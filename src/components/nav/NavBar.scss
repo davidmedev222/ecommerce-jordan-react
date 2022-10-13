@@ -1,0 +1,70 @@
+@mixin flex($direction, $justify, $align) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin grid($justify, $align) {
+    display: grid;
+    justify-items: $justify;
+    align-items: $align;
+}
+
+@mixin media($px) {
+    @media screen and (max-width: $px) {
+        @content;
+    }
+}
+
+.header {
+    @include grid(center, center);
+    grid-template:
+        "logo nav cart" auto
+        / 1fr 1fr 1fr;
+    position: sticky;
+    top: -50%;
+    z-index: 1;
+    padding: clamp(0.5rem, 1rem, 2rem);
+    background-color: var(--background-primary);
+    transition: top 650ms ease;
+
+    &-title {
+        grid-area: logo;
+        font-size: clamp(0.75rem, 1.5vw, 3rem);
+        font-weight: 700;
+    }
+    &-cart {
+        grid-area: cart;
+        position: relative;
+        width: clamp(2.5rem, 3.5vw, 7rem);
+    }
+    &-badge {
+        position: absolute;
+        right: -10%;
+        top: -10%;
+        font-size: clamp(0.85rem, 1.3vw, 2.6rem);
+        font-weight: bold;
+        color: black;
+        background-color: white;
+        border-radius: 1rem;
+        padding: 0.25em;
+    }
+}
+.nav {
+    &-ul {
+        @include flex(row, center, center);
+        gap: clamp(2.5rem, 5vw, 10rem);
+    }
+    &-a {
+        font-size: clamp(0.75rem, 1.5vw, 3rem);
+        font-weight: 700;
+    }
+}
+
+//* MEDIA QUERYS DE HEADER
+@include media(480px) {
+    .nav {
+        display: none;
+    }
+}

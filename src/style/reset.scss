@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+:root {
+    // COLORES
+    --text-primary: #181818;
+    --background-primary: #e6e6e6;
+    --background-secondary: #d9d9d9;
+    // TIPOGRAFIA
+    --family-primary: "Montserrat", sans-serif;
+    --family-secondary: Helvetica, Arial, sans-serif;
+}
+
+// GENERAL
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    vertical-align: baseline;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+    font-size: 100%;
+    font-family: var(--family-primary);
+    color: var(--text-primary);
+    background-color: var(--background-primary);
+    hyphens: auto;
+
+    &::-webkit-scrollbar {
+        width: 7px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: var(--text-primary);
+    }
+}
+
+img,
+picture,
+video,
+iframe,
+figure {
+    max-width: 100%;
+    width: 100%;
+    display: block;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    font-size: inherit;
+}
+
+p a {
+    display: inline;
+}
+
+li {
+    list-style-type: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+a,
+strong,
+blockquote,
+i,
+b,
+u,
+em {
+    font-size: 1em;
+    font-weight: inherit;
+    font-style: inherit;
+    text-decoration: none;
+    color: inherit;
+    text-transform: uppercase;
+}
+
+// SELECCION DE TEXTO Y COLOR
+::-moz-selection {
+    background-color: var(--text-primary);
+    color: var(--background-primary);
+}
+
+::selection {
+    background-color: var(--text-primary);
+    color: var(--background-primary);
+}
+
+form,
+input,
+textarea,
+select,
+button,
+label {
+    display: block;
+    background-color: transparent;
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    hyphens: auto;
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+table,
+tr,
+td {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+svg {
+    display: block;
+    width: 100%;
+    fill: currentColor;
+}
