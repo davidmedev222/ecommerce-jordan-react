@@ -1,0 +1,10 @@
+// BOTON
+.btn {
+    font-size: clamp(1rem, 1.5vw, 2rem);
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+    background-color: black;
+    border-radius: 3rem;
+    padding: clamp(0.75em, 1vw, 1.5rem) clamp(1.5em, 2vw, 3rem);
+}

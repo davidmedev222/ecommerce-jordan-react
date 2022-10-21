@@ -1,0 +1,89 @@
+// MIXINS
+@mixin flex($direction, $justify, $align) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin grid($justify, $align) {
+    display: grid;
+    justify-items: $justify;
+    align-items: $align;
+}
+
+@mixin media($px) {
+    @media screen and (max-width: $px) {
+        @content;
+    }
+}
+
+// STYLES
+.card-detail {
+    @include grid(center, center);
+    grid-template: "images info" auto / 55% 45%;
+    position: relative;
+    height: 100%;
+    &-close {
+        position: absolute;
+        top: 5%;
+        right: 5%;
+        width: clamp(3rem, 5vw, 10rem);
+    }
+    &-picture {
+        grid-area: images;
+    }
+    &-info {
+        grid-area: info;
+        @include flex(column, center, center);
+        gap: 0.75rem;
+    }
+    &-collection {
+        opacity: 0;
+        font-size: clamp(0.85rem, 1.5vw, 3rem);
+        font-weight: bold;
+        color: grey;
+    }
+
+    &-name {
+        opacity: 0;
+        font-size: clamp(2.5rem, 5vw, 10rem);
+        font-weight: bold;
+        text-align: center;
+    }
+    &-color {
+        @extend .card-detail-collection;
+    }
+    &-price {
+        @extend .card-detail-name;
+    }
+    &-stock {
+        @extend .card-detail-collection;
+    }
+    &-designer {
+        @extend .card-detail-collection;
+    }
+    &-location {
+        @extend .card-detail-collection;
+    }
+    &-launch {
+        @extend .card-detail-collection;
+    }
+
+    &-footer {
+        @include flex(column, center, center);
+        gap: clamp(0.75rem, 1.5vw, 3rem);
+        margin: 3rem 0 0 0;
+    }
+}
+
+// MEDIAQUERYS
+@include media(900px) {
+    .card-detail {
+        grid-template: "images images" auto "info info" auto / 1fr 1fr;
+        padding: clamp(0rem, 5vw, 10rem);
+    }
+    .card-detail-info {
+        padding: clamp(0rem, 7.5vw, 15rem);
+    }
+}

@@ -1,14 +1,17 @@
+import { NavBar } from "./components/nav/NavBar"; // COMPONENT
+import { ItemDetailContainer } from "./pages/shop/ItemDetailContainer/ItemDetailContainer"; // COMPONENT
+import { ItemListContainer } from "./pages/shop/ItemListContainer/ItemListContainer"; // COMPONENT
 import "./styles/reset.scss"; // STYLES
 import "./styles/utilities.scss"; // STYLES
-import { NavBar } from "./components/nav/NavBar"; // COMPONENT
-import { ItemListContainer } from "./pages/shop/ItemListContainer/ItemListContainer"; // COMPONENT
 
 const App = () => {
     return (
         <>
             {/* HEADER */}
             <NavBar />
-            {/* MAIN - CATEGORY */}
+            {/* MAIN - SHOP-DETAIL */}
+            <ItemDetailContainer />
+            {/* MAIN - SHOP */}
             <ItemListContainer greeting="JORDAN SHOP" />
         </>
     );
