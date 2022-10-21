@@ -1,0 +1,40 @@
+// MIXINS
+@mixin flex($direction, $justify, $align) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+// STYLES
+.card {
+    @include flex(column, center, center);
+    padding: clamp(0.75rem, 1.5rem, 3rem);
+    gap: clamp(0.5rem, 1vw, 2rem);
+
+    &-picture {
+        position: relative;
+    }
+    &-price {
+        font-size: clamp(1.5rem, 1.75vw, 3.5rem);
+        font-weight: 600;
+        position: absolute;
+        top: 10%;
+        left: 10%;
+        color: whitesmoke;
+        background-color: black;
+        transform: rotate(-45deg);
+        padding: 0 1em;
+    }
+    &-name {
+        font-size: clamp(2rem, 2.5vw, 5rem);
+        font-weight: 800;
+    }
+    &-btn {
+        color: white;
+        background-color: black;
+        width: clamp(3.75rem, 4vw, 6rem);
+        border-radius: 100%;
+        padding: 0.75em;
+    }
+}

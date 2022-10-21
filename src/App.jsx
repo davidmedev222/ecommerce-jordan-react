@@ -1,12 +1,14 @@
-import "./style/reset.scss";
-import "./style/utilities.scss";
-import { NavBar } from "./components/nav/NavBar";
-import { ItemListContainer } from "./pages/category/ItemListContainer";
+import "./styles/reset.scss"; // STYLES
+import "./styles/utilities.scss"; // STYLES
+import { NavBar } from "./components/nav/NavBar"; // COMPONENT
+import { ItemListContainer } from "./pages/shop/ItemListContainer/ItemListContainer"; // COMPONENT
 
 const App = () => {
     return (
         <>
+            {/* HEADER */}
             <NavBar />
+            {/* MAIN - CATEGORY */}
             <ItemListContainer greeting="JORDAN SHOP" />
         </>
     );

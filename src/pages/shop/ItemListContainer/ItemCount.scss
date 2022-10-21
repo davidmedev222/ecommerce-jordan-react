@@ -1,0 +1,24 @@
+// MIXINS
+@mixin flex($direction, $justify, $align) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+// STYLES
+.count {
+    @include flex(row, center, center);
+    gap: clamp(0.75rem, 1.5vw, 3rem);
+
+    &-btn {
+        width: clamp(2.5rem, 3vw, 6rem);
+        border-radius: 100%;
+        padding: 0.5em;
+        background-color: lightgrey;
+    }
+    &-quantity {
+        font-size: clamp(1.25rem, 1.5vw, 3rem);
+        font-weight: bold;
+    }
+}

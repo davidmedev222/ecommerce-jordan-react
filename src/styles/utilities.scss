@@ -1,0 +1,18 @@
+// MIXINS
+@mixin flex($direction, $justify, $align) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+// TIPOGRAFIA
+.h1 {
+    font-size: clamp(2.5rem, 5vw, 10rem);
+    font-weight: 900;
+}
+// SECCION
+.section {
+    @include flex(column, center, center);
+    gap: clamp(1.25rem, 2.5vw, 5rem);
+    padding: clamp(1.25rem, 2.5vw, 5rem) 0;
+}
