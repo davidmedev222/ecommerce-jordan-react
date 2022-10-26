@@ -1,0 +1,13 @@
+// MIXINS
+@mixin flex($direction, $justify, $align) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+// STYLES
+.btn-group {
+    @include flex(row, center, center);
+    gap: clamp(1rem, 2vw, 4rem);
+}

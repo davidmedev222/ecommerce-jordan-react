@@ -1,11 +1,15 @@
 import { fetchJordan } from "../../.././services/jordanAPI"; // API
 import { ItemDetail } from "./ItemDetail"; // COMPONENT
 import { useState, useEffect } from "react"; // HOOKS
-import "./ItemDetailContainer.scss"; // STYLES
+import { useParams } from "react-router-dom"; // HOOKS
 
 const ItemDetailContainer = () => {
+    const { id } = useParams(); // PARAM ROUTE
     const [products, updateProducts] = useState([]); // STATE
-    const product = products.filter((product) => product.id === "30"); // PRODUCT FILTERED
+
+    const product = products // PRODUCT FILTERED
+        .filter((product) => product.id === id)
+        .map((product) => <ItemDetail key={product.id} {...product} />); // COMPONENT ITEM DETAIL FILTERED
 
     useEffect(() => {
         fetchJordan().then((response) => updateProducts(response)); // API RESULTS
@@ -13,10 +17,8 @@ const ItemDetailContainer = () => {
 
     return (
         <div className="shop-detail">
-            {/* COMPONENT ITEM DETAIL */}
-            {product.map((product) => (
-                <ItemDetail key={product.id} {...product} />
-            ))}
+            <h1 className="h1">{id}</h1>
+            {product.length > 0 ? product : <h1 className="h1">CARGANDO</h1>}
         </div>
     );
 };

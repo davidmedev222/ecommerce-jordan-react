@@ -1,19 +1,20 @@
-import { ItemCount } from "../ItemListContainer/ItemCount"; // COMPONENT
 import "./ItemDetail.scss"; // STYLES
+import { ItemCount } from "../ItemListContainer/ItemCount"; // COMPONENT
+import { Link } from "react-router-dom"; // ROUTER DOM
 
 const ItemDetail = ({ imageOne, imageTwo, name, collection, color, price, stock, designer, location, launch }) => {
     return (
         <div className="card-detail">
             {/* BUTTON */}
-            <button className="card-detail-close">
+            <Link to={"/shop"} className="card-detail-close">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
                     <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z" />
                 </svg>
-            </button>
+            </Link>
             {/* IMAGES */}
             <picture className="card-detail-picture" data-fade>
-                <img className="card-detail-image" src={`./assets/${imageOne}`} alt={name} />
-                <img className="card-detail-image card-detail-image-two " src={`./assets/${imageTwo}`} alt={name} />
+                <img className="card-detail-image" src={imageOne} alt={name} />
+                <img className="card-detail-image card-detail-image-two " src={imageTwo} alt={name} />
             </picture>
             {/* INFO */}
             <article className="card-detail-info">
@@ -37,6 +38,7 @@ const ItemDetail = ({ imageOne, imageTwo, name, collection, color, price, stock,
                 <span data-fade data-delay="700" className="card-detail-stock">
                     {stock} available units
                 </span>
+                {/* COMPONENT ITEM COUNT */}
                 <ItemCount stock={stock} initial={1} text="add to cart" />
                 <footer className="card-detail-footer">
                     {/* DESIGNER */}

@@ -24,7 +24,6 @@
         grid-template-columns: repeat(2, 1fr);
     }
 }
-
 @include media(570px) {
     .shop-content {
         grid-template-columns: 1fr;

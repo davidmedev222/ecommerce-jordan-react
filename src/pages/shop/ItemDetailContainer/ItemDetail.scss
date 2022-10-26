@@ -24,6 +24,7 @@
     grid-template: "images info" auto / 55% 45%;
     position: relative;
     height: 100%;
+
     &-close {
         position: absolute;
         top: 5%;
@@ -44,7 +45,6 @@
         font-weight: bold;
         color: grey;
     }
-
     &-name {
         opacity: 0;
         font-size: clamp(2.5rem, 5vw, 10rem);
@@ -69,7 +69,6 @@
     &-launch {
         @extend .card-detail-collection;
     }
-
     &-footer {
         @include flex(column, center, center);
         gap: clamp(0.75rem, 1.5vw, 3rem);

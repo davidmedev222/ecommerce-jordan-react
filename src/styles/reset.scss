@@ -1,4 +1,7 @@
+// FUENTE IMPORTADA
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+// RAIZ
 :root {
     // COLORES
     --text-primary: #181818;
@@ -33,7 +36,6 @@ body {
     &::-webkit-scrollbar {
         width: 7px;
     }
-
     &::-webkit-scrollbar-thumb {
         background-color: var(--text-primary);
     }
