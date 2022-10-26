@@ -1,11 +1,17 @@
 import "./ButtonFilter.scss"; // STYLES
-import { Link } from "react-router-dom"; // ROUTER DOM
+import { useNavigate } from "react-router-dom"; // HOOKS
 
 const ButtonFilter = ({ text, path }) => {
+    const navigate = useNavigate(); // NAVIGATE
+
+    const handleNavigate = (to) => {
+        navigate(to); // EVENT
+    };
+
     return (
-        <Link to={path} className="btn-filter">
+        <button onClick={() => handleNavigate(path)} className="btn-filter">
             {text}
-        </Link>
+        </button>
     );
 };
 

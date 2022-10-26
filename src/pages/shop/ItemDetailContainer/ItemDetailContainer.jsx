@@ -17,7 +17,7 @@ const ItemDetailContainer = () => {
 
     return (
         <div className="shop-detail">
-            <h1 className="h1">{id}</h1>
+            {/* COMPONENT ITEM DETAIL OR LOADING */}
             {product.length > 0 ? product : <h1 className="h1">CARGANDO</h1>}
         </div>
     );

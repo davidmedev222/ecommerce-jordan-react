@@ -20,7 +20,7 @@ const ItemList = ({ items }) => {
     return (
         <div className="shop-content">
             {/* COMPONENT ITEM */}
-            {products}
+            {products.length > 0 ? products : <h1 className="h1">CARGANDO</h1>}
         </div>
     );
 };
