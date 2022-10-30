@@ -12,7 +12,9 @@ const ItemDetailContainer = () => {
         .map((product) => <ItemDetail key={product.id} {...product} />); // COMPONENT ITEM DETAIL FILTERED
 
     useEffect(() => {
-        fetchJordan().then((response) => updateProducts(response)); // API RESULTS
+        setTimeout(() => {
+            fetchJordan().then((response) => updateProducts(response)); // API RESULTS
+        }, 1300);
     }, []);
 
     return (

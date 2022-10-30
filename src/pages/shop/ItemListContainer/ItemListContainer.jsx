@@ -9,7 +9,9 @@ const ItemListContainer = () => {
     const [products, updateProducts] = useState([]); // STATE
 
     useEffect(() => {
-        fetchJordan().then((response) => updateProducts(response)); // API RESULTS
+        setTimeout(() => {
+            fetchJordan().then((response) => updateProducts(response)); // API RESULTS
+        }, 1300);
     }, []);
 
     return (
@@ -21,13 +23,12 @@ const ItemListContainer = () => {
                 {/* BTN GROUP */}
                 <div className="btn-group">
                     <ButtonFilter path={"/shop"} text={"ALL"} /> {/* COMPONENT BUTTON FILTER */}
-                    <ButtonFilter path={"/shop/category/2017"} text={2017} /> {/* COMPONENT BUTTON FILTER */}
-                    <ButtonFilter path={"/shop/category/2018"} text={2018} /> {/* COMPONENT BUTTON FILTER */}
                     <ButtonFilter path={"/shop/category/2019"} text={2019} /> {/* COMPONENT BUTTON FILTER */}
                     <ButtonFilter path={"/shop/category/2020"} text={2020} /> {/* COMPONENT BUTTON FILTER */}
+                    <ButtonFilter path={"/shop/category/2021"} text={2021} /> {/* COMPONENT BUTTON FILTER */}
+                    <ButtonFilter path={"/shop/category/2022"} text={2022} /> {/* COMPONENT BUTTON FILTER */}
                 </div>
-                {/* COMPONENT ITEM LIST */}
-                <ItemList items={products} />
+                <ItemList items={products} /> {/* COMPONENT ITEM LIST */}
             </section>
         </>
     );

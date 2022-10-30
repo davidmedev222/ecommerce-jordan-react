@@ -1,31 +1,8 @@
-// MIXINS
-@mixin grid($justify, $align) {
-    display: grid;
-    justify-items: $justify;
-    align-items: $align;
-}
-
-@mixin media($px) {
-    @media screen and (max-width: $px) {
-        @content;
-    }
-}
-
 // STYLES
 .shop-content {
-    @include grid(center, center);
-    grid-template-columns: repeat(3, 1fr);
-    gap: clamp(0.5rem, 1vw, 2rem);
-}
-
-// MEDIA QUERYS
-@include media(840px) {
-    .shop-content {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-@include media(570px) {
-    .shop-content {
-        grid-template-columns: 1fr;
-    }
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-auto-rows: 1fr;
+    padding: clamp(2rem, 5vw, 10rem) clamp(0rem, 5vw, 10rem);
+    gap: clamp(2.5rem, 3vw, 6rem);
 }

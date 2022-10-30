@@ -8,9 +8,8 @@
 
 // STYLES
 .card {
-    @include flex(column, center, center);
-    padding: clamp(0.75rem, 1.5rem, 3rem);
-    gap: clamp(0.5rem, 1vw, 2rem);
+    @include flex(column, space-between, center);
+    gap: clamp(0.75rem, 1.5vw, 3rem);
 
     &-picture {
         position: relative;
@@ -20,15 +19,15 @@
         font-weight: 600;
         position: absolute;
         top: 10%;
-        left: 10%;
+        left: 5%;
         color: whitesmoke;
         background-color: black;
         transform: rotate(-45deg);
         border-radius: 1rem;
-        padding: 0 1em;
+        padding: 0.1em 1em;
     }
     &-name {
-        font-size: clamp(2rem, 2.5vw, 5rem);
+        font-size: clamp(2rem, 3vw, 5rem);
         font-weight: 800;
     }
     &-btn {

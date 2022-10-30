@@ -6,12 +6,6 @@
     align-items: $align;
 }
 
-@mixin grid($justify, $align) {
-    display: grid;
-    justify-items: $justify;
-    align-items: $align;
-}
-
 @mixin media($px) {
     @media screen and (max-width: $px) {
         @content;
@@ -20,34 +14,38 @@
 
 // STYLES
 .header {
-    @include grid(center, center);
-    grid-template:
-        "logo nav cart" auto
-        / 1fr 1fr 1fr;
+    @include flex(row, space-around, center);
+    padding: clamp(1.25rem, 2vw, 4rem);
     position: sticky;
-    padding: clamp(0.5rem, 1rem, 2rem);
-    background-color: var(--background-primary);
+    top: 0;
 
+    &-icons {
+        @include flex(row, center, center);
+        gap: clamp(1rem, 1.5vw, 3rem);
+    }
+    &-icon {
+        width: clamp(4rem, 5vw, 10rem);
+        background-color: lightblue;
+        padding: 1em;
+        border-radius: 100%;
+    }
     &-title {
-        grid-area: logo;
-        font-size: clamp(0.75rem, 1.5vw, 3rem);
-        font-weight: 700;
+        font-size: clamp(1.25rem, 2.25vw, 5rem);
+        font-weight: 800;
     }
     &-cart {
-        grid-area: cart;
         position: relative;
-        width: clamp(2.5rem, 3.5vw, 7rem);
+        justify-self: flex-end;
     }
     &-badge {
-        position: absolute;
-        right: -10%;
-        top: -10%;
-        font-size: clamp(0.85rem, 1.3vw, 2.6rem);
-        font-weight: bold;
-        color: black;
-        background-color: white;
-        border-radius: 1rem;
+        font-size: clamp(1rem, 1.3vw, 2.6rem);
+        font-weight: 800;
         padding: 0.25em;
+        border-radius: 1em;
+        background-color: white;
+        position: absolute;
+        top: 0;
+        right: 5%;
     }
 }
 
@@ -55,16 +53,22 @@
 .nav {
     &-ul {
         @include flex(row, center, center);
-        gap: clamp(2.5rem, 5vw, 10rem);
+        gap: clamp(1rem, 5vw, 10rem);
     }
     &-a {
-        font-size: clamp(0.75rem, 1.5vw, 3rem);
-        font-weight: 700;
+        font-size: clamp(1rem, 2.25vw, 5rem);
+        font-weight: 800;
     }
 }
 
 // MEDIAQUERYS
 @include media(480px) {
+    .header-title {
+        display: none;
+    }
+    .d-none {
+        display: block;
+    }
     .nav {
         display: none;
     }

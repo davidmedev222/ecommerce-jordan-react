@@ -22,10 +22,9 @@
     vertical-align: baseline;
 }
 
-body {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto 1fr auto;
+#root {
+    display: flex;
+    flex-direction: column;
     min-height: 100vh;
     font-size: 100%;
     font-family: var(--family-primary);
@@ -89,6 +88,7 @@ em {
     font-weight: inherit;
     font-style: inherit;
     text-decoration: none;
+    text-align: center;
     color: inherit;
     text-transform: uppercase;
 }

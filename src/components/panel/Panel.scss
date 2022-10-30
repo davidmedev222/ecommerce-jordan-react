@@ -1,0 +1,46 @@
+// MIXINS
+@mixin flex($direction, $justify, $align) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin media($px) {
+    @media screen and (max-width: $px) {
+        @content;
+    }
+}
+
+// STYLES
+.panel {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-auto-flow: dense;
+    grid-auto-rows: 1fr;
+    gap: clamp(0.5rem, 1vw, 2rem);
+    padding: 0 clamp(1rem, 5vw, 10rem) clamp(1.5rem, 1.5vw, 3rem);
+
+    &-option {
+        @include flex(column, center, center);
+        gap: clamp(1rem, 1.5vw, 3rem);
+        padding: clamp(1rem, 2.5vw, 5rem) clamp(1.5rem, 2.5vw, 5rem);
+        border-radius: 1rem;
+        border: 1.25px black solid;
+    }
+    &-btn {
+        width: clamp(2.25rem, 5vw, 10rem);
+    }
+    &-title {
+        font-size: clamp(1rem, 2.25vw, 4.5rem);
+        font-weight: 800;
+    }
+}
+
+// MEDIAQUERYS
+@include media(480px) {
+    .panel-option {
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+}

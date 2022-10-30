@@ -9,5 +9,7 @@
 // STYLES
 .btn-group {
     @include flex(row, center, center);
-    gap: clamp(1rem, 2vw, 4rem);
+    flex-wrap: wrap;
+    gap: clamp(0.75rem, 2vw, 4rem);
+    padding: 0 0.75em;
 }
