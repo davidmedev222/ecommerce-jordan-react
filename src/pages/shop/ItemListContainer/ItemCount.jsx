@@ -1,15 +1,23 @@
 import "./ItemCount.scss"; // STYLES
+import { CartContext } from "../../context/cart/CartContext"; // CONTEXT
 import { Button } from "../../../components/button/Button"; // COMPONENT
-import { useState } from "react"; // HOOKS
+import { useState, useContext } from "react"; // HOOKS
 
-const ItemCount = ({ stock, initial, text }) => {
+const ItemCount = ({ item, onAdd, stock, initial }) => {
     const [quantity, updateQuantity] = useState(initial); // STATE
 
     const handleIncrease = () => {
-        quantity < stock && updateQuantity((q) => q + 1);
-    }; // EVENT
+        quantity < stock && updateQuantity((q) => q + 1); // EVENT
+    };
     const handleDecrease = () => {
-        quantity > initial && updateQuantity((q) => q - 1);
+        quantity > initial && updateQuantity((q) => q - 1); // EVENT
+    };
+
+    const { addItem } = useContext(CartContext); // HELPER
+
+    const handleAddToCart = () => {
+        onAdd(true);
+        addItem(item, quantity);
     }; // EVENT
 
     return (
@@ -29,7 +37,7 @@ const ItemCount = ({ stock, initial, text }) => {
                 </svg>
             </button>
             {/* COMPONENT BUTTON */}
-            <Button text={text} />
+            <Button onClick={handleAddToCart}>add to cart</Button>
         </div>
     );
 };

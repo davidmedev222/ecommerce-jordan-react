@@ -1,13 +1,24 @@
 import "./ItemDetail.scss"; // STYLES
+import { CartContext } from "../../context/cart/CartContext"; // CONTEXT
 import { ItemCount } from "../ItemListContainer/ItemCount"; // COMPONENT
+import { Button } from "../../../components/button/Button"; // COMPONENT
 import { useNavigate } from "react-router-dom"; // HOOKS
+import { useState, useContext } from "react"; // HOOKS
 
-const ItemDetail = ({ imageOne, imageTwo, name, collection, color, price, stock, designer, location, launch }) => {
+const ItemDetail = ({ id, imageOne, imageTwo, name, collection, color, price, stock, designer, location, launch }) => {
     const navigate = useNavigate(); // NAVIGATE
 
-    const handleNavigate = () => {
-        navigate("/shop"); // EVENT
-    };
+    const [onAdd, updateOnAdd] = useState(false); // STATE
+
+    const { isInCart } = useContext(CartContext); // HELPER
+
+    const item = {
+        image: imageOne,
+        name: name,
+        color: color,
+        price: price,
+        id: id,
+    }; // ITEM
 
     return (
         <div className="card-detail">
@@ -17,7 +28,7 @@ const ItemDetail = ({ imageOne, imageTwo, name, collection, color, price, stock,
                 <img className="card-detail-image card-detail-image-two " src={imageTwo} alt={name} />
             </picture>
             {/* BUTTON */}
-            <button onClick={handleNavigate} className="card-detail-close">
+            <button onClick={() => navigate("/shop")} className="card-detail-close">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
                     <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z" />
                 </svg>
@@ -44,8 +55,12 @@ const ItemDetail = ({ imageOne, imageTwo, name, collection, color, price, stock,
                 <span data-fade data-delay="700" className="card-detail-stock">
                     {stock} available units
                 </span>
-                {/* COMPONENT ITEM COUNT */}
-                <ItemCount stock={stock} initial={1} text="add to cart" />
+                {/* COMPONENT BUTTON OR ITEM COUNT */}
+                {onAdd || isInCart(id) ? (
+                    <Button onClick={() => navigate("/cart")}>checkout</Button>
+                ) : (
+                    <ItemCount item={item} onAdd={updateOnAdd} stock={stock} initial={1} />
+                )}
                 <footer className="card-detail-footer">
                     {/* DESIGNER */}
                     <span data-fade data-delay="1100" className="card-detail-designer">

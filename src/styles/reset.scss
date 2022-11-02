@@ -23,8 +23,8 @@
 }
 
 #root {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-rows: auto 1fr;
     min-height: 100vh;
     font-size: 100%;
     font-family: var(--family-primary);

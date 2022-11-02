@@ -13,7 +13,6 @@
 
     &-img {
         position: relative;
-        min-height: 70vh;
         background-size: cover;
         background-position: center;
         border: 1px solid black;
@@ -54,12 +53,8 @@
 }
 
 // MEDIAQUERYS
-@include media(480px) {
+@include media(768px) {
     .category {
         flex-direction: column;
-
-        &-img {
-            min-height: 15vh;
-        }
     }
 }

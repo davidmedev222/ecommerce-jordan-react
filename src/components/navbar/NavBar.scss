@@ -15,13 +15,13 @@
 // STYLES
 .header {
     @include flex(row, space-around, center);
-    padding: clamp(1.25rem, 2vw, 4rem);
+    padding: clamp(0.5rem, 2vw, 4rem);
     position: sticky;
     top: 0;
 
     &-icons {
         @include flex(row, center, center);
-        gap: clamp(1rem, 1.5vw, 3rem);
+        gap: clamp(0rem, 1.5vw, 3rem);
     }
     &-icon {
         width: clamp(4rem, 5vw, 10rem);

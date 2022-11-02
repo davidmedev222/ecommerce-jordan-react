@@ -24,7 +24,7 @@
     &-option {
         @include flex(column, center, center);
         gap: clamp(1rem, 1.5vw, 3rem);
-        padding: clamp(1rem, 2.5vw, 5rem) clamp(1.5rem, 2.5vw, 5rem);
+        padding: clamp(1rem, 2.5vw, 5rem) clamp(1rem, 2.5vw, 5rem);
         border-radius: 1rem;
         border: 1.25px black solid;
     }
