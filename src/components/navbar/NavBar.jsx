@@ -42,8 +42,7 @@ const NavBar = () => {
                 </Link>
                 {/* ICON CART */}
                 <Link to={"/cart"} className="header-icon header-cart">
-                    <span className="header-badge">0</span>
-                    {/* COMPONENT CARD WIDGET */}
+                    {/* COMPONENT CARD WIDGET & BADGE*/}
                     <CartWidget />
                 </Link>
                 {/* ICON PROFILE */}

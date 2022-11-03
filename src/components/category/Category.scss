@@ -1,6 +1,11 @@
 // MIXINS
-@mixin media($px) {
+@mixin mediamax($px) {
     @media screen and (max-width: $px) {
+        @content;
+    }
+}
+@mixin mediamin($px) {
+    @media screen and (min-width: $px) {
         @content;
     }
 }
@@ -19,13 +24,6 @@
         border-radius: 1rem;
         flex: 1;
         transition: flex 600ms ease-in;
-
-        &:hover {
-            flex: 4;
-            .category-span {
-                font-size: clamp(3rem, 8.5vw, 15rem);
-            }
-        }
     }
     &-img:nth-child(1) {
         background-image: url("https://i.ibb.co/CQgrSc1/product-28.webp");
@@ -53,8 +51,16 @@
 }
 
 // MEDIAQUERYS
-@include media(768px) {
+@include mediamax(768px) {
     .category {
         flex-direction: column;
+    }
+}
+@include mediamin(768px) {
+    .category-img:hover {
+        flex: 4;
+        .category-span {
+            font-size: clamp(3rem, 8.5vw, 15rem);
+        }
     }
 }

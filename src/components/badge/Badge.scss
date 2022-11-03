@@ -1,0 +1,11 @@
+// STYLES
+.badge {
+    font-size: clamp(1rem, 1.3vw, 2.6rem);
+    font-weight: 800;
+    padding: 0.25em;
+    border-radius: 1em;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    right: 5%;
+}

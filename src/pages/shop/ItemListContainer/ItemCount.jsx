@@ -1,5 +1,5 @@
 import "./ItemCount.scss"; // STYLES
-import { CartContext } from "../../context/cart/CartContext"; // CONTEXT
+import { CartContext } from "../../../context/cart/CartContext"; // CONTEXT
 import { Button } from "../../../components/button/Button"; // COMPONENT
 import { useState, useContext } from "react"; // HOOKS
 

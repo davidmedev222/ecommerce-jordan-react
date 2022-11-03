@@ -20,7 +20,15 @@ const CartContextProvider = ({ children }) => {
         updateCart([]);
     };
 
-    const values = { cart, updateCart, addItem, isInCart, deleteItem, removeCart };
+    const quantityItems = () => {
+        return cart.reduce((acumulador, cadaItem) => acumulador + cadaItem.quantity, 0);
+    };
+
+    const totalPrice = () => {
+        return cart.reduce((acumulador, cadaItem) => acumulador + cadaItem.price * cadaItem.quantity, 0);
+    };
+
+    const values = { cart, updateCart, addItem, isInCart, deleteItem, removeCart, quantityItems, totalPrice };
 
     return <CartContext.Provider value={values}>{children}</CartContext.Provider>;
 };
