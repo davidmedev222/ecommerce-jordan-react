@@ -73,6 +73,11 @@
         flex-direction: column;
         gap: clamp(1rem, 1.5vw, 3rem);
     }
+    &-empty {
+        align-self: flex-end;
+        color: black;
+        background-color: lightgrey;
+    }
     &-discount {
         display: flex;
         flex-direction: row;
