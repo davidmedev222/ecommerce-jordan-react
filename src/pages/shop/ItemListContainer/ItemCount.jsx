@@ -13,7 +13,7 @@ const ItemCount = ({ item, onAdd, stock, initial }) => {
         quantity > initial && updateQuantity((q) => q - 1); // EVENT
     };
 
-    const { addItem } = useContext(CartContext); // HELPER
+    const { addItem } = useContext(CartContext); // HELPERS
 
     const handleAddToCart = () => {
         onAdd(true);

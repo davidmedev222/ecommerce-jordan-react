@@ -13,11 +13,13 @@ const ItemDetail = ({ id, imageOne, imageTwo, name, collection, color, price, st
     const { isInCart } = useContext(CartContext); // HELPER
 
     const item = {
+        id: id,
         image: imageOne,
         name: name,
         color: color,
         price: price,
-        id: id,
+        stock: stock,
+        quantity: 1,
     }; // ITEM
 
     return (

@@ -14,7 +14,7 @@ const ItemDetailContainer = () => {
     useEffect(() => {
         setTimeout(() => {
             fetchJordan().then((response) => updateProducts(response)); // API RESULTS
-        }, 1300);
+        }, 50);
     }, []);
 
     return (
