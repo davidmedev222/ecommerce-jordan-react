@@ -5,7 +5,7 @@ import { Home } from "../pages/home/Home"; // COMPONENT
 import { Error } from "../pages/error/Error"; // COMPONENT
 import { ItemDetailContainer } from "../pages/shop/ItemDetailContainer/ItemDetailContainer"; // COMPONENT
 import { ItemListContainer } from "../pages/shop/ItemListContainer/ItemListContainer"; // COMPONENT
-import { ItemListCart } from "../pages/cart/ItemListCart"; // COMPONENT
+import { ItemListCart } from "../pages/cart/ItemListCart/ItemListCart"; // COMPONENT
 import { Account } from "../pages/account/Account"; // COMPONENT
 import { BrowserRouter, Routes, Route } from "react-router-dom"; // ROUTER DOM
 

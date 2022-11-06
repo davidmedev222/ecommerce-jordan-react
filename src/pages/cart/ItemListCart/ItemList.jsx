@@ -1,6 +1,6 @@
-import { CartContext } from "../.././context/cart/CartContext"; // CONTEXT
+import { CartContext } from "../../.././context/cart/CartContext"; // CONTEXT
 import { Item } from "./Item"; // COMPONENT
-import { Button } from "../.././components/button/Button"; // COMPONENT
+import { Button } from "../../.././components/button/Button"; // COMPONENT
 import { useContext } from "react"; // HOOKS
 
 const ItemList = () => {

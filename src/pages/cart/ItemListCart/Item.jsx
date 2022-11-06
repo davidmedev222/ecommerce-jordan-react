@@ -1,4 +1,4 @@
-import { ItemCount } from "./ItemListCart/ItemCount"; // COMPONENT
+import { ItemCount } from "./ItemCount"; // COMPONENT
 
 const Item = ({ id, image, name, color, price, quantity, stock }) => {
     return (

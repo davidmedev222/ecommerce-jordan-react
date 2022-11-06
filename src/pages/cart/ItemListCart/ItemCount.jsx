@@ -1,4 +1,4 @@
-import { CartContext } from "../../../context/cart/CartContext"; // CONTEXT
+import { CartContext } from "../../.././context/cart/CartContext"; // CONTEXT
 import { useContext } from "react"; // HOOKS
 
 const ItemCount = ({ itemId, itemQuantity, itemStock }) => {
