@@ -1,16 +1,5 @@
 // MIXINS
-@mixin flex($direction, $justify, $align) {
-    display: flex;
-    flex-direction: $direction;
-    justify-content: $justify;
-    align-items: $align;
-}
-
-@mixin media($px) {
-    @media screen and (max-width: $px) {
-        @content;
-    }
-}
+@import "../../global/mixins";
 
 // STYLES
 .panel {
@@ -38,7 +27,7 @@
 }
 
 // MEDIAQUERYS
-@include media(480px) {
+@include mediamax(480px) {
     .panel-option {
         flex-direction: row;
         justify-content: flex-start;

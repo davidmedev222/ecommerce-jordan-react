@@ -1,4 +1,3 @@
-import "./Category.scss"; // STYLES
 import { Link } from "react-router-dom"; // ROUTER DOM
 
 const Category = ({ all, year2, year3, year4, year5 }) => {

@@ -1,4 +1,3 @@
-import "./ItemList.scss"; // STYLES
 import { Item } from "./Item"; // COMPONENT
 import { useParams } from "react-router-dom"; // HOOKS
 

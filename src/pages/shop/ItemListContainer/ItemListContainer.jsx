@@ -1,4 +1,3 @@
-import "./ItemListContainer.scss"; // STYLES
 import { fetchJordan } from "../../../services/jordanAPI"; // API
 import { NavBar } from "../../../components/navbar/NavBar"; // COMPONENT
 import { ItemList } from "./ItemList"; // COMPONENT

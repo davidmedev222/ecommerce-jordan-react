@@ -1,4 +1,3 @@
-import "./NavBar.scss"; // STYLES
 import { CartWidget } from "./CartWidget"; // COMPONENT
 import { Link } from "react-router-dom"; // ROUTER DOM
 

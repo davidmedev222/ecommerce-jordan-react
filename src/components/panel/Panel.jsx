@@ -1,5 +1,3 @@
-import "./Panel.scss"; // STYLES
-
 const Panel = () => {
     return (
         <div className="panel">

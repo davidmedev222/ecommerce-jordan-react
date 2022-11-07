@@ -1,14 +1,5 @@
 // MIXINS
-@mixin mediamax($px) {
-    @media screen and (max-width: $px) {
-        @content;
-    }
-}
-@mixin mediamin($px) {
-    @media screen and (min-width: $px) {
-        @content;
-    }
-}
+@import "../../global/mixins";
 
 // STYLES
 .category {

@@ -1,22 +1,5 @@
 // MIXINS
-@mixin flex($direction, $justify, $align) {
-    display: flex;
-    flex-direction: $direction;
-    justify-content: $justify;
-    align-items: $align;
-}
-
-@mixin grid($justify, $align) {
-    display: grid;
-    justify-items: $justify;
-    align-items: $align;
-}
-
-@mixin media($px) {
-    @media screen and (max-width: $px) {
-        @content;
-    }
-}
+@import "../../.././global/mixins";
 
 // STYLES
 .card-detail {
@@ -77,7 +60,7 @@
 }
 
 // MEDIAQUERYS
-@include media(900px) {
+@include mediamax(900px) {
     .card-detail {
         grid-template: "images images" auto "info info" auto / 1fr 1fr;
         padding: clamp(0rem, 5vw, 10rem);

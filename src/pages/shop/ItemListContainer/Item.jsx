@@ -1,4 +1,3 @@
-import "./Item.scss"; // STYLES
 import { useNavigate } from "react-router-dom"; // HOOKS
 
 const Item = ({ id, price, imageOne, name }) => {

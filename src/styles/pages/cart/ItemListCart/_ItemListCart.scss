@@ -1,16 +1,5 @@
 // MIXINS
-@mixin flex($direction, $justify, $align) {
-    display: flex;
-    flex-direction: $direction;
-    justify-content: $justify;
-    align-items: $align;
-}
-
-@mixin media($px) {
-    @media screen and (max-width: $px) {
-        @content;
-    }
-}
+@import "../../.././global/mixins";
 
 // STYLES
 .cart {
@@ -119,12 +108,12 @@
 }
 
 // MEDIAQUERYS
-@include media(768px) {
+@include mediamax(768px) {
     .cart-content {
         width: 100%;
     }
 }
-@include media(624px) {
+@include mediamax(624px) {
     .cart-count {
         flex: none;
     }

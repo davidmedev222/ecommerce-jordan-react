@@ -1,0 +1,35 @@
+// MIXINS
+
+@mixin flex($direction, $justify, $align) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin grid($justify, $align) {
+    display: grid;
+    justify-items: $justify;
+    align-items: $align;
+}
+
+@mixin parallax {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100vh;
+}
+
+@mixin mediamax($px) {
+    @media screen and (max-width: $px) {
+        @content;
+    }
+}
+
+@mixin mediamin($px) {
+    @media screen and (min-width: $px) {
+        @content;
+    }
+}

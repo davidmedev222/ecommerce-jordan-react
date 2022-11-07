@@ -1,4 +1,3 @@
-import "./ItemListCart.scss"; // STYLES
 import { CartContext } from "../../.././context/cart/CartContext"; // CONTEXT
 import { NavBar } from "../../.././components/navbar/NavBar"; // COMPONENT
 import { ItemList } from "./ItemList"; // COMPONENT

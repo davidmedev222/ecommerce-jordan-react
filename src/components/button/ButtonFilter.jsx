@@ -1,4 +1,3 @@
-import "./ButtonFilter.scss"; // STYLES
 import { useNavigate } from "react-router-dom"; // HOOKS
 
 const ButtonFilter = ({ text, path }) => {

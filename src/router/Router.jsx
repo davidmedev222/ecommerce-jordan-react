@@ -1,5 +1,4 @@
-import ".././styles/reset.scss"; // STYLES
-import ".././styles/utilities.scss"; // STYLES
+import ".././styles/App.scss"; // STYLES
 import { CartContextProvider } from "../context/cart/CartContextProvider"; // CONTEXT
 import { Home } from "../pages/home/Home"; // COMPONENT
 import { Error } from "../pages/error/Error"; // COMPONENT

@@ -1,4 +1,3 @@
-import "./EmptyCart.scss"; // STYLES
 import { Button } from "../../../components/button/Button"; // COMPONENT
 import { useNavigate } from "react-router-dom"; // HOOKS
 
