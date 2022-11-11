@@ -14,7 +14,7 @@
         border: 1px solid black;
         border-radius: 1rem;
         flex: 1;
-        transition: flex 600ms ease-in;
+        transition: flex 1000ms ease-in;
     }
     &-img:nth-child(1) {
         background-image: url("https://i.ibb.co/CQgrSc1/product-28.webp");
@@ -35,9 +35,9 @@
         position: absolute;
         top: 10%;
         left: 5%;
-        font-size: clamp(3rem, 4vw, 8rem);
+        font-size: clamp(2.75rem, 3vw, 8rem);
         font-weight: 800;
-        transition: font-size 600ms ease-in;
+        transition: font-size 700ms ease-in;
     }
 }
 
@@ -47,11 +47,11 @@
         flex-direction: column;
     }
 }
-@include mediamin(768px) {
+@include mediamin(1124px) {
     .category-img:hover {
         flex: 4;
         .category-span {
-            font-size: clamp(3rem, 8.5vw, 15rem);
+            font-size: clamp(2.75rem, 8vw, 16rem);
         }
     }
 }
