@@ -8,30 +8,30 @@ const CartContextProvider = ({ children }) => {
         updateCart([...cart, { ...item, quantity: quantity }]);
     };
 
-    const isInCart = (id) => {
-        return cart.some((cadaItem) => cadaItem.id === id);
+    const isInCart = (codeProduct) => {
+        return cart.some((cadaItem) => cadaItem.cp === codeProduct);
     };
 
-    const decreaseItem = (id) => {
+    const decreaseItem = (codeProduct) => {
         updateCart(
             cart.map((cadaItem, index) => {
-                if (cadaItem.id === id) return { ...cadaItem, quantity: cart[index].quantity - 1 };
+                if (cadaItem.cp === codeProduct) return { ...cadaItem, quantity: cart[index].quantity - 1 };
                 return cadaItem;
             })
         );
     };
 
-    const increaseItem = (id) => {
+    const increaseItem = (codeProduct) => {
         updateCart(
             cart.map((cadaItem, index) => {
-                if (cadaItem.id === id) return { ...cadaItem, quantity: cart[index].quantity + 1 };
+                if (cadaItem.cp === codeProduct) return { ...cadaItem, quantity: cart[index].quantity + 1 };
                 return cadaItem;
             })
         );
     };
 
-    const deleteItem = (id) => {
-        updateCart(cart.filter((cadaItem) => cadaItem.id !== id));
+    const deleteItem = (codeProduct) => {
+        updateCart(cart.filter((cadaItem) => cadaItem.cp !== codeProduct));
     };
 
     const removeCart = () => {
