@@ -1,4 +1,4 @@
-import { fetchJordan } from "../../../services/jordanAPI"; // API
+import { getItems } from "../../.././services/firestore/getItems"; // FIRESTORE
 import { NavBar } from "../../../components/navbar/NavBar"; // COMPONENT
 import { ItemList } from "./ItemList"; // COMPONENT
 import { ButtonFilter } from "../../.././components/button/ButtonFilter"; // COMPONENT
@@ -8,9 +8,7 @@ const ItemListContainer = () => {
     const [products, updateProducts] = useState([]); // STATE
 
     useEffect(() => {
-        setTimeout(() => {
-            fetchJordan().then((response) => updateProducts(response)); // API RESULTS
-        }, 50);
+        getItems().then((response) => updateProducts(response)); // RESULT REQUEST
     }, []);
 
     return (

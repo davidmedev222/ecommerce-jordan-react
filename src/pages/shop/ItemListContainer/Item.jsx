@@ -1,10 +1,10 @@
 import { useNavigate } from "react-router-dom"; // HOOKS
 
-const Item = ({ id, price, imageOne, name }) => {
+const Item = ({ cp, price, imageOne, name }) => {
     const navigate = useNavigate(); // NAVIGATE
 
     const handleNavigate = () => {
-        navigate(`/shop/item/${id}`); // EVENT
+        navigate(`/shop/item/${cp}`); // EVENT
     };
 
     return (

@@ -4,22 +4,22 @@ import { Button } from "../../../components/button/Button"; // COMPONENT
 import { useNavigate } from "react-router-dom"; // HOOKS
 import { useState, useContext } from "react"; // HOOKS
 
-const ItemDetail = ({ id, imageOne, imageTwo, name, collection, color, price, stock, designer, location, launch }) => {
+const ItemDetail = ({ cp, imageOne, imageTwo, name, collection, color, price, stock, designer, location, launch }) => {
     const navigate = useNavigate(); // NAVIGATE
 
     const [onAdd, updateOnAdd] = useState(false); // STATE
 
     const { isInCart } = useContext(CartContext); // HELPER
 
-    const item = {
-        id: id,
+    const modelItem = {
+        cp: cp,
         image: imageOne,
         name: name,
         color: color,
         price: price,
         stock: stock,
         quantity: 1,
-    }; // ITEM
+    }; // MODEL ITEM
 
     return (
         <div className="card-detail">
@@ -57,10 +57,10 @@ const ItemDetail = ({ id, imageOne, imageTwo, name, collection, color, price, st
                     {stock} available units
                 </span>
                 {/* COMPONENT BUTTON OR ITEM COUNT */}
-                {onAdd || isInCart(id) ? (
+                {onAdd || isInCart(cp) ? (
                     <Button onClick={() => navigate("/cart")}>checkout</Button>
                 ) : (
-                    <ItemCount item={item} onAdd={updateOnAdd} stock={stock} initial={1} />
+                    <ItemCount item={modelItem} onAdd={updateOnAdd} stock={stock} initial={1} />
                 )}
                 <footer className="card-detail-footer">
                     {/* DESIGNER */}

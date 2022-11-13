@@ -9,9 +9,9 @@ const ItemList = ({ items }) => {
         if (paramRoute) {
             return products
                 .filter((cadaJordan) => cadaJordan.year === category)
-                .map((cadaJordan) => <Item key={cadaJordan.id} {...cadaJordan} />);
+                .map((cadaJordan) => <Item key={cadaJordan.cp} {...cadaJordan} />);
         } else {
-            return products.map((cadaJordan) => <Item key={cadaJordan.id} {...cadaJordan} />);
+            return products.map((cadaJordan) => <Item key={cadaJordan.cp} {...cadaJordan} />);
         }
     };
     const products = component(category, items); // RESULT COMPONENT ITEM
