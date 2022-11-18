@@ -14,7 +14,7 @@ const ItemDetailContainer = () => {
     }, [id]);
 
     return (
-        <div className="shop-detail">
+        <div className="section">
             {/* COMPONENT ITEM DETAIL OR LOADING */}
             {product.length > 0 ? componentItemDetail : <h1 className="h1">CARGANDO</h1>}
         </div>

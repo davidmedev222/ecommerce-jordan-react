@@ -7,6 +7,10 @@ import { useState, useContext } from "react"; // HOOKS
 const ItemDetail = ({ cp, imageOne, imageTwo, name, collection, color, price, stock, designer, location, launch }) => {
     const navigate = useNavigate(); // NAVIGATE
 
+    const handleNavigate = () => {
+        navigate("/shop");
+    }; // EVENT
+
     const [onAdd, updateOnAdd] = useState(false); // STATE
 
     const { isInCart } = useContext(CartContext); // HELPER
@@ -29,9 +33,9 @@ const ItemDetail = ({ cp, imageOne, imageTwo, name, collection, color, price, st
                 <img className="card-detail-image card-detail-image-two " src={imageTwo} alt={name} />
             </picture>
             {/* BUTTON */}
-            <button onClick={() => navigate("/shop")} className="card-detail-close">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
-                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z" />
+            <button onClick={handleNavigate} className="card-detail-close">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                    <path d="M109.3 288L480 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-370.7 0 73.4-73.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-128 128c-12.5 12.5-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 288z" />
                 </svg>
             </button>
             {/* INFO */}
