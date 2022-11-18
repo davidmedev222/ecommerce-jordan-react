@@ -21,3 +21,6 @@
 //? CART
 @use "./pages/cart/EmptyCart/EmptyCart";
 @use "./pages/cart/ItemListCart/ItemListCart";
+//? LOGIN & REGISTER
+@use "./pages/login/Login";
+@use "./pages/login/Register";

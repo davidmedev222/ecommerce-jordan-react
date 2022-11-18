@@ -11,25 +11,25 @@
         position: relative;
         background-size: cover;
         background-position: center;
-        border: 1px solid black;
+        background-color: lightgrey;
         border-radius: 1rem;
         flex: 1;
         transition: flex 1000ms ease-in;
     }
     &-img:nth-child(1) {
-        background-image: url("https://i.ibb.co/CQgrSc1/product-28.webp");
+        background-image: url("https://res.cloudinary.com/dos3i5jqy/image/upload/v1668792321/ecommerce-jordan-react/product-28_mofgy5.webp");
     }
     &-img:nth-child(2) {
-        background-image: url("https://i.ibb.co/vcRXShm/product-10.webp");
+        background-image: url("https://res.cloudinary.com/dos3i5jqy/image/upload/v1668792315/ecommerce-jordan-react/product-10_g5gby9.webp");
     }
     &-img:nth-child(3) {
-        background-image: url("https://i.ibb.co/K9nkBcR/product-15.webp");
+        background-image: url("https://res.cloudinary.com/dos3i5jqy/image/upload/v1668792316/ecommerce-jordan-react/product-15_pd73xl.webp");
     }
     &-img:nth-child(4) {
-        background-image: url("https://i.ibb.co/1fqnx1n/product-27.webp");
+        background-image: url("https://res.cloudinary.com/dos3i5jqy/image/upload/v1668792316/ecommerce-jordan-react/product-27_lbelzo.webp");
     }
     &-img:nth-child(5) {
-        background-image: url("https://i.ibb.co/fkcVT2r/product-30.webp");
+        background-image: url("https://res.cloudinary.com/dos3i5jqy/image/upload/v1668792317/ecommerce-jordan-react/product-30_pbny4c.webp");
     }
     &-span {
         position: absolute;

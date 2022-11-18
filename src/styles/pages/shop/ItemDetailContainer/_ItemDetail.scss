@@ -3,36 +3,36 @@
 
 // STYLES
 .card-detail {
-    @include grid(center, center);
-    grid-template: "images info" auto / 55% 45%;
+    display: flex;
     position: relative;
-    height: 100%;
+    flex-direction: row;
+    gap: clamp(1rem, 1vw, 2rem);
 
     &-close {
         position: absolute;
         top: 5%;
-        right: 5%;
+        left: 10%;
         width: clamp(3rem, 5vw, 10rem);
     }
     &-picture {
-        grid-area: images;
+        flex: 1;
     }
     &-info {
-        grid-area: info;
+        flex: 1;
         @include flex(column, center, center);
-        gap: 0.75rem;
+        gap: clamp(1rem, 1vw, 2rem);
     }
     &-collection {
         opacity: 0;
         font-size: clamp(0.85rem, 1.5vw, 3rem);
-        font-weight: bold;
+        font-weight: 800;
         color: grey;
     }
     &-name {
         opacity: 0;
         font-size: clamp(2.5rem, 5vw, 10rem);
-        font-weight: bold;
-        text-align: center;
+        font-weight: 900;
+        padding: 0 clamp(0.5rem, 1vw, 2rem);
     }
     &-color {
         @extend .card-detail-collection;
@@ -55,17 +55,13 @@
     &-footer {
         @include flex(column, center, center);
         gap: clamp(0.75rem, 1.5vw, 3rem);
-        margin: 3rem 0 0 0;
+        margin: clamp(1rem, 3vw, 6rem) 0 0 0;
     }
 }
 
 // MEDIAQUERYS
 @include mediamax(900px) {
     .card-detail {
-        grid-template: "images images" auto "info info" auto / 1fr 1fr;
-        padding: clamp(0rem, 5vw, 10rem);
-    }
-    .card-detail-info {
-        padding: clamp(0rem, 7.5vw, 15rem);
+        flex-direction: column;
     }
 }

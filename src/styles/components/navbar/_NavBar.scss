@@ -13,14 +13,14 @@
         gap: clamp(0rem, 1.5vw, 3rem);
     }
     &-icon {
-        width: clamp(4rem, 5vw, 10rem);
         background-color: lightgrey;
-        padding: 1em;
+        width: clamp(4rem, 5vw, 10rem);
         border-radius: 100%;
+        padding: clamp(1rem, 1vw, 2rem);
     }
     &-title {
         font-size: clamp(1.25rem, 2.25vw, 5rem);
-        font-weight: 800;
+        font-weight: 900;
     }
     &-cart {
         position: relative;
@@ -35,7 +35,7 @@
     }
     &-a {
         font-size: clamp(1rem, 2.25vw, 5rem);
-        font-weight: 800;
+        font-weight: 900;
     }
 }
 
