@@ -1,6 +1,6 @@
 import { ItemCount } from "./ItemCount"; // COMPONENT
 
-const Item = ({ id, image, name, color, price, quantity, stock }) => {
+const Item = ({ cp, image, name, color, price, quantity, stock }) => {
     return (
         <div className="cart-item">
             {/* IMAGE */}
@@ -14,7 +14,7 @@ const Item = ({ id, image, name, color, price, quantity, stock }) => {
                 <span className="cart-price">{price} usd</span>
             </article>
             {/* ITEM COUNT */}
-            <ItemCount itemId={id} itemQuantity={quantity} itemStock={stock} />
+            <ItemCount itemCp={cp} itemQuantity={quantity} itemStock={stock} />
         </div>
     );
 };

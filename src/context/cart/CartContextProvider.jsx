@@ -5,7 +5,7 @@ const CartContextProvider = ({ children }) => {
     const [cart, updateCart] = useState([]); // STATE
 
     const addItem = (item, quantity) => {
-        updateCart([...cart, { ...item, quantity: quantity }]);
+        updateCart((prevCart) => [...prevCart, { ...item, quantity: quantity }]);
     };
 
     const isInCart = (codeProduct) => {
@@ -13,8 +13,8 @@ const CartContextProvider = ({ children }) => {
     };
 
     const decreaseItem = (codeProduct) => {
-        updateCart(
-            cart.map((cadaItem, index) => {
+        updateCart((prevCart) =>
+            prevCart.map((cadaItem, index) => {
                 if (cadaItem.cp === codeProduct) return { ...cadaItem, quantity: cart[index].quantity - 1 };
                 return cadaItem;
             })
@@ -22,8 +22,8 @@ const CartContextProvider = ({ children }) => {
     };
 
     const increaseItem = (codeProduct) => {
-        updateCart(
-            cart.map((cadaItem, index) => {
+        updateCart((prevCart) =>
+            prevCart.map((cadaItem, index) => {
                 if (cadaItem.cp === codeProduct) return { ...cadaItem, quantity: cart[index].quantity + 1 };
                 return cadaItem;
             })
@@ -31,7 +31,7 @@ const CartContextProvider = ({ children }) => {
     };
 
     const deleteItem = (codeProduct) => {
-        updateCart(cart.filter((cadaItem) => cadaItem.cp !== codeProduct));
+        updateCart((prevCart) => prevCart.filter((cadaItem) => cadaItem.cp !== codeProduct));
     };
 
     const removeCart = () => {
