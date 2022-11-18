@@ -1,0 +1,59 @@
+// MIXINS
+@import "../.././global/mixins";
+
+// STYLES
+.register-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    @include flex(row, center, center);
+    padding: clamp(1rem, 2.5vw, 5rem);
+}
+.register {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(1rem, 1vw, 2rem);
+    padding: clamp(1rem, 2vw, 4rem) clamp(1rem, 3.5vw, 7rem);
+    max-width: clamp(480px, 60vw, 60vw);
+
+    &-btn-close {
+        color: #181818;
+        width: clamp(2.5rem, 3vw, 6rem);
+        position: absolute;
+        top: 5%;
+        left: 10%;
+    }
+    &-h1 {
+        color: #181818;
+        font-size: clamp(2rem, 2vw, 4rem);
+        font-weight: 900;
+    }
+    &-span {
+        color: #181818;
+        font-size: clamp(0.75rem, 1vw, 2rem);
+        font-weight: 400;
+        padding: 0 clamp(1rem, 6vw, 12rem);
+    }
+    &-label {
+        font-size: clamp(1rem, 1.5vw, 2rem);
+        font-weight: 700;
+        padding: clamp(0.5rem, 0.5vw, 1rem) 0;
+    }
+    &-input {
+        width: 100%;
+        outline: none;
+        border-bottom: 1px solid black;
+        padding: clamp(0.5rem, 0.5vw, 1rem) 0;
+    }
+    &-p {
+        color: #181818;
+        font-size: clamp(0.75em, 0.75vw, 1.5rem);
+        font-weight: 400;
+    }
+    &-a {
+        text-decoration: underline;
+    }
+    &-btn {
+        text-transform: capitalize;
+    }
+}
