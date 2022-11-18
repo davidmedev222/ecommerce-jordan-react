@@ -2,12 +2,17 @@ import { CartContext } from "../../.././context/cart/CartContext"; // CONTEXT
 import { Item } from "./Item"; // COMPONENT
 import { Button } from "../../.././components/button/Button"; // COMPONENT
 import { useContext } from "react"; // HOOKS
+import { createOrder } from "../../../services/firestore/createOrder"; // FUNCTION FOR FIRESTORE
 
 const ItemList = () => {
     const { cart, removeCart, totalQuantityItems, totalPrice } = useContext(CartContext); // HELPERS
 
-    const items = cart.map((cadaItem) => <Item key={cadaItem.id} {...cadaItem} />);
+    const items = cart.map((cadaItem) => <Item key={cadaItem.cp} {...cadaItem} />); // COMPONENT ITEM
 
+    const handleCreateOrder = () => {
+        createOrder(cart, totalQuantityItems, totalPrice);
+        removeCart();
+    };
     return (
         <div className="cart-content">
             {/* COMPONENT ITEM */}
@@ -30,7 +35,7 @@ const ItemList = () => {
                     <span className="cart-price">{totalPrice()} USD</span>
                 </article>
                 {/* COMPONENT BUTTON */}
-                <Button>checkout</Button>
+                <Button onClick={handleCreateOrder}>checkout</Button>
             </div>
         </div>
     );

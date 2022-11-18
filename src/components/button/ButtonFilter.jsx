@@ -1,16 +1,10 @@
-import { useNavigate } from "react-router-dom"; // HOOKS
+import { NavLink } from "react-router-dom"; // ROUTER DOM
 
 const ButtonFilter = ({ text, path }) => {
-    const navigate = useNavigate(); // NAVIGATE
-
-    const handleNavigate = (to) => {
-        navigate(to); // EVENT
-    };
-
     return (
-        <button onClick={() => handleNavigate(path)} className="btn-filter">
+        <NavLink to={path} className={({ isActive }) => (isActive ? "btn-filter btn-filter-active" : "btn-filter")}>
             {text}
-        </button>
+        </NavLink>
     );
 };
 
