@@ -24,3 +24,6 @@
 //? LOGIN & REGISTER
 @use "./pages/login/Login";
 @use "./pages/login/Register";
+//? CHECKOUT
+@use "./pages/checkout/Checkout";
+@use "./pages/checkout/CheckoutMessage";
