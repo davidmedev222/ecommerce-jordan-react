@@ -1,4 +1,4 @@
-import { CartContext } from "./CartContext"; // COMPONENT
+import { CartContext } from "./CartContext"; // COMPONENT CONTEXT
 import { useState } from "react"; // HOOKS
 
 const CartContextProvider = ({ children }) => {
@@ -46,6 +46,10 @@ const CartContextProvider = ({ children }) => {
         return cart.reduce((acumulador, cadaItem) => acumulador + cadaItem.price * cadaItem.quantity, 0);
     };
 
+    const [order, updateOrder] = useState({}); // STATE
+
+    const [orderUid, updateOrderUid] = useState(""); // STATE
+
     const values = {
         cart,
         updateCart,
@@ -57,6 +61,10 @@ const CartContextProvider = ({ children }) => {
         removeCart,
         totalQuantityItems,
         totalPrice,
+        order,
+        updateOrder,
+        orderUid,
+        updateOrderUid,
     };
 
     return <CartContext.Provider value={values}>{children}</CartContext.Provider>;
