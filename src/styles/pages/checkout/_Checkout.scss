@@ -41,7 +41,7 @@
         @include flex(column, center, flex-start);
         gap: clamp(1rem, 1vw, 2rem);
         padding: clamp(1rem, 1vw, 2rem);
-        &-sub {
+        &-brief {
             font-size: clamp(0.75rem, 1.5vw, 3rem);
             font-weight: 700;
         }
