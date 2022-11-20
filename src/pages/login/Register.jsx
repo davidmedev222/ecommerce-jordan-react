@@ -56,6 +56,9 @@ const Register = () => {
                             className="register-input"
                             type="text"
                             name="name"
+                            required={true}
+                            minLength={3}
+                            maxLength={30}
                         />
                     </label>
                     <label htmlFor="phone" className="register-label">
@@ -66,6 +69,9 @@ const Register = () => {
                             className="register-input"
                             type="tel"
                             name="phone"
+                            required={true}
+                            minLength={10}
+                            maxLength={16}
                         />
                     </label>
                     <label htmlFor="email" className="register-label">
@@ -76,6 +82,9 @@ const Register = () => {
                             className="register-input"
                             type="email"
                             name="email"
+                            required={true}
+                            minLength={5}
+                            maxLength={50}
                         />
                     </label>
                     <label htmlFor="password" className="register-label">
@@ -86,6 +95,9 @@ const Register = () => {
                             className="register-input"
                             type="password"
                             name="password"
+                            required={true}
+                            minLength={5}
+                            maxLength={30}
                         />
                     </label>
                     {/* BUTTON */}
