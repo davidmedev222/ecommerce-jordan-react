@@ -1,8 +1,37 @@
+import { UserContext } from "../../context/user/UserContext"; // CONTEXT
+import { useContext } from "react"; // HOOKS
 import { Link, useNavigate } from "react-router-dom"; // ROUTER DOM & HOOK
-import { Button } from "../.././components/button/Button"; // COMPONENT
 
 const Register = () => {
     const navigate = useNavigate(); // NAVIGATE
+
+    const { updateUser, userModel, updateUserModel, createUser } = useContext(UserContext); // HELPERS
+
+    const handleOnChange = (ev) => {
+        updateUserModel((prevUserModel) => {
+            return {
+                ...prevUserModel,
+                [ev.target.name]: ev.target.value,
+            };
+        });
+    }; // EVENT
+
+    const handleFormSubmit = async (ev) => {
+        try {
+            ev.preventDefault();
+            const userCredential = await createUser(userModel.email, userModel.password); // REQUEST AUTH
+            updateUser({
+                name: userCredential.user.displayName ?? userModel.name,
+                phone: userCredential.user.phoneNumber ?? userModel.phone,
+                email: userCredential.user.email,
+                photo: userCredential.user.photoURL,
+                orders: [],
+            });
+            navigate("/account"); // NAVIGATE
+        } catch (error) {
+            console.log(error.code);
+        }
+    }; // EVENT
 
     return (
         <div className="register-container">
@@ -18,38 +47,64 @@ const Register = () => {
                 {/* INFO */}
                 <span className="register-span">Fill in the form with your data to create a new account.</span>
                 {/* FORM */}
-                <form>
+                <form onSubmit={handleFormSubmit} className="register-form">
                     <label htmlFor="name" className="register-label">
                         User Name
-                        <input className="register-input" type="text" name="name" />
+                        <input
+                            value={userModel.name}
+                            onChange={handleOnChange}
+                            className="register-input"
+                            type="text"
+                            name="name"
+                        />
+                    </label>
+                    <label htmlFor="phone" className="register-label">
+                        Phone
+                        <input
+                            value={userModel.phone}
+                            onChange={handleOnChange}
+                            className="register-input"
+                            type="tel"
+                            name="phone"
+                        />
                     </label>
                     <label htmlFor="email" className="register-label">
                         Email
-                        <input className="register-input" type="email" name="email" />
+                        <input
+                            value={userModel.email}
+                            onChange={handleOnChange}
+                            className="register-input"
+                            type="email"
+                            name="email"
+                        />
                     </label>
                     <label htmlFor="password" className="register-label">
                         Password
-                        <input className="register-input" type="password" name="password" />
+                        <input
+                            value={userModel.password}
+                            onChange={handleOnChange}
+                            className="register-input"
+                            type="password"
+                            name="password"
+                        />
                     </label>
-                    <label htmlFor="confirm-password" className="register-label">
-                        Confirm Password
-                        <input className="register-input" type="password" name="confirm-password" />
-                    </label>
+                    {/* BUTTON */}
+                    <button type="sumbit" className="btn register-btn">
+                        CreateAccount
+                    </button>
                 </form>
                 {/* DETAILS */}
                 <p className="register-p">
                     By clicking on the button, you accept the{" "}
-                    <Link to="/tyc" className="register-a">
+                    <Link to="#" className="register-a">
                         Terms of Use
                     </Link>{" "}
                     and the{" "}
-                    <Link to="/pp" className="register-a">
+                    <Link to="#" className="register-a">
                         Privacy Policy
                     </Link>{" "}
                     and also confirms that he is 18 years of age or older.
                 </p>
-                {/* COMPONENT BUTTON */}
-                <Button className="register-btn">Create Account</Button>
             </section>
         </div>
     );
