@@ -46,7 +46,9 @@ const CartContextProvider = ({ children }) => {
         return cart.reduce((acumulador, cadaItem) => acumulador + cadaItem.price * cadaItem.quantity, 0);
     };
 
-    const [order, updateOrder] = useState({}); // STATE
+    const [order, updateOrder] = useState(undefined); // STATE
+
+    const [onOrder, updateOnOrder] = useState(false); // STATE
 
     const [orderUid, updateOrderUid] = useState(""); // STATE
 
@@ -63,6 +65,8 @@ const CartContextProvider = ({ children }) => {
         totalPrice,
         order,
         updateOrder,
+        onOrder,
+        updateOnOrder,
         orderUid,
         updateOrderUid,
     };

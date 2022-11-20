@@ -11,7 +11,7 @@ const UserContextProvider = ({ children }) => {
         phone: "",
         email: "",
         password: "",
-    });
+    }); // MODEL USER
 
     const createUser = (email, password) => createUserWithEmailAndPassword(auth, email, password);
 
