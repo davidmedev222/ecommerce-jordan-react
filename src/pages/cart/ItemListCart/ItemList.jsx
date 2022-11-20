@@ -2,17 +2,23 @@ import { CartContext } from "../../.././context/cart/CartContext"; // CONTEXT
 import { Item } from "./Item"; // COMPONENT
 import { Button } from "../../.././components/button/Button"; // COMPONENT
 import { useContext } from "react"; // HOOKS
-import { createOrder } from "../../../services/firestore/createOrder"; // FUNCTION FOR FIRESTORE
+import { useOrder } from "../../../hooks/firestore/useOrder"; // CUSTOM HOOK
+import { useNavigate } from "react-router-dom"; // HOOKS
 
 const ItemList = () => {
-    const { cart, removeCart, totalQuantityItems, totalPrice } = useContext(CartContext); // HELPERS
+    const { cart, removeCart, totalQuantityItems, totalPrice, updateOrder } = useContext(CartContext); // HELPERS
 
     const items = cart.map((cadaItem) => <Item key={cadaItem.cp} {...cadaItem} />); // COMPONENT ITEM
 
+    const navigate = useNavigate(); // NAVIGATE
+
+    const { createOrder } = useOrder(); // HELPERS
+
     const handleCreateOrder = () => {
-        createOrder(cart, totalQuantityItems, totalPrice);
-        removeCart();
-    };
+        updateOrder(createOrder(cart, totalQuantityItems, totalPrice)); // ORDER UPDATE
+        navigate("/checkout"); // REDIRECT
+    }; // EVENT
+
     return (
         <div className="cart-content">
             {/* COMPONENT ITEM */}
