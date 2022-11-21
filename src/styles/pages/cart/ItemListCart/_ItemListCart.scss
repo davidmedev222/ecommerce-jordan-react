@@ -33,7 +33,7 @@
     }
 
     &-color {
-        color: grey;
+        color: var(--text-three);
         font-size: clamp(1rem, 1.25vw, 2.5rem);
         font-weight: 800;
     }
@@ -48,9 +48,10 @@
 
         &-btn {
             width: clamp(2.5rem, 3vw, 6rem);
+            color: var(--icon);
+            background-color: var(--icon-background);
             border-radius: 100%;
             padding: 0.5em;
-            background-color: lightgrey;
         }
         &-quantity {
             font-size: clamp(1.25rem, 1.5vw, 3rem);
@@ -64,8 +65,8 @@
     }
     &-empty {
         align-self: flex-end;
-        color: black;
-        background-color: lightgrey;
+        color: var(--text-one);
+        background-color: var(--icon-background);
     }
     &-discount {
         display: flex;
@@ -78,7 +79,7 @@
         font-size: clamp(1rem, 1.5vw, 2rem);
         font-weight: 400;
         padding: clamp(0.75em, 1vw, 1.5rem) clamp(1.5em, 2vw, 3rem);
-        border: black 2.5px solid;
+        border: var(--text-one) 2.5px solid;
         border-radius: 3rem;
 
         &::placeholder {
@@ -103,7 +104,7 @@
     }
     &-description {
         @extend .cart-color;
-        color: grey;
+        color: var(--text-three);
     }
 }
 

@@ -4,19 +4,30 @@
 // STYLES
 .header {
     @include flex(row, space-around, center);
-    padding: clamp(0.5rem, 2vw, 4rem);
     position: sticky;
     top: 0;
+    background-color: var(--background-one);
+    padding: clamp(0.5rem, 2vw, 4rem);
+    z-index: 1;
+
+    &-active {
+        color: #c7c7c7;
+    }
 
     &-icons {
         @include flex(row, center, center);
         gap: clamp(0rem, 1.5vw, 3rem);
     }
     &-icon {
-        background-color: lightgrey;
+        color: var(--icon);
         width: clamp(4rem, 5vw, 10rem);
         border-radius: 100%;
+        background-color: var(--icon-background);
         padding: clamp(1rem, 1vw, 2rem);
+    }
+    &-icon-active {
+        color: var(--icon-active);
+        background-color: var(--icon-background-active);
     }
     &-title {
         font-size: clamp(1.25rem, 2.25vw, 5rem);

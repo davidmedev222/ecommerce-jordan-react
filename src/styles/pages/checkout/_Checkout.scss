@@ -16,19 +16,13 @@
     padding: clamp(1rem, 2vw, 4rem) clamp(1rem, 3.5vw, 7rem);
 
     &-btn-close {
-        color: #181818;
+        color: var(--icon);
         width: clamp(2.5rem, 3vw, 6rem);
         position: absolute;
         top: 5%;
         left: 10%;
     }
-    &-h1 {
-        color: #181818;
-        font-size: clamp(2rem, 2vw, 4rem);
-        font-weight: 900;
-    }
     &-span {
-        color: #181818;
         font-size: clamp(0.75rem, 1vw, 2rem);
         font-weight: 400;
         padding: 0 clamp(1rem, 6vw, 12rem);
@@ -50,7 +44,6 @@
         }
     }
     &-p {
-        color: #181818;
         font-size: clamp(0.75em, 0.75vw, 1.5rem);
         font-weight: 400;
     }

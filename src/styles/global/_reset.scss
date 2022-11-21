@@ -4,12 +4,20 @@
 // RAIZ
 :root {
     // COLORES
-    --text-primary: #181818;
-    --background-primary: #e6e6e6;
-    --background-secondary: #d9d9d9;
+    --text-one: #0d0d0d; // 5%
+    --text-two: #f2f2f2; // 95%
+    --text-three: #b3b3b3; // 70%
+    --background-one: #f2f2f2; // 95%
+    --background-two: #d9d9d9; // 85%
+    --component-one: #262626; // 15%
+    --btn: #262626; // 15%
+    --icon: #262626; // 15%
+    --icon-background: #d9d9d9; // 85%
+    --icon-active: #d9d9d9; // 85%
+    --icon-background-active: #262626; // 15%
     // TIPOGRAFIA
-    --family-primary: "Montserrat", sans-serif;
-    --family-secondary: Helvetica, Arial, sans-serif;
+    --family-one: "Montserrat", sans-serif;
+    --family-two: Helvetica, Arial, sans-serif;
 }
 
 // GENERAL
@@ -27,16 +35,16 @@
     grid-template-rows: auto 1fr;
     min-height: 100vh;
     font-size: 100%;
-    font-family: var(--family-primary);
-    color: var(--text-primary);
-    background-color: var(--background-primary);
+    font-family: var(--family-one);
+    color: var(--text-one);
+    background-color: var(--background-one);
     hyphens: auto;
 
     &::-webkit-scrollbar {
         width: 7px;
     }
     &::-webkit-scrollbar-thumb {
-        background-color: var(--text-primary);
+        background-color: var(--text-one);
     }
 }
 
@@ -95,13 +103,13 @@ em {
 
 // SELECCION DE TEXTO Y COLOR
 ::-moz-selection {
-    background-color: var(--text-primary);
-    color: var(--background-primary);
+    background-color: var(--text-one);
+    color: var(--background-one);
 }
 
 ::selection {
-    background-color: var(--text-primary);
-    color: var(--background-primary);
+    background-color: var(--text-one);
+    color: var(--background-one);
 }
 
 form,

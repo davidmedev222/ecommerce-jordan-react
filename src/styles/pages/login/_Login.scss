@@ -17,35 +17,32 @@
     max-width: clamp(480px, 60vw, 60vw);
 
     &-btn-close {
-        color: #181818;
+        color: var(--component-one);
         width: clamp(2.5rem, 3vw, 6rem);
         position: absolute;
         top: 5%;
         left: 10%;
     }
     &-h1 {
-        color: #181818;
         font-size: clamp(2rem, 2vw, 4rem);
         font-weight: 900;
     }
     &-h2 {
-        color: #181818;
         font-size: clamp(1.25rem, 1.5vw, 3rem);
         font-weight: 800;
     }
     &-span {
-        color: #181818;
         font-size: clamp(0.75rem, 1vw, 2rem);
         font-weight: 400;
         padding: 0 clamp(1rem, 6vw, 12rem);
     }
     &-btn {
-        color: #ffffff;
-        background-color: #45474f;
+        color: var(--text-two);
+        background-color: var(--btn);
         font-size: clamp(0.75rem, 1vw, 2rem);
         font-weight: 800;
-        padding: clamp(1rem, 1vw, 2rem) clamp(1.5rem, 3vw, 6rem);
         border-radius: 3rem;
+        padding: clamp(1rem, 1vw, 2rem) clamp(1.5rem, 3vw, 6rem);
         &-apple {
             background-color: #45474f;
         }
@@ -53,19 +50,16 @@
             background-color: #4f6abf;
         }
         &-google {
-            color: #181818;
-            background-color: #ffffff;
-        }
-        &-correo {
-            background-color: #181818;
+            color: var(--text-one);
+            background-color: var(--icon-background);
         }
     }
     &-p {
-        color: #181818;
         font-size: clamp(0.75em, 0.75vw, 1.5rem);
         font-weight: 400;
     }
     &-a {
         text-decoration: underline;
+        font-weight: 800;
     }
 }

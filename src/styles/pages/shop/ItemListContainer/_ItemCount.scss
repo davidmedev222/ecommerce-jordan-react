@@ -10,7 +10,8 @@
         width: clamp(2.5rem, 3vw, 6rem);
         border-radius: 100%;
         padding: 0.5em;
-        background-color: lightgrey;
+        color: var(--icon);
+        background-color: var(--icon-background);
     }
     &-quantity {
         font-size: clamp(1.25rem, 1.5vw, 3rem);
