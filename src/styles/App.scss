@@ -4,6 +4,7 @@
 @use "./global/utilities";
 
 //* IMPORT COMPONENTS
+@use "./components/toastify/Toastify";
 @use "./components/navbar/NavBar";
 @use "./components/category/Category";
 @use "./components/panel/Panel";
