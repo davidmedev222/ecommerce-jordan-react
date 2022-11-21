@@ -6,8 +6,10 @@ import { useOrder } from "../../hooks/firestore/useOrder"; // CUSTOM HOOK
 const BriefCheckout = () => {
     const navigate = useNavigate(); // NAVIGATE
 
+    const { order, removeCart, updateOnOrder } = useContext(CartContext); // HELPERS
+    const { buyer, total } = order; // DESTRUCTURING ORDER
+
     const { postOrder } = useOrder(); // HELPERS
-    const { removeCart, updateOnOrder } = useContext(CartContext); // HELPERS
 
     const handleConfirmOrder = async () => {
         await postOrder(); // REQUEST FIRESTORE
@@ -28,23 +30,23 @@ const BriefCheckout = () => {
                 {/* BUYER */}
                 <div className="order-data">
                     <span className="order-data-brief">
-                        Name <span className="order-data-span">: davidmedev</span>
+                        Name <span className="order-data-span">: {buyer.name}</span>
                     </span>
                     <span className="order-data-brief">
-                        Email <span className="order-data-span"> : davidcatrielamaman@gmail.com</span>
+                        Email <span className="order-data-span"> : {buyer.email}</span>
                     </span>
                     <span className="order-data-brief">
-                        Phone <span className="order-data-span"> : 1168663837</span>
+                        Phone <span className="order-data-span"> : {buyer.phone}</span>
                     </span>
                 </div>
                 <h4 className="order-heading">total</h4>
                 {/* TOTAL */}
                 <div className="order-data">
                     <span className="order-data-brief">
-                        Items <span className="order-data-span">: 14</span>
+                        Items <span className="order-data-span">: {total.items}</span>
                     </span>
                     <span className="order-data-brief">
-                        Price <span className="order-data-span">: 232usd</span>
+                        Price <span className="order-data-span">: {total.price} usd</span>
                     </span>
                 </div>
             </div>
