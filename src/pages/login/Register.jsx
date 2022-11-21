@@ -1,6 +1,7 @@
 import { UserContext } from "../../context/user/UserContext"; // CONTEXT
-import { useContext } from "react"; // HOOKS
 import { Link, useNavigate } from "react-router-dom"; // ROUTER DOM & HOOK
+import { useContext } from "react"; // HOOKS
+import { toastifyNotication } from "../../components/toastify/Toastify"; // FUNCTION NOTIFICATION
 
 const Register = () => {
     const navigate = useNavigate(); // NAVIGATE
@@ -28,8 +29,9 @@ const Register = () => {
                 orders: [],
             });
             navigate("/account"); // NAVIGATE
+            toastifyNotication("account created"); // NOTIFICATION
         } catch (error) {
-            console.log(error.code);
+            toastifyNotication(error.code);
         }
     }; // EVENT
 
