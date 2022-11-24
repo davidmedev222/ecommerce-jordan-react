@@ -30,9 +30,7 @@ const UserContextProvider = ({ children }) => {
 
     const signOutUser = () => signOut(auth);
 
-    const updateProfileUser = () => {
-        updateProfile(auth.currentUser);
-    };
+    const updateProfileUser = (object) => updateProfile(auth.currentUser, object);
 
     const values = {
         user,

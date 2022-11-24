@@ -22,12 +22,15 @@ const Register = () => {
         });
     }; // EVENT
 
-    const { updateUser, createUser } = useContext(UserContext); // HELPERS
+    const { updateUser, createUser, updateProfileUser } = useContext(UserContext); // HELPERS
 
     const handleFormSubmit = async (ev) => {
         try {
             ev.preventDefault();
             const userCredential = await createUser(registerData.email, registerData.password); // REQUEST FIREBASE AUTH
+            await updateProfileUser({
+                displayName: registerData.name,
+            }); // REQUEST FIREBASE AUTH
             updateUser(userCredential.user); // UPDATE USER
             navigate("/account"); // NAVIGATE
             toastifyNotication("account created"); // NOTIFICATION
