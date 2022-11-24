@@ -1,10 +1,20 @@
 import { Link, useNavigate } from "react-router-dom"; // ROUTER DOM & HOOK
+import { SignInWithCorreo } from "./SignInWithCorreo"; // COMPONENT
+import { useState } from "react"; // HOOKS
 
 const Login = () => {
     const navigate = useNavigate(); // NAVIGATE
 
+    const [onContinue, updateOnContinue] = useState(false); // STATE
+
+    const handleContinue = () => {
+        updateOnContinue(true);
+    }; // EVENT
+
     return (
         <div className="login-background">
+            {/* COMPONENT SIGN IN WITH CORREO */}
+            {onContinue && <SignInWithCorreo updateOnContinue={updateOnContinue} />}
             {/* BUTTON CLOSE */}
             <button onClick={() => navigate("/cart")} className="login-btn-close">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
@@ -20,7 +30,9 @@ const Login = () => {
                 <button className="login-btn login-btn-apple">Continue with Github</button>
                 <button className="login-btn login-btn-facebook">Continue with Facebook</button>
                 <button className="login-btn login-btn-google">Continue with Google</button>
-                <button className="login-btn login-btn-correo">Continue with tu correo</button>
+                <button onClick={handleContinue} className="login-btn login-btn-correo">
+                    Continue with correo
+                </button>
                 {/* DETAILS */}
                 <p className="login-p">
                     You do not have an account?{" "}

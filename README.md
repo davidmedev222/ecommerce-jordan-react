@@ -28,17 +28,18 @@ Open http://localhost:3000 in your browser to view the application.
 
 # **Latest updates**
 
--   ### _custom style variables_
--   ### _notification style customized_
--   ### _link active function_
--   ### _notification function_
--   ### _details brief to order_
+-   _custom style variables_
+-   _notification style customized_
+-   _link active function_
+-   _notification function_
+-   _details brief to order_
+-   _user status_
+-   _panel logout option_
+-   _login with email_
 
 ---
 
 # **Updates in progress**
 
--   ### _user status_
--   ### _protected paths for login and register_
--   ### _dark mode_
--   ### _user panel options_
+-   _user panel options_
+-   _protected paths for login and register_
