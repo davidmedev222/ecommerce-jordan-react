@@ -8,21 +8,30 @@
     grid-auto-flow: dense;
     grid-auto-rows: 1fr;
     gap: clamp(0.5rem, 1vw, 2rem);
-    padding: 0 clamp(1rem, 5vw, 10rem) clamp(1.5rem, 1.5vw, 3rem);
+    padding: clamp(1rem, 2.5vw, 5rem) clamp(1rem, 5vw, 10rem);
 
     &-option {
         @include flex(column, center, center);
         gap: clamp(1rem, 1.5vw, 3rem);
-        padding: clamp(1rem, 2.5vw, 5rem) clamp(1rem, 2.5vw, 5rem);
+        padding: clamp(1rem, 2.5vw, 5rem);
         border-radius: 1rem;
-        border: 1.25px black solid;
+        background-color: var(--background-two);
+    }
+    &-signout {
+        color: var(--text-two);
+        background-color: var(--btn-danger);
+
+        button {
+            color: var(--text-two);
+        }
     }
     &-btn {
-        width: clamp(2.25rem, 5vw, 10rem);
+        color: var(--icon);
+        width: clamp(2rem, 5vw, 10rem);
     }
     &-title {
-        font-size: clamp(1rem, 2.25vw, 4.5rem);
-        font-weight: 800;
+        font-size: clamp(1rem, 2vw, 2rem);
+        font-weight: 900;
     }
 }
 
