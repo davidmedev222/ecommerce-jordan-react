@@ -2,7 +2,7 @@
 
 E-commerce created with `ReactJs` for the interface, `Sass` for the styles, `Firebase Auth` for user authentication and `Firebase Firestore` for the project database.
 
-### [https://jordanshop.netlify.app/](https://jordanshop.netlify.app/)
+### [https://jordanstore.vercel.app/](https://jordanshop.netlify.app/)
 
 ---
 
