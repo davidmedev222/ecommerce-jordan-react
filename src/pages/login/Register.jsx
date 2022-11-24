@@ -1,33 +1,34 @@
 import { UserContext } from "../../context/user/UserContext"; // CONTEXT
 import { Link, useNavigate } from "react-router-dom"; // ROUTER DOM & HOOK
-import { useContext } from "react"; // HOOKS
+import { useContext, useState } from "react"; // HOOKS
 import { toastifyNotication } from "../../components/toastify/Toastify"; // FUNCTION NOTIFICATION
 
 const Register = () => {
     const navigate = useNavigate(); // NAVIGATE
 
-    const { updateUser, userModel, updateUserModel, createUser } = useContext(UserContext); // HELPERS
+    const [registerData, updateRegisterData] = useState({
+        name: "",
+        phone: "",
+        email: "",
+        password: "",
+    }); // STATE
 
     const handleOnChange = (ev) => {
-        updateUserModel((prevUserModel) => {
+        updateRegisterData((prevRegisterData) => {
             return {
-                ...prevUserModel,
+                ...prevRegisterData,
                 [ev.target.name]: ev.target.value,
             };
         });
     }; // EVENT
 
+    const { updateUser, createUser } = useContext(UserContext); // HELPERS
+
     const handleFormSubmit = async (ev) => {
         try {
             ev.preventDefault();
-            const userCredential = await createUser(userModel.email, userModel.password); // REQUEST AUTH
-            updateUser({
-                name: userCredential.user.displayName ?? userModel.name,
-                phone: userCredential.user.phoneNumber ?? userModel.phone,
-                email: userCredential.user.email,
-                photo: userCredential.user.photoURL,
-                orders: [],
-            });
+            const userCredential = await createUser(registerData.email, registerData.password); // REQUEST FIREBASE AUTH
+            updateUser(userCredential.user); // UPDATE USER
             navigate("/account"); // NAVIGATE
             toastifyNotication("account created"); // NOTIFICATION
         } catch (error) {
@@ -53,7 +54,7 @@ const Register = () => {
                     <label htmlFor="name" className="register-label">
                         User Name
                         <input
-                            value={userModel.name}
+                            value={registerData.name}
                             onChange={handleOnChange}
                             className="register-input"
                             type="text"
@@ -61,12 +62,13 @@ const Register = () => {
                             required={true}
                             minLength={3}
                             maxLength={30}
+                            autoComplete="off"
                         />
                     </label>
                     <label htmlFor="phone" className="register-label">
                         Phone
                         <input
-                            value={userModel.phone}
+                            value={registerData.phone}
                             onChange={handleOnChange}
                             className="register-input"
                             type="tel"
@@ -74,12 +76,13 @@ const Register = () => {
                             required={true}
                             minLength={10}
                             maxLength={16}
+                            autoComplete="off"
                         />
                     </label>
                     <label htmlFor="email" className="register-label">
                         Email
                         <input
-                            value={userModel.email}
+                            value={registerData.email}
                             onChange={handleOnChange}
                             className="register-input"
                             type="email"
@@ -87,12 +90,13 @@ const Register = () => {
                             required={true}
                             minLength={5}
                             maxLength={50}
+                            autoComplete="off"
                         />
                     </label>
                     <label htmlFor="password" className="register-label">
                         Password
                         <input
-                            value={userModel.password}
+                            value={registerData.password}
                             onChange={handleOnChange}
                             className="register-input"
                             type="password"
@@ -100,6 +104,7 @@ const Register = () => {
                             required={true}
                             minLength={5}
                             maxLength={30}
+                            autoComplete="off"
                         />
                     </label>
                     {/* BUTTON */}
