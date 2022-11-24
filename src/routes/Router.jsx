@@ -7,6 +7,7 @@ import { ItemDetailContainer } from "../pages/shop/ItemDetailContainer/ItemDetai
 import { ItemListContainer } from "../pages/shop/ItemListContainer/ItemListContainer"; // COMPONENT
 import { ItemListCart } from "../pages/cart/ItemListCart/ItemListCart"; // COMPONENT
 import { ProtectedRoute } from "./protectedRoute/ProtectedRoute"; // COMPONENT
+import { ProtectedRouteUser } from "./protectedRouteUser/ProtectedRouteUser"; // COMPONENT
 import { Account } from "../pages/account/Account"; // COMPONENT
 import { Login } from "../pages/login/Login"; // COMPONENT
 import { Register } from "../pages/login/Register"; // COMPONENT
@@ -34,8 +35,20 @@ const App = () => {
                                 </ProtectedRoute>
                             }
                         />
-                        <Route path="/login" element={<Login />}></Route> {/* LOGGIN */}
-                        <Route path="/register" element={<Register />}></Route> {/* REGISTER */}
+                        <Route
+                            path="/login"
+                            element={
+                                <ProtectedRouteUser>
+                                    <Login /> {/* LOGGIN */}
+                                </ProtectedRouteUser>
+                            }></Route>
+                        <Route
+                            path="/register"
+                            element={
+                                <ProtectedRouteUser>
+                                    <Register /> {/* REGISTER */}
+                                </ProtectedRouteUser>
+                            }></Route>
                         <Route
                             path="/checkout"
                             element={
