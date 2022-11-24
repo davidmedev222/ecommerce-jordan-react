@@ -1,4 +1,4 @@
-# **E-COMMERCE JORDAN WITH REACT**
+# **ABOUT THE PROJECT**
 
 E-commerce created with `ReactJs` for the interface, `Sass` for the styles, `Firebase Auth` for user authentication and `Firebase Firestore` for the project database.
 
@@ -36,10 +36,12 @@ Open http://localhost:3000 in your browser to view the application.
 -   _user status_
 -   _panel logout option_
 -   _login with email_
+-   _protected paths for login and register_
 
 ---
 
 # **Updates in progress**
 
 -   _user panel options_
--   _protected paths for login and register_
+-   _item visualization in checkout_
+-   _login with Github, Facebook, Google_
