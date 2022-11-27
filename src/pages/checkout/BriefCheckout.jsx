@@ -21,12 +21,12 @@ const BriefCheckout = () => {
     return (
         <>
             {/* TITLE */}
-            <h1 className="h1">checkout</h1>
+            <h2 className="h1">checkout</h2>
             {/* INFO */}
             <span className="order-span">Confirm your purchase order to continue.</span>
             {/* ORDER */}
             <div className="order-details">
-                <h2 className="order-heading">buyer data</h2>
+                <h3 className="order-heading">buyer data</h3>
                 {/* BUYER */}
                 <div className="order-data">
                     <span className="order-data-brief">
@@ -35,11 +35,13 @@ const BriefCheckout = () => {
                     <span className="order-data-brief">
                         Email <span className="order-data-span"> : {buyer.email}</span>
                     </span>
-                    <span className="order-data-brief">
-                        Phone <span className="order-data-span"> : {buyer.phone}</span>
-                    </span>
+                    {buyer.phone && (
+                        <span className="order-data-brief">
+                            Phone <span className="order-data-span"> : {buyer.phone}</span>
+                        </span>
+                    )}
                 </div>
-                <h4 className="order-heading">total</h4>
+                <h3 className="order-heading">total</h3>
                 {/* TOTAL */}
                 <div className="order-data">
                     <span className="order-data-brief">

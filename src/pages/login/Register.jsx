@@ -8,7 +8,6 @@ const Register = () => {
 
     const [registerData, updateRegisterData] = useState({
         name: "",
-        phone: "",
         email: "",
         password: "",
     }); // STATE
@@ -65,20 +64,6 @@ const Register = () => {
                             required={true}
                             minLength={3}
                             maxLength={30}
-                            autoComplete="off"
-                        />
-                    </label>
-                    <label htmlFor="phone" className="register-label">
-                        Phone
-                        <input
-                            value={registerData.phone}
-                            onChange={handleOnChange}
-                            className="register-input"
-                            type="tel"
-                            name="phone"
-                            required={true}
-                            minLength={10}
-                            maxLength={16}
                             autoComplete="off"
                         />
                     </label>

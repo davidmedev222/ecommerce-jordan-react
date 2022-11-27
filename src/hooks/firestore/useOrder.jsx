@@ -10,9 +10,9 @@ const useOrder = () => {
     const createOrder = (items, totalQuantityItems, totalPrice) => {
         return {
             buyer: {
-                name: user ? user.displayName : "",
-                email: user ? user.email : "",
-                phone: user ? user.phoneNumber : "",
+                name: user?.displayName ?? "",
+                email: user?.email ?? "",
+                phone: user?.phoneNumber ?? "",
             },
             items: [...items],
             total: {

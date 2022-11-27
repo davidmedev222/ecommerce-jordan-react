@@ -11,6 +11,7 @@
     &-order {
         font-size: clamp(1.25rem, 2vw, 4rem);
         font-weight: 400;
+        text-transform: none;
     }
     &-icon {
         width: clamp(12.5rem, 15vw, 50rem);
