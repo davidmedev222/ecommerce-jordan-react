@@ -1,4 +1,4 @@
-# **ABOUT THE PROJECT**
+# **About The Proyect**
 
 E-commerce created with `ReactJs` for the interface, `Sass` for the styles, `Firebase Auth` for user authentication and `Firebase Firestore` for the project database.
 
@@ -42,6 +42,8 @@ Open http://localhost:3000 in your browser to view the application.
 
 # **Updates in progress**
 
+-   _loader_
+-   _promo code_
 -   _user panel options_
 -   _item visualization in checkout_
 -   _login with Github, Facebook, Google_
