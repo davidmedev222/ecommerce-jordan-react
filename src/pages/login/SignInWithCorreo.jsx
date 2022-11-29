@@ -53,6 +53,7 @@ const SignInWithCorreo = ({ updateOnContinue }) => {
                                 className="signin-input"
                                 type="email"
                                 name="email"
+                                id="email"
                                 required={true}
                                 minLength={3}
                                 maxLength={50}
@@ -67,6 +68,7 @@ const SignInWithCorreo = ({ updateOnContinue }) => {
                                 className="signin-input"
                                 type="password"
                                 name="password"
+                                id="password"
                                 required={true}
                                 minLength={5}
                                 maxLength={30}

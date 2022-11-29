@@ -61,6 +61,7 @@ const Register = () => {
                             className="register-input"
                             type="text"
                             name="name"
+                            id="name"
                             required={true}
                             minLength={3}
                             maxLength={30}
@@ -75,6 +76,7 @@ const Register = () => {
                             className="register-input"
                             type="email"
                             name="email"
+                            id="email"
                             required={true}
                             minLength={5}
                             maxLength={50}
@@ -89,6 +91,7 @@ const Register = () => {
                             className="register-input"
                             type="password"
                             name="password"
+                            id="password"
                             required={true}
                             minLength={5}
                             maxLength={30}
