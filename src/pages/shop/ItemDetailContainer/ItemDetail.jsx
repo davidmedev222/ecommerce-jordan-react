@@ -8,7 +8,7 @@ const ItemDetail = ({ cp, imageOne, imageTwo, name, collection, color, price, st
     const navigate = useNavigate(); // NAVIGATE
 
     const handleNavigate = () => {
-        navigate("/shop");
+        navigate(-1);
     }; // EVENT
 
     const [onAdd, updateOnAdd] = useState(false); // STATE
