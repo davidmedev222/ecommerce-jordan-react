@@ -1,8 +1,8 @@
-import { CartContext } from "../../context/cart/CartContext"; // CONTEXT
-import { Button } from "../../components/button/Button"; // COMPONENT
-import { Navigate, useNavigate } from "react-router-dom"; // HOOKS
-import { useContext } from "react"; // HOOKS
-import { useEffect } from "react";
+import { CartContext } from '../../context/cart/CartContext'; // CONTEXT
+import { Button } from '../../components/button/Button'; // COMPONENT
+import { Navigate, useNavigate } from 'react-router-dom'; // HOOKS
+import { useContext } from 'react'; // HOOKS
+import { useEffect } from 'react';
 
 const CheckoutMessage = () => {
     const navigate = useNavigate(); // NAVIGATE
@@ -10,7 +10,7 @@ const CheckoutMessage = () => {
     const { updateOrder, onOrder, orderUid } = useContext(CartContext); // HELPERS
 
     const handleNavigate = () => {
-        navigate("/account");
+        navigate('/account');
     }; // EVENT
 
     useEffect(() => {

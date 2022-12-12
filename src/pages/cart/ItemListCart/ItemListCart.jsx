@@ -1,8 +1,8 @@
-import { CartContext } from "../../.././context/cart/CartContext"; // CONTEXT
-import { NavBar } from "../../.././components/navbar/NavBar"; // COMPONENT
-import { ItemList } from "./ItemList"; // COMPONENT
-import { EmptyCart } from ".././EmptyCart/EmptyCart"; // COMPONENT
-import { useContext } from "react"; // HOOKS
+import { CartContext } from '../../.././context/cart/CartContext'; // CONTEXT
+import { NavBar } from '../../.././components/navbar/NavBar'; // COMPONENT
+import { ItemList } from './ItemList'; // COMPONENT
+import { EmptyCart } from '.././EmptyCart/EmptyCart'; // COMPONENT
+import { useContext } from 'react'; // HOOKS
 
 const ItemListCart = () => {
     const { cart } = useContext(CartContext); // HELPERS

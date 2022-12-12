@@ -1,5 +1,5 @@
-import { NavBar } from "../../components/navbar/NavBar"; // COMPONENT
-import { Panel } from "../../components/panel/Panel"; // COMPONENT
+import { NavBar } from '../../components/navbar/NavBar'; // COMPONENT
+import { Panel } from '../../components/panel/Panel'; // COMPONENT
 
 const Account = () => {
     return (
@@ -11,4 +11,3 @@ const Account = () => {
 };
 
 export { Account };
-    

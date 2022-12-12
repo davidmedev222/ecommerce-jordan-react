@@ -1,31 +1,31 @@
 //* IMPORT GLOBAL
-@use "./global/mixins";
-@use "./global/reset";
-@use "./global/utilities";
+@use './global/mixins';
+@use './global/reset';
+@use './global/utilities';
 
 //* IMPORT COMPONENTS
-@use "./components/toastify/Toastify";
-@use "./components/navbar/NavBar";
-@use "./components/category/Category";
-@use "./components/panel/Panel";
-@use "./components/badge/Badge";
-@use "./components/button/Button";
-@use "./components/button/ButtonFilter";
+@use './components/toastify/Toastify';
+@use './components/navbar/NavBar';
+@use './components/category/Category';
+@use './components/panel/Panel';
+@use './components/badge/Badge';
+@use './components/button/Button';
+@use './components/button/ButtonFilter';
 
 //* IMPORT PAGES
 //? SHOP
-@use "./pages/shop/ItemListContainer/ItemListContainer";
-@use "./pages/shop/ItemListContainer/ItemList";
-@use "./pages/shop/ItemListContainer/Item";
-@use "./pages/shop/ItemListContainer/ItemCount";
-@use "./pages/shop/ItemDetailContainer/ItemDetail";
+@use './pages/shop/ItemListContainer/ItemListContainer';
+@use './pages/shop/ItemListContainer/ItemList';
+@use './pages/shop/ItemListContainer/Item';
+@use './pages/shop/ItemListContainer/ItemCount';
+@use './pages/shop/ItemDetailContainer/ItemDetail';
 //? CART
-@use "./pages/cart/EmptyCart/EmptyCart";
-@use "./pages/cart/ItemListCart/ItemListCart";
+@use './pages/cart/EmptyCart/EmptyCart';
+@use './pages/cart/ItemListCart/ItemListCart';
 //? LOGIN & REGISTER
-@use "./pages/login/Login";
-@use "./pages/login/Register";
-@use "./pages/login/SignInWithCorreo";
+@use './pages/login/Login';
+@use './pages/login/Register';
+@use './pages/login/SignInWithCorreo';
 //? CHECKOUT
-@use "./pages/checkout/Checkout";
-@use "./pages/checkout/CheckoutMessage";
+@use './pages/checkout/Checkout';
+@use './pages/checkout/CheckoutMessage';

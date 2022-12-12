@@ -1,15 +1,15 @@
-import { UserContext } from "../../context/user/UserContext"; // CONTEXT
-import { Link, useNavigate } from "react-router-dom"; // ROUTER DOM & HOOK
-import { useContext, useState } from "react"; // HOOKS
-import { toastifyNotication } from "../../components/toastify/Toastify"; // FUNCTION NOTIFICATION
+import { UserContext } from '../../context/user/UserContext'; // CONTEXT
+import { Link, useNavigate } from 'react-router-dom'; // ROUTER DOM & HOOK
+import { useContext, useState } from 'react'; // HOOKS
+import { toastifyNotication } from '../../components/toastify/Toastify'; // FUNCTION NOTIFICATION
 
 const Register = () => {
     const navigate = useNavigate(); // NAVIGATE
 
     const [registerData, updateRegisterData] = useState({
-        name: "",
-        email: "",
-        password: "",
+        name: '',
+        email: '',
+        password: '',
     }); // STATE
 
     const handleOnChange = (ev) => {
@@ -31,8 +31,8 @@ const Register = () => {
                 displayName: registerData.name,
             }); // REQUEST FIREBASE AUTH
             updateUser(userCredential.user); // UPDATE USER
-            navigate("/account"); // NAVIGATE
-            toastifyNotication("account created"); // NOTIFICATION
+            navigate('/account'); // NAVIGATE
+            toastifyNotication('account created'); // NOTIFICATION
         } catch (error) {
             toastifyNotication(error.code);
         }
@@ -41,7 +41,7 @@ const Register = () => {
     return (
         <div className="register-container">
             {/* BUTTON CLOSE */}
-            <button onClick={() => navigate("/login")} className="register-btn-close">
+            <button onClick={() => navigate('/login')} className="register-btn-close">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                     <path d="M109.3 288L480 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-370.7 0 73.4-73.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-128 128c-12.5 12.5-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 288z" />
                 </svg>
@@ -105,14 +105,14 @@ const Register = () => {
                 </form>
                 {/* DETAILS */}
                 <p className="register-p">
-                    By clicking on the button, you accept the{" "}
+                    By clicking on the button, you accept the{' '}
                     <Link to="#" className="register-a">
                         Terms of Use
-                    </Link>{" "}
-                    and the{" "}
+                    </Link>{' '}
+                    and the{' '}
                     <Link to="#" className="register-a">
                         Privacy Policy
-                    </Link>{" "}
+                    </Link>{' '}
                     and also confirms that he is 18 years of age or older.
                 </p>
             </section>

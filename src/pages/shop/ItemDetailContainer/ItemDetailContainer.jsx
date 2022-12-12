@@ -1,7 +1,7 @@
-import { getItem } from "../../../services/firestore/getItem"; // FIRESTORE
-import { ItemDetail } from "./ItemDetail"; // COMPONENT
-import { useState, useEffect } from "react"; // HOOKS
-import { useParams } from "react-router-dom"; // HOOKS
+import { getItem } from '../../../services/firestore/getItem'; // FIRESTORE
+import { ItemDetail } from './ItemDetail'; // COMPONENT
+import { useState, useEffect } from 'react'; // HOOKS
+import { useParams } from 'react-router-dom'; // HOOKS
 
 const ItemDetailContainer = () => {
     const { id } = useParams(); // PARAM ROUTE

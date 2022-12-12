@@ -1,9 +1,9 @@
-import { CartContext } from "../../.././context/cart/CartContext"; // CONTEXT
-import { Item } from "./Item"; // COMPONENT
-import { Button } from "../../.././components/button/Button"; // COMPONENT
-import { useContext } from "react"; // HOOKS
-import { useOrder } from "../../../hooks/firestore/useOrder"; // CUSTOM HOOK
-import { useNavigate } from "react-router-dom"; // HOOKS
+import { CartContext } from '../../.././context/cart/CartContext'; // CONTEXT
+import { Item } from './Item'; // COMPONENT
+import { Button } from '../../.././components/button/Button'; // COMPONENT
+import { useContext } from 'react'; // HOOKS
+import { useOrder } from '../../../hooks/firestore/useOrder'; // CUSTOM HOOK
+import { useNavigate } from 'react-router-dom'; // HOOKS
 
 const ItemList = () => {
     const { cart, removeCart, totalQuantityItems, totalPrice, updateOrder } = useContext(CartContext); // HELPERS
@@ -16,7 +16,7 @@ const ItemList = () => {
 
     const handleCreateOrder = () => {
         updateOrder(createOrder(cart, totalQuantityItems, totalPrice)); // ORDER UPDATE
-        navigate("/checkout"); // REDIRECT
+        navigate('/checkout'); // REDIRECT
     }; // EVENT
 
     return (

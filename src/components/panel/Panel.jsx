@@ -1,6 +1,6 @@
-import { UserContext } from "../../context/user/UserContext"; // CONTEXT
-import { useContext } from "react"; // HOOKS
-import { toastifyNotication } from ".././toastify/Toastify"; // FUNCTION NOTIFICATION
+import { UserContext } from '../../context/user/UserContext'; // CONTEXT
+import { useContext } from 'react'; // HOOKS
+import { toastifyNotication } from '.././toastify/Toastify'; // FUNCTION NOTIFICATION
 
 const Panel = () => {
     const { signOutUser } = useContext(UserContext); // HELPERS
@@ -8,7 +8,7 @@ const Panel = () => {
     const handleSignOut = async () => {
         try {
             await signOutUser(); // REQUEST FIREBASE AUTH
-            toastifyNotication("session closed"); // NOTIFICATION
+            toastifyNotication('session closed'); // NOTIFICATION
         } catch (error) {
             toastifyNotication(error.code); // NOTIFICATION
         }

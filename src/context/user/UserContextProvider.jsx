@@ -1,13 +1,13 @@
-import { UserContext } from "./UserContext"; // COMPONENT CONTEXT
+import { UserContext } from './UserContext'; // COMPONENT CONTEXT
 import {
     createUserWithEmailAndPassword,
     onAuthStateChanged,
     signInWithEmailAndPassword,
     signOut,
     updateProfile,
-} from "firebase/auth"; // AUTH FIREBASE
-import { auth } from "../../services/firebase/config"; // AUTH FIREBASE
-import { useState, useEffect } from "react"; // HOOKS
+} from 'firebase/auth'; // AUTH FIREBASE
+import { auth } from '../../services/firebase/config'; // AUTH FIREBASE
+import { useState, useEffect } from 'react'; // HOOKS
 
 const UserContextProvider = ({ children }) => {
     const [user, updateUser] = useState(false); // STATE

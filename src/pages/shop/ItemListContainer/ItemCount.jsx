@@ -1,6 +1,6 @@
-import { CartContext } from "../../../context/cart/CartContext"; // CONTEXT
-import { Button } from "../../../components/button/Button"; // COMPONENT
-import { useState, useContext } from "react"; // HOOKS
+import { CartContext } from '../../../context/cart/CartContext'; // CONTEXT
+import { Button } from '../../../components/button/Button'; // COMPONENT
+import { useState, useContext } from 'react'; // HOOKS
 
 const ItemCount = ({ item, onAdd, stock, initial }) => {
     const [quantity, updateQuantity] = useState(initial); // STATE

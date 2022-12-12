@@ -1,5 +1,5 @@
 // MIXINS
-@import "../../global/mixins";
+@import '../../global/mixins';
 
 // STYLES
 .category {
@@ -17,19 +17,19 @@
         transition: flex 1000ms ease-in;
     }
     &-img:nth-child(1) {
-        background-image: url("https://res.cloudinary.com/dos3i5jqy/image/upload/v1668792321/ecommerce-jordan-react/product-28_mofgy5.webp");
+        background-image: url('https://res.cloudinary.com/dos3i5jqy/image/upload/v1668792321/ecommerce-jordan-react/product-28_mofgy5.webp');
     }
     &-img:nth-child(2) {
-        background-image: url("https://res.cloudinary.com/dos3i5jqy/image/upload/v1668792315/ecommerce-jordan-react/product-10_g5gby9.webp");
+        background-image: url('https://res.cloudinary.com/dos3i5jqy/image/upload/v1668792315/ecommerce-jordan-react/product-10_g5gby9.webp');
     }
     &-img:nth-child(3) {
-        background-image: url("https://res.cloudinary.com/dos3i5jqy/image/upload/v1668792316/ecommerce-jordan-react/product-15_pd73xl.webp");
+        background-image: url('https://res.cloudinary.com/dos3i5jqy/image/upload/v1668792316/ecommerce-jordan-react/product-15_pd73xl.webp');
     }
     &-img:nth-child(4) {
-        background-image: url("https://res.cloudinary.com/dos3i5jqy/image/upload/v1668792316/ecommerce-jordan-react/product-27_lbelzo.webp");
+        background-image: url('https://res.cloudinary.com/dos3i5jqy/image/upload/v1668792316/ecommerce-jordan-react/product-27_lbelzo.webp');
     }
     &-img:nth-child(5) {
-        background-image: url("https://res.cloudinary.com/dos3i5jqy/image/upload/v1668792317/ecommerce-jordan-react/product-30_pbny4c.webp");
+        background-image: url('https://res.cloudinary.com/dos3i5jqy/image/upload/v1668792317/ecommerce-jordan-react/product-30_pbny4c.webp');
     }
     &-span {
         position: absolute;

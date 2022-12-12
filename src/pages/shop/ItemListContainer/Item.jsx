@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom"; // HOOKS
+import { useNavigate } from 'react-router-dom'; // HOOKS
 
 const Item = ({ cp, price, imageOne, name }) => {
     const navigate = useNavigate(); // NAVIGATE

@@ -1,8 +1,8 @@
-import { CartContext } from "../../../context/cart/CartContext"; // CONTEXT
-import { ItemCount } from "../ItemListContainer/ItemCount"; // COMPONENT
-import { Button } from "../../../components/button/Button"; // COMPONENT
-import { useNavigate } from "react-router-dom"; // HOOKS
-import { useState, useContext } from "react"; // HOOKS
+import { CartContext } from '../../../context/cart/CartContext'; // CONTEXT
+import { ItemCount } from '../ItemListContainer/ItemCount'; // COMPONENT
+import { Button } from '../../../components/button/Button'; // COMPONENT
+import { useNavigate } from 'react-router-dom'; // HOOKS
+import { useState, useContext } from 'react'; // HOOKS
 
 const ItemDetail = ({ cp, imageOne, imageTwo, name, collection, color, price, stock, designer, location, launch }) => {
     const navigate = useNavigate(); // NAVIGATE
@@ -62,7 +62,7 @@ const ItemDetail = ({ cp, imageOne, imageTwo, name, collection, color, price, st
                 </span>
                 {/* COMPONENT BUTTON OR ITEM COUNT */}
                 {onAdd || isInCart(cp) ? (
-                    <Button onClick={() => navigate("/cart")}>checkout</Button>
+                    <Button onClick={() => navigate('/cart')}>checkout</Button>
                 ) : (
                     <ItemCount item={modelItem} onAdd={updateOnAdd} stock={stock} initial={1} />
                 )}

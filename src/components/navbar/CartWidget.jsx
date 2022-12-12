@@ -1,6 +1,6 @@
-import { CartContext } from "../.././context/cart/CartContext"; // CONTEXT
-import { Badge } from "../badge/Badge"; // COMPONENT
-import { useContext } from "react"; // HOOKS
+import { CartContext } from '../.././context/cart/CartContext'; // CONTEXT
+import { Badge } from '../badge/Badge'; // COMPONENT
+import { useContext } from 'react'; // HOOKS
 
 const CartWidget = () => {
     const { cart, totalQuantityItems } = useContext(CartContext); // HELPERS

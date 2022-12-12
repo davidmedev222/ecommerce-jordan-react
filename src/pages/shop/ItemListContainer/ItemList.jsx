@@ -1,5 +1,5 @@
-import { Item } from "./Item"; // COMPONENT
-import { useParams } from "react-router-dom"; // HOOKS
+import { Item } from './Item'; // COMPONENT
+import { useParams } from 'react-router-dom'; // HOOKS
 
 const ItemList = ({ items }) => {
     const { category } = useParams(); // PARAM ROUTE

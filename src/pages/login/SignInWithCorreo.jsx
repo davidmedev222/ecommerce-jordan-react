@@ -1,11 +1,11 @@
-import { UserContext } from "../../context/user/UserContext"; // CONTEXT
-import { useState, useContext } from "react"; // HOOKS
-import { toastifyNotication } from "../.././components/toastify/Toastify"; // FUNCTION NOTIFICATION
+import { UserContext } from '../../context/user/UserContext'; // CONTEXT
+import { useState, useContext } from 'react'; // HOOKS
+import { toastifyNotication } from '../.././components/toastify/Toastify'; // FUNCTION NOTIFICATION
 
 const SignInWithCorreo = ({ updateOnContinue }) => {
     const [signInData, updateSignInData] = useState({
-        email: "",
-        password: "",
+        email: '',
+        password: '',
     }); // STATE
 
     const handleOnChange = (ev) => {
@@ -23,7 +23,7 @@ const SignInWithCorreo = ({ updateOnContinue }) => {
         try {
             ev.preventDefault();
             await signInUser(signInData.email, signInData.password); // REQUEST FIREBASE AUTH
-            toastifyNotication("session started"); // NOTIFICATION
+            toastifyNotication('session started'); // NOTIFICATION
         } catch (error) {
             toastifyNotication(error.code); // NOTIFICATION
         }

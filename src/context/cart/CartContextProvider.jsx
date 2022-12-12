@@ -1,5 +1,5 @@
-import { CartContext } from "./CartContext"; // COMPONENT CONTEXT
-import { useState } from "react"; // HOOKS
+import { CartContext } from './CartContext'; // COMPONENT CONTEXT
+import { useState } from 'react'; // HOOKS
 
 const CartContextProvider = ({ children }) => {
     const [cart, updateCart] = useState([]); // STATE
@@ -50,7 +50,7 @@ const CartContextProvider = ({ children }) => {
 
     const [onOrder, updateOnOrder] = useState(false); // STATE
 
-    const [orderUid, updateOrderUid] = useState(""); // STATE
+    const [orderUid, updateOrderUid] = useState(''); // STATE
 
     const values = {
         cart,

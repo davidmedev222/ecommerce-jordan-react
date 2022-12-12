@@ -1,7 +1,7 @@
-import { CartContext } from "../../context/cart/CartContext"; // CONTEXT
-import { useContext } from "react"; // HOOKS
-import { useNavigate } from "react-router-dom"; // HOOKS
-import { useOrder } from "../../hooks/firestore/useOrder"; // CUSTOM HOOK
+import { CartContext } from '../../context/cart/CartContext'; // CONTEXT
+import { useContext } from 'react'; // HOOKS
+import { useNavigate } from 'react-router-dom'; // HOOKS
+import { useOrder } from '../../hooks/firestore/useOrder'; // CUSTOM HOOK
 
 const BriefCheckout = () => {
     const navigate = useNavigate(); // NAVIGATE
@@ -15,7 +15,7 @@ const BriefCheckout = () => {
         await postOrder(); // REQUEST FIRESTORE
         removeCart(); // UPDATE CART
         updateOnOrder(true); // UPDATE STATE ORDER
-        navigate("/checkout/message"); // NAVIGATE
+        navigate('/checkout/message'); // NAVIGATE
     }; // EVENT
 
     return (

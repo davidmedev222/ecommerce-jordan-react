@@ -1,4 +1,4 @@
-import { NavBar } from "../../components/navbar/NavBar"; // COMPONENT
+import { NavBar } from '../../components/navbar/NavBar'; // COMPONENT
 
 const Error = () => {
     return (

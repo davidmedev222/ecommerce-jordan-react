@@ -1,11 +1,11 @@
-import { Link } from "react-router-dom"; // ROUTER DOM
+import { Link } from 'react-router-dom'; // ROUTER DOM
 
 const Category = ({ all, year2, year3, year4, year5 }) => {
     return (
         <>
             <div className="category">
                 {/* IMAGE */}
-                <Link to={"/shop"} className="category-img">
+                <Link to={'/shop'} className="category-img">
                     <span className="category-span">{all}</span>
                 </Link>
                 {/* IMAGE */}
