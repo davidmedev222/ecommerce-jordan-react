@@ -3,55 +3,22 @@
 
 // STYLES
 .category {
-    display: flex;
-    padding: clamp(1rem, 2.5vw, 5rem);
-    gap: clamp(0.5rem, 1vw, 2rem);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(clamp(100px, 100%, 375px), 1fr));
+    gap: clamp(1rem, 1vw, 2rem);
+    padding: clamp(1rem, 5.75vw, 12rem);
 
-    &-img {
+    &-a {
+        @include flex(column, center, center);
         position: relative;
-        background-size: cover;
-        background-position: center;
-        background-color: var(--background-two);
         border-radius: 1rem;
-        flex: 1;
-        transition: flex 1000ms ease-in;
-    }
-    &-img:nth-child(1) {
-        background-image: url('https://res.cloudinary.com/dos3i5jqy/image/upload/v1668792321/ecommerce-jordan-react/product-28_mofgy5.webp');
-    }
-    &-img:nth-child(2) {
-        background-image: url('https://res.cloudinary.com/dos3i5jqy/image/upload/v1668792315/ecommerce-jordan-react/product-10_g5gby9.webp');
-    }
-    &-img:nth-child(3) {
-        background-image: url('https://res.cloudinary.com/dos3i5jqy/image/upload/v1668792316/ecommerce-jordan-react/product-15_pd73xl.webp');
-    }
-    &-img:nth-child(4) {
-        background-image: url('https://res.cloudinary.com/dos3i5jqy/image/upload/v1668792316/ecommerce-jordan-react/product-27_lbelzo.webp');
-    }
-    &-img:nth-child(5) {
-        background-image: url('https://res.cloudinary.com/dos3i5jqy/image/upload/v1668792317/ecommerce-jordan-react/product-30_pbny4c.webp');
+        background-color: var(--background-two);
     }
     &-span {
         position: absolute;
         top: 10%;
         left: 5%;
-        font-size: clamp(2.75rem, 3vw, 8rem);
+        font-size: clamp(3.5rem, 5vw, 10rem);
         font-weight: 800;
-        transition: font-size 700ms ease-in;
-    }
-}
-
-// MEDIAQUERYS
-@include mediamax(768px) {
-    .category {
-        flex-direction: column;
-    }
-}
-@include mediamin(1124px) {
-    .category-img:hover {
-        flex: 4;
-        .category-span {
-            font-size: clamp(2.75rem, 8vw, 16rem);
-        }
     }
 }
