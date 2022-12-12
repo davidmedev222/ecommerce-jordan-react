@@ -1,49 +1,49 @@
-# **About The Proyect**
-
-E-commerce created with `ReactJs` for the interface, `Sass` for the styles, `Firebase Auth` for user authentication and `Firebase Firestore` for the project database.
+# **JORDAN STORE**
 
 ### [https://jordanstore.vercel.app/](https://jordanshop.netlify.app/)
 
----
+# **¿Qué tecnologias se usaron?**
 
-# **¿How to initialize the project?**
+Se uso `ReactJs` para la interfaz, `Sass` para los estilos, `Firebase Auth` para la autenticacion del usuario y `Firebase Firestore` para la base de datos de la tienda.
 
-To start the project, type the following commands in your code editor.
+# **¿Quiénes participan en el proyecto?**
+
+> `David Mamani` | Frontend Developer.
+
+# **¿Cómo inicializo el proyecto en mi ordenador ?**
+
+Para iniciar el proyecto, escriba los siguientes comandos en su editor de código.
 
 ### `git clone https://github.com/davidmedev222/ecommerce-jordan-react.git`
 
-This command will clone the project on your computer.
+Este comando clonará el proyecto en su ordenador.
 
 ### `npm install`
 
-This command will install the project dependencies.
+Este comando instalará las dependencias del proyecto.
 
 ### `npm start`
 
-This command will run the application on your computer.
+Este comando ejecutará la aplicación en su ordenador.
 
-Open http://localhost:3000 in your browser to view the application.
+Abra http://localhost:3000 en su navegador para ver la aplicación.
 
----
+# **Últimas actualizaciones**
 
-# **Latest updates**
+-   función de notificación
+-   función de inicio de sesión con correo
+-   función de cerrar sesión del panel de usuario
+-   interfaz de detalles de la compra
+-   rutas protegidas para las paginas inicio de sesión y registro
 
--   _custom style variables_
--   _notification style customized_
--   _link active function_
--   _notification function_
--   _details brief to order_
--   _user status_
--   _panel logout option_
--   _login with email_
--   _protected paths for login and register_
+# **Futuras actualizaciones**
 
----
-
-# **Updates in progress**
-
--   _loader_
--   _promo code_
--   _user panel options_
--   _item visualization in checkout_
--   _login with Github, Facebook, Google_
+-   interfaz de cargando
+-   interfaz de página preguntas frecuentes
+-   interfaz de productos a comprar en la pagina de confirmación de compra
+-   función de ver perfil del panel de usuario
+-   función de ver órdenes del panel de usuario
+-   función de aplicar modo oscuro del panel de usuario
+-   función de inicio de sesión con Github, Facebook y Google
+-   función de guardar productos favoritos del panel de usuario
+-   función de aplicar código promocional del panel de usuario
