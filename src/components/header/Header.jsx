@@ -1,25 +1,27 @@
+import { NavLink } from 'react-router-dom'; // COMPONENT ROUTER DOM
 import { CartWidget } from './CartWidget'; // COMPONENT
-import { NavLink } from 'react-router-dom'; // ROUTER DOM
 
-const NavBar = () => {
+const Header = () => {
     return (
         <header className="header">
             {/* TITLE */}
-            <NavLink end to={'/'} className={({ isActive }) => (isActive ? 'header-title header-active' : 'header-title')}>
-                <h1>JORDAN STORE</h1>
-            </NavLink>
+            <h1 className="header-title">
+                <NavLink end to="/" className={({ isActive }) => (isActive ? 'nav-a nav-a-active' : 'nav-a')}>
+                    JORDAN STORE
+                </NavLink>
+            </h1>
             {/* NAVBAR */}
             <nav className="nav">
                 <ul className="nav-ul">
                     <li className="nav-li">
                         {/* LINK */}
-                        <NavLink to={'/shop'} className={({ isActive }) => (isActive ? 'nav-a header-active' : 'nav-a')}>
+                        <NavLink to="/shop" className={({ isActive }) => (isActive ? 'nav-a nav-a-active' : 'nav-a')}>
                             shop
                         </NavLink>
                     </li>
                     <li className="nav-li">
                         {/* LINK */}
-                        <NavLink to="/faq" className={({ isActive }) => (isActive ? 'nav-a header-active' : 'nav-a')}>
+                        <NavLink to="/faq" className={({ isActive }) => (isActive ? 'nav-a nav-a-active' : 'nav-a')}>
                             faq
                         </NavLink>
                     </li>
@@ -68,4 +70,4 @@ const NavBar = () => {
     );
 };
 
-export { NavBar };
+export { Header };

@@ -1,22 +1,22 @@
 // MIXINS
-@import '../../global/mixins';
+@import '../.././global/mixins';
 
 // STYLES
 .header {
-    @include flex(row, space-around, center);
+    @include flex(row, space-between, center);
     position: sticky;
     top: 0;
     background-color: var(--background-one);
-    padding: clamp(0.5rem, 2vw, 4rem);
+    padding: clamp(1rem, 2.5vw, 5rem) clamp(1rem, 5.75vw, 12rem);
     z-index: 1;
 
-    &-active {
-        color: #c7c7c7;
+    &-title {
+        font-size: clamp(1.25rem, 2.25vw, 5rem);
+        font-weight: 900;
     }
-
     &-icons {
         @include flex(row, center, center);
-        gap: clamp(0rem, 1.5vw, 3rem);
+        gap: clamp(1rem, 1.5vw, 3rem);
     }
     &-icon {
         color: var(--icon);
@@ -29,24 +29,24 @@
         color: var(--icon-active);
         background-color: var(--icon-background-active);
     }
-    &-title {
-        font-size: clamp(1.25rem, 2.25vw, 5rem);
-        font-weight: 900;
-    }
     &-cart {
         position: relative;
     }
-}
+    .nav {
+        &-ul {
+            @include flex(row, center, center);
+            gap: clamp(1rem, 5vw, 10rem);
+        }
+        &-a {
+            font-size: clamp(1rem, 2.25vw, 5rem);
+            font-weight: 900;
 
-// STYLES
-.nav {
-    &-ul {
-        @include flex(row, center, center);
-        gap: clamp(1rem, 5vw, 10rem);
-    }
-    &-a {
-        font-size: clamp(1rem, 2.25vw, 5rem);
-        font-weight: 900;
+            &-active {
+                color: white;
+                background-color: black;
+                padding: 0.5em 1em;
+            }
+        }
     }
 }
 
@@ -54,6 +54,9 @@
 @include mediamax(480px) {
     .header-title {
         display: none;
+    }
+    .header-icons {
+        width: 100%;
     }
     .d-none {
         display: block;

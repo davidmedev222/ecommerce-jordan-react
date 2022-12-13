@@ -5,7 +5,7 @@
 
 //* IMPORT COMPONENTS
 @use './components/toastify/Toastify';
-@use './components/navbar/NavBar';
+@use './components/header/Header';
 @use './components/category/Category';
 @use './components/panel/Panel';
 @use './components/badge/Badge';
@@ -13,6 +13,8 @@
 @use './components/button/ButtonFilter';
 
 //* IMPORT PAGES
+//? HOME
+@use './pages/home/Home';
 //? SHOP
 @use './pages/shop/ItemListContainer/ItemListContainer';
 @use './pages/shop/ItemListContainer/ItemList';

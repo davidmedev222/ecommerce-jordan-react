@@ -1,4 +1,4 @@
-import { CartContext } from '../.././context/cart/CartContext'; // CONTEXT
+import { CartContext } from '../../context/cart/CartContext'; // CONTEXT
 import { Badge } from '../badge/Badge'; // COMPONENT
 import { useContext } from 'react'; // HOOKS
 
