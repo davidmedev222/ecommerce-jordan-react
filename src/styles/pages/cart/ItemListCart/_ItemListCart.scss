@@ -2,6 +2,10 @@
 @import '../../.././global/mixins';
 
 // STYLES
+.main-cart {
+    @include flex(column, center, center);
+    padding: var(--padding-main);
+}
 .cart {
     @include flex(column, center, center);
     gap: clamp(1.25rem, 2.5vw, 5rem);
