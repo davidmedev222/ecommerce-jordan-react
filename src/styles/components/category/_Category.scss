@@ -6,7 +6,6 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(clamp(100px, 100%, 375px), 1fr));
     gap: clamp(1rem, 1vw, 2rem);
-    padding: clamp(1rem, 5.75vw, 12rem);
 
     &-a {
         @include flex(column, center, center);

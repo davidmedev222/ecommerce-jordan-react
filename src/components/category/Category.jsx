@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'; // ROUTER DOM
 
 const Category = ({ year1, year2, year3, year4 }) => {
     return (
-        <div className="category">
+        <section className="category">
             {/* IMAGE */}
             <Link to={`/shop/category/${year1}`} className="category-a">
                 <img
@@ -35,7 +35,7 @@ const Category = ({ year1, year2, year3, year4 }) => {
                 />
                 <span className="category-span">{year4}</span>
             </Link>
-        </div>
+        </section>
     );
 };
 
