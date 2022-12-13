@@ -15,7 +15,7 @@ const Panel = () => {
     };
 
     return (
-        <div className="panel">
+        <section className="panel">
             {/* CONTENT */}
             <div className="panel-option">
                 {/* ICON PROFILE */}
@@ -98,7 +98,7 @@ const Panel = () => {
                 </button>
                 <h2 className="panel-title">sign out</h2>
             </div>
-        </div>
+        </section>
     );
 };
 

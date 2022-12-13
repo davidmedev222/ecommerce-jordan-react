@@ -4,11 +4,11 @@
 // STYLES
 .panel {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(clamp(100px, 100%, 350px), 1fr));
     grid-auto-flow: dense;
     grid-auto-rows: 1fr;
     gap: clamp(0.5rem, 1vw, 2rem);
-    padding: clamp(1rem, 2.5vw, 5rem) clamp(1rem, 5vw, 10rem);
+    padding: var(--padding-main);
 
     &-option {
         @include flex(column, center, center);
