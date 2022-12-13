@@ -17,10 +17,10 @@ const ItemList = ({ items }) => {
     const products = component(category, items); // RESULT COMPONENT ITEM
 
     return (
-        <div className="shop-content">
+        <section className="shop-content">
             {/* COMPONENT ITEM */}
             {products.length > 0 ? products : <h1 className="h1">CARGANDO</h1>}
-        </div>
+        </section>
     );
 };
 
