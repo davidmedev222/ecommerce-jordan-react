@@ -1,12 +1,11 @@
-import { NavBar } from '../.././components/navbar/NavBar'; // COMPONENT
 import { Category } from '../.././components/category/Category'; // COMPONENT
 
 const Home = () => {
     return (
-        <>
-            <NavBar />
-            <Category all={'all'} year2={2019} year3={2020} year4={2021} year5={'2022'} />
-        </>
+        <main className="main-home">
+            {/* COMPONENT */}
+            <Category year1={2019} year2={2020} year3={2021} year4={2022} />
+        </main>
     );
 };
 
