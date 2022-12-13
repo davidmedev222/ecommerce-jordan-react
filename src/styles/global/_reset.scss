@@ -19,6 +19,8 @@
     // TIPOGRAFIA
     --family-one: 'Montserrat', sans-serif;
     --family-two: Helvetica, Arial, sans-serif;
+    // PADDING
+    --padding-main: clamp(1rem, 2.5vw, 5rem) clamp(1rem, 5.75vw, 12rem);
 }
 
 // GENERAL
@@ -33,7 +35,7 @@
 
 body {
     &::-webkit-scrollbar {
-        width: 7px;
+        width: 0.5rem;
     }
     &::-webkit-scrollbar-thumb {
         background-color: var(--text-one);
@@ -43,13 +45,12 @@ body {
 
 #root {
     display: grid;
-    grid-template-rows: auto 1fr;
+    grid-template-rows: auto 1fr auto;
     min-height: 100vh;
     font-size: 100%;
     font-family: var(--family-one);
     color: var(--text-one);
     background-color: var(--background-one);
-    hyphens: auto;
 }
 
 img,
