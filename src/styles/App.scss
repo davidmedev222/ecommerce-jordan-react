@@ -11,9 +11,9 @@
 @use './components/badge/Badge';
 @use './components/button/Button';
 @use './components/button/ButtonFilter';
+@use './components/heading/Heading';
 
-//* IMPORT PAGES
-//? HOME
+//* IMPORT PAGES //? HOME
 @use './pages/home/Home';
 //? SHOP
 @use './pages/shop/ItemListContainer/ItemListContainer';
@@ -30,4 +30,4 @@
 @use './pages/login/SignInWithCorreo';
 //? CHECKOUT
 @use './pages/checkout/Checkout';
-@use './pages/checkout/CheckoutMessage';
+@use './pages/checkout/CheckoutBrief';

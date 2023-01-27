@@ -1,22 +1,19 @@
 import { CartContext } from '../../.././context/cart/CartContext'; // CONTEXT
-import { Item } from './Item'; // COMPONENT
+import { ButtonLink } from '../../../components/button/ButtonLink'; // COMPONENT
 import { Button } from '../../.././components/button/Button'; // COMPONENT
+import { Item } from './Item'; // COMPONENT
 import { useContext } from 'react'; // HOOKS
 import { useOrder } from '../../../hooks/firestore/useOrder'; // CUSTOM HOOK
-import { useNavigate } from 'react-router-dom'; // HOOKS
 
 const ItemList = () => {
     const { cart, removeCart, totalQuantityItems, totalPrice, updateOrder } = useContext(CartContext); // HELPERS
 
     const items = cart.map((cadaItem) => <Item key={cadaItem.cp} {...cadaItem} />); // COMPONENT ITEM
 
-    const navigate = useNavigate(); // NAVIGATE
-
-    const { createOrder } = useOrder(); // HELPERS
+    const { createOrder } = useOrder(); // CUSTOM HELPERS
 
     const handleCreateOrder = () => {
         updateOrder(createOrder(cart, totalQuantityItems, totalPrice)); // ORDER UPDATE
-        navigate('/checkout'); // REDIRECT
     }; // EVENT
 
     return (
@@ -41,7 +38,9 @@ const ItemList = () => {
                     <span className="cart-price">{totalPrice()} USD</span>
                 </article>
                 {/* COMPONENT BUTTON */}
-                <Button onClick={handleCreateOrder}>checkout</Button>
+                <ButtonLink to={'/checkout'} onClick={handleCreateOrder}>
+                    checkout
+                </ButtonLink>
             </div>
         </div>
     );

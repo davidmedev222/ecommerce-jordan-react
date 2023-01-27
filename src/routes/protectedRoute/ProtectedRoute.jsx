@@ -1,8 +1,8 @@
 import { UserContext } from '../.././context/user/UserContext'; // CONTEXT
-import { Navigate } from 'react-router-dom'; // ROUTER DOM
+import { Navigate, Outlet } from 'react-router-dom'; // ROUTER DOM
 import { useContext } from 'react'; // HOOKS
 
-const ProtectedRoute = ({ children }) => {
+const ProtectedRoute = () => {
     const { user } = useContext(UserContext); // CONTEXT
 
     if (user === false) {
@@ -12,7 +12,7 @@ const ProtectedRoute = ({ children }) => {
     if (user === null) {
         return <Navigate to="/login" />; // REDIRECT
     }
-    return children;
+    return <Outlet />;
 };
 
 export { ProtectedRoute };

@@ -5,7 +5,7 @@ import { useContext } from 'react'; // HOOKS
 
 const useOrder = () => {
     const { user } = useContext(UserContext); // HELPERS
-    const { order, updateOrderUid } = useContext(CartContext); // HELPERS
+    const { order } = useContext(CartContext); // HELPERS
 
     const createOrder = (items, totalQuantityItems, totalPrice) => {
         return {
@@ -26,8 +26,7 @@ const useOrder = () => {
     const postOrder = async () => {
         try {
             const database = getFirestore();
-            const request = await addDoc(collection(database, 'orders'), order);
-            updateOrderUid(request.id);
+            await addDoc(collection(database, 'orders'), order);
         } catch (error) {
             console.log(error);
         }
