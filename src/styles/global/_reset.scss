@@ -3,54 +3,70 @@
 
 // RAIZ
 :root {
-    // COLORES
-    --text-one: #0d0d0d; // 5%
-    --text-two: #f2f2f2; // 95%
-    --text-three: #b3b3b3; // 70%
-    --background-one: #f2f2f2; // 95%
-    --background-two: #d9d9d9; // 85%
-    --component-one: #262626; // 15%
-    --btn: #262626; // 15%
-    --btn-danger: #ff1a1a; // 55%
-    --icon: #262626; // 15%
-    --icon-background: #d9d9d9; // 85%
-    --icon-active: #d9d9d9; // 85%
-    --icon-background-active: #262626; // 15%
-    // TIPOGRAFIA
-    --family-one: 'Montserrat', sans-serif;
-    --family-two: Helvetica, Arial, sans-serif;
-    // PADDING
-    --padding-main: clamp(1rem, 2.5vw, 5rem) clamp(1rem, 5.75vw, 12rem);
+  // TIPOGRAFIA
+  --family-one: 'Montserrat', sans-serif;
+  --family-two: Helvetica, Arial, sans-serif;
+  // PADDING
+  --padding-main: clamp(1rem, 2.5vw, 5rem) clamp(1rem, 5.75vw, 12rem);
+}
+[data-theme='light'] {
+  --text-one: #0d0d0d; // 5%
+  --text-two: #f2f2f2; // 95%
+  --text-three: #b3b3b3; // 70%
+  --background-one: #f2f2f2; // 95%
+  --background-two: #d9d9d9; // 85%
+  --component-one: #262626; // 15%
+  --btn: #262626; // 15%
+  --btn-danger: #ff1a1a; // 55%
+  --icon: #262626; // 15%
+  --icon-background: #d9d9d9; // 85%
+  --icon-active: #d9d9d9; // 85%
+  --icon-background-active: #262626; // 15%
+}
+
+[data-theme='dark'] {
+  --text-one: #f2f2f2; // 95%
+  --text-two: #0d0d0d; // 5%
+  --text-three: #4d4d4d; // 30%
+  --background-one: #0d0d0d; // 5%
+  --background-two: #262626; // 15%
+  --component-one: #d9d9d9; // 85%
+  --btn: #d9d9d9; // 85%
+  --btn-danger: #e60000; // 45%
+  --icon: #d9d9d9; // 85%
+  --icon-background: #262626; // 15%
+  --icon-active: #262626; // 15%
+  --icon-background-active: #d9d9d9; // 85%
 }
 
 // GENERAL
 * {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  vertical-align: baseline;
 }
 
 body {
-    &::-webkit-scrollbar {
-        width: 0.5rem;
-    }
-    &::-webkit-scrollbar-thumb {
-        background-color: var(--text-one);
-        border-radius: 3rem;
-    }
+  &::-webkit-scrollbar {
+    width: 0.5rem;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--text-one);
+    border-radius: 3rem;
+  }
 }
 
 #root {
-    display: grid;
-    grid-template-rows: auto 1fr auto;
-    min-height: 100vh;
-    font-size: 100%;
-    font-family: var(--family-one);
-    color: var(--text-one);
-    background-color: var(--background-one);
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+  font-size: 100%;
+  font-family: var(--family-one);
+  color: var(--text-one);
+  background-color: var(--background-one);
 }
 
 img,
@@ -58,28 +74,28 @@ picture,
 video,
 iframe,
 figure {
-    max-width: 100%;
-    width: 100%;
-    display: block;
+  max-width: 100%;
+  width: 100%;
+  display: block;
 }
 
 a {
-    display: block;
-    text-decoration: none;
-    color: inherit;
-    font-size: inherit;
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  font-size: inherit;
 }
 
 p a {
-    display: inline;
+  display: inline;
 }
 
 li {
-    list-style-type: none;
+  list-style-type: none;
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 h1,
@@ -97,24 +113,24 @@ i,
 b,
 u,
 em {
-    font-size: 1em;
-    font-weight: inherit;
-    font-style: inherit;
-    text-decoration: none;
-    text-align: center;
-    color: inherit;
-    text-transform: uppercase;
+  font-size: 1em;
+  font-weight: inherit;
+  font-style: inherit;
+  text-decoration: none;
+  text-align: center;
+  color: inherit;
+  text-transform: uppercase;
 }
 
 // SELECCION DE TEXTO Y COLOR
 ::-moz-selection {
-    background-color: var(--text-one);
-    color: var(--background-one);
+  background-color: var(--text-one);
+  color: var(--background-one);
 }
 
 ::selection {
-    background-color: var(--text-one);
-    color: var(--background-one);
+  background-color: var(--text-one);
+  color: var(--background-one);
 }
 
 form,
@@ -123,25 +139,25 @@ textarea,
 select,
 button,
 label {
-    display: block;
-    background-color: transparent;
-    color: inherit;
-    font-family: inherit;
-    font-size: inherit;
-    hyphens: auto;
-    appearance: none;
-    -webkit-appearance: none;
+  display: block;
+  background-color: transparent;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  hyphens: auto;
+  appearance: none;
+  -webkit-appearance: none;
 }
 
 table,
 tr,
 td {
-    border-collapse: collapse;
-    border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 svg {
-    display: block;
-    width: 100%;
-    fill: currentColor;
+  display: block;
+  width: 100%;
+  fill: currentColor;
 }
