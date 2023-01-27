@@ -4,7 +4,6 @@
 // STYLES
 .login-background {
     position: relative;
-    width: 100vw;
     height: 100vh;
     @include flex(row, center, center);
     padding: clamp(1rem, 2.5vw, 5rem);
