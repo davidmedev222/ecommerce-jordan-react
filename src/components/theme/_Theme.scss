@@ -1,0 +1,9 @@
+// STYLES
+.theme {
+  width: clamp(3.25rem, 4vw, 8rem);
+  height: clamp(3.25rem, 4vw, 8rem);
+  color: var(--components-two);
+  border-radius: 100%;
+  background-color: var(--components-one);
+  padding: clamp(0.5rem, 0.5vw, 1rem) clamp(1rem, 1vw, 2rem);
+}
