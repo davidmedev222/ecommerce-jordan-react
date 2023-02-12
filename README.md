@@ -1,5 +1,17 @@
-# **JORDAN STORE**
+# **📂JORDAN STORE**
 
+# **📑 GUIDE**
+
+<ol>
+     <li><a href="#imágenes">Imágenes</a></li>
+     <li><a href="#demo">Demo</a></li>
+     <li><a href="#qué-tecnologias-se-usaron">Tecnologias</a></li>
+     <li><a href="#quiénes-participaron-en-el-proyecto">Integrantes</a></li>
+     <li><a href="#últimasactualizaciones">Últimas actualizaciones</a></li>
+     <li><a href="#futurasactualizaciones">Futuras actualizaciones</a></li>
+</ol>
+
+# **📂IMÁGENES**
 ![](https://res.cloudinary.com/dos3i5jqy/image/upload/v1676229801/layers/jordanstore/jordan1_inkvsq.jpg)
 ![](https://res.cloudinary.com/dos3i5jqy/image/upload/v1676229801/layers/jordanstore/jordan2_n2z4m8.jpg)
 ![](https://res.cloudinary.com/dos3i5jqy/image/upload/v1676229802/layers/jordanstore/jordan3_bvpg0m.jpg)
@@ -18,15 +30,6 @@
 ![](https://res.cloudinary.com/dos3i5jqy/image/upload/v1676229801/layers/jordanstore/jordan8dark_tkfl0c.jpg)
 
 
-# **📑 GUIDE**
-
-<ol>
-     <li><a href="#demo">Demo</a></li>
-     <li><a href="#tecnologias">Tecnologias</a></li>
-     <li><a href="#technologies-used">Integrantes</a></li>
-     <li><a href="#ultimasactualizaciones">Últimas actualizaciones</a></li>
-     <li><a href="#futurasactualizaciones">Futuras actualizaciones</a></li>
-</ol>
 
 # **💥DEMO**
 [https://jordanstore.vercel.app/](https://jordanshop.netlify.app/)
@@ -39,7 +42,7 @@ Se uso `ReactJs` para la interfaz, `Sass` para los estilos, `Firebase Auth` para
 
 > `David Mamani` | Frontend Developer.
 
-# **📌Últimas actualizaciones**
+# **📌ÚLTIMAS ACTUALIZACIONES**
 
 -   función de notificación
 -   función de inicio de sesión con correo
@@ -47,7 +50,7 @@ Se uso `ReactJs` para la interfaz, `Sass` para los estilos, `Firebase Auth` para
 -   interfaz de detalles de la compra
 -   rutas protegidas para las paginas inicio de sesión y registro
 
-# **📝Futuras actualizaciones**
+# **📝FUTURAS ACTUALIZACIONES**
 
 -   interfaz de cargando
 -   interfaz de página preguntas frecuentes
