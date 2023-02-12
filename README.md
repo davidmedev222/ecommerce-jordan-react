@@ -7,8 +7,8 @@
      <li><a href="#demo">Demo</a></li>
      <li><a href="#qué-tecnologias-se-usaron">Tecnologias</a></li>
      <li><a href="#quiénes-participaron-en-el-proyecto">Integrantes</a></li>
-     <li><a href="#últimasactualizaciones">Últimas actualizaciones</a></li>
-     <li><a href="#futurasactualizaciones">Futuras actualizaciones</a></li>
+     <li><a href="#últimas-actualizaciones">Últimas actualizaciones</a></li>
+     <li><a href="#futuras-actualizaciones">Futuras actualizaciones</a></li>
 </ol>
 
 # **📂IMÁGENES**
@@ -38,7 +38,7 @@
 
 Se uso `ReactJs` para la interfaz, `Sass` para los estilos, `Firebase Auth` para la autenticacion del usuario, `Firebase Firestore` para la base de datos de la tienda, `Git` para el control de versiones y `Github` para hospedar el código del proyecto.
 
-# **🙍‍♂️¿QUIÉNES PARTICIPARON EN EL PROYECTO?**
+# **👨‍💻¿QUIÉNES PARTICIPARON EN EL PROYECTO?**
 
 > `David Mamani` | Frontend Developer.
 
