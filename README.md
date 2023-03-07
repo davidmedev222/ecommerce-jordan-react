@@ -29,35 +29,10 @@
 ![](https://res.cloudinary.com/dos3i5jqy/image/upload/v1676229801/layers/jordanstore/jordan7dark_r67zmn.jpg)
 ![](https://res.cloudinary.com/dos3i5jqy/image/upload/v1676229801/layers/jordanstore/jordan8dark_tkfl0c.jpg)
 
-
-
 # **🚀DEMO**
 [https://jordanstore.vercel.app/](https://jordanstore.vercel.app/)
 
 # **💬¿QUÉ TECNOLOGIAS SE USARON?**
 
-Se uso `ReactJs` para la interfaz, `Sass` para los estilos, `Firebase Auth` para la autenticacion del usuario, `Firebase Firestore` para la base de datos de la tienda, `Git` para el control de versiones y `Github` para hospedar el código del proyecto.
-
-# **👨‍💻¿QUIÉNES PARTICIPARON EN EL PROYECTO?**
-
-> `David Mamani` | Frontend Developer.
-
-# **📌ÚLTIMAS ACTUALIZACIONES**
-
--   función de notificación
--   función de inicio de sesión con correo
--   función de cerrar sesión del panel de usuario
--   interfaz de detalles de la compra
--   rutas protegidas para las paginas inicio de sesión y registro
-
-# **📝FUTURAS ACTUALIZACIONES**
-
--   interfaz de cargando
--   interfaz de página preguntas frecuentes
--   interfaz de productos a comprar en la pagina de confirmación de compra
--   función de ver perfil del panel de usuario
--   función de ver órdenes del panel de usuario
--   función de aplicar modo oscuro del panel de usuario
--   función de inicio de sesión con Github, Facebook y Google
--   función de guardar productos favoritos del panel de usuario
--   función de aplicar código promocional del panel de usuario
+Se uso `ViteJs` como framework de desarollo, `ReactJs` para el desarrollo de interfaces, `Sass` para el desarrollo de estilos, `Context API` para el manejo y gestión de estados globales, `React Router Dom` para enrutamiento del proyecto, `Firebase Auth` para la autenticacion del usuario, `Firebase Firestore` para la base de datos de la tienda, `Husky` para la ejecucion de los hooks de Git, `StandardJs` como linter de código, 
+`Pnpm` para la gestión de paquetes, `Git` para el control de versiones y `Github` para hospedar el código del proyecto.
