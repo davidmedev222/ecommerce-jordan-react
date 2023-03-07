@@ -32,7 +32,7 @@
 
 
 # **🚀DEMO**
-[https://jordanstore.vercel.app/](https://jordanshop.netlify.app/)
+[https://jordanstore.vercel.app/](https://jordanstore.vercel.app/)
 
 # **💬¿QUÉ TECNOLOGIAS SE USARON?**
 
