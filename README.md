@@ -11,7 +11,7 @@
      <li><a href="#futuras-actualizaciones">Futuras actualizaciones</a></li>
 </ol>
 
-# **📂IMÁGENES**
+# **📸IMÁGENES**
 ![](https://res.cloudinary.com/dos3i5jqy/image/upload/v1676229801/layers/jordanstore/jordan1_inkvsq.jpg)
 ![](https://res.cloudinary.com/dos3i5jqy/image/upload/v1676229801/layers/jordanstore/jordan2_n2z4m8.jpg)
 ![](https://res.cloudinary.com/dos3i5jqy/image/upload/v1676229802/layers/jordanstore/jordan3_bvpg0m.jpg)
@@ -31,8 +31,8 @@
 
 
 
-# **💥DEMO**
-[https://jordanstore.vercel.app/](https://jordanshop.netlify.app/)
+# **🚀DEMO**
+[https://jordanstore.vercel.app/](https://jordanstore.vercel.app/)
 
 # **💬¿QUÉ TECNOLOGIAS SE USARON?**
 
