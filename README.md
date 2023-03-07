@@ -6,9 +6,6 @@
      <li><a href="#imágenes">Imágenes</a></li>
      <li><a href="#demo">Demo</a></li>
      <li><a href="#qué-tecnologias-se-usaron">Tecnologias</a></li>
-     <li><a href="#quiénes-participaron-en-el-proyecto">Integrantes</a></li>
-     <li><a href="#últimas-actualizaciones">Últimas actualizaciones</a></li>
-     <li><a href="#futuras-actualizaciones">Futuras actualizaciones</a></li>
 </ol>
 
 # **📸IMÁGENES**
