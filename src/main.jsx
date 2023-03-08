@@ -1,5 +1,5 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
+import { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
 import { initializeApp } from 'firebase/app';
 import { firebaseConfig } from './services/firebase/config';
 import { App } from './routes/App';
@@ -7,11 +7,12 @@ import { ThemeProvider } from './context/theme/ThemeProvider';
 
 initializeApp(firebaseConfig);
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = createRoot(document.getElementById('app'))
+
 root.render(
-  <React.StrictMode>
+  <StrictMode>
     <ThemeProvider>
       <App />
     </ThemeProvider>
-  </React.StrictMode>
-);
+  </StrictMode>
+)
