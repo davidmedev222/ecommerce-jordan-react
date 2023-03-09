@@ -1,3 +1,4 @@
+// ? ICONS
 export { IconArrowRight } from './icons/IconArrow'
 export { IconBell } from './icons/IconBell'
 export { IconBookMark } from './icons/IconBookMark'
@@ -13,3 +14,4 @@ export { IconSun } from './icons/IconSun'
 export { IconSignOut } from './icons/IconSignOut'
 export { IconTrash } from './icons/IconTrash'
 export { IconUser } from './icons/IconUser'
+export { IconLogo } from './icons/IconLogo'
