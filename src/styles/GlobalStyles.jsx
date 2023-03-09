@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components'
+import { helpers } from './helpers'
 
 const GlobalStyles = createGlobalStyle`
   :root {
@@ -138,6 +139,8 @@ const GlobalStyles = createGlobalStyle`
     width: 100%;
     display: block;
   }
+
+  ${helpers}
 `
 
 export { GlobalStyles }
