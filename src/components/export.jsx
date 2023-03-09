@@ -1,3 +1,5 @@
+// ? COMPONENTS
+export { Categories } from './categories/Categories'
 // ? ICONS
 export { IconArrowRight } from './icons/IconArrow'
 export { IconBell } from './icons/IconBell'
