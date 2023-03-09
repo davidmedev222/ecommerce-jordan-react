@@ -4,6 +4,7 @@ import { initializeApp } from 'firebase/app'
 import { firebaseConfig } from './services/firebase/config'
 import { App } from './routes/App'
 import { ThemeProvider } from './context/theme/ThemeProvider'
+import { GlobalStyles } from './styles/GlobalStyles'
 
 initializeApp(firebaseConfig)
 
@@ -12,6 +13,7 @@ const root = createRoot(document.getElementById('app'))
 root.render(
   <StrictMode>
     <ThemeProvider>
+      <GlobalStyles />
       <App />
     </ThemeProvider>
   </StrictMode>
