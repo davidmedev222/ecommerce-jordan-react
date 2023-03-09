@@ -21,6 +21,7 @@
     "@vitejs/plugin-react-swc": "^3.0.0",
     "sass": "^1.58.3",
     "standard": "^17.0.0",
+    "styled-components": "^5.3.8",
     "vite": "^4.1.0"
   }
 }
