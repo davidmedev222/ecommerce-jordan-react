@@ -1,4 +1,5 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
+import { useIntersection } from '../../hooks/intersection/useIntersection'
 
 const CategoryStyled = styled('article')`
   display: grid;
@@ -10,6 +11,13 @@ const CategoryStyled = styled('article')`
 const CategoryImage = styled('img')`
   object-fit: contain;
   aspect-ratio: 1;
+  transform: translateX(50%);
+  transition: transform 800ms ease-in-out;
+  z-index: 1;
+
+  ${({ inView }) => inView && css`
+    transform: translateX(0);
+  `}
 `
 const CategoryHeader = styled('header')`
   grid-area: header;
@@ -19,6 +27,14 @@ const CategoryHeader = styled('header')`
   align-items: center;
   position: relative;
   text-align: center;
+  transform: translateX(-50%);
+  transition: transform 800ms ease-in-out;
+  visibility: hidden;
+  
+  ${({ inView }) => inView && css`
+    transform: translateX(0);
+    visibility: visible;
+  `}
 `
 const CategoryYear = styled('span')`
   font-size: clamp(3.5rem, 7vw, 14rem);
@@ -36,10 +52,14 @@ const CategoryParagraph = styled('p')`
   z-index: 1;
 `
 const Category = ({ image, alt, year, paragraph }) => {
+  const [elementRef, isIntersecting] = useIntersection({
+    threshold: 1
+  }, true)
+
   return (
-    <CategoryStyled>
-      <CategoryImage src={image} alt={alt} />
-      <CategoryHeader>
+    <CategoryStyled ref={elementRef} data-opacity data-view={isIntersecting}>
+      <CategoryImage inView={isIntersecting} src={image} alt={alt} />
+      <CategoryHeader inView={isIntersecting}>
         <CategoryHeading>AIR JORDAN</CategoryHeading>
         <CategoryYear>{year}</CategoryYear>
         <CategoryParagraph>{paragraph}</CategoryParagraph>
