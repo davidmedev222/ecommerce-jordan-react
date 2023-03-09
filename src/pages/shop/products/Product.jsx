@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import { useToggle } from '../../../hooks/toggle/useToggle'
 import { IconBookMark, IconBookMarkBold } from '../../../components/export'
+import { useIntersection } from '../../../hooks/intersection/useIntersection'
 
 const ProductStyled = styled('article')`
   display: flex;
@@ -46,13 +47,17 @@ const ProductPrice = styled('h4')`
 const Product = () => {
   const { toggle, onToggle } = useToggle()
 
+  const [elementRef, isIntersecting] = useIntersection({
+    threshold: 1
+  }, true)
+
   return (
-    <ProductStyled>
-      <ProductImage src='https://res.cloudinary.com/dos3i5jqy/image/upload/v1668792317/ecommerce-jordan-react/product-10_2_v8chjs.webp' alt='asd' />
+    <ProductStyled ref={elementRef} data-opacity data-view={isIntersecting}>
+      <ProductImage data-mask={isIntersecting} src='https://res.cloudinary.com/dos3i5jqy/image/upload/v1668792317/ecommerce-jordan-react/product-10_2_v8chjs.webp' alt='asd' />
       <WrapperBookMark onClick={onToggle}>
         {toggle ? <IconBookMarkBold /> : <IconBookMark />}
       </WrapperBookMark>
-      <ProductFooter>
+      <ProductFooter data-mask={isIntersecting}>
         <ProductHeading>One Multicolor</ProductHeading>
         <ProductColor>Grey / Black / White</ProductColor>
         <ProductPrice>$198.00</ProductPrice>

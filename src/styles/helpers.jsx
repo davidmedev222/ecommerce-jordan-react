@@ -12,6 +12,14 @@ const view = keyframes`
     opacity: 1;
   }
 `
+const mask = keyframes`
+  0% {
+    clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+  }
+  100% {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+`
 // ? DATA ATTRIBUTES
 const helpers = css`
   [data-opacity]{
@@ -19,6 +27,9 @@ const helpers = css`
   }
   [data-view=true]{
     animation: ${view} 1500ms ease-in-out forwards;
+  }
+  [data-mask=true]{
+    animation: ${mask} 650ms ease-in-out forwards;
   }
 `
 
