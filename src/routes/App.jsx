@@ -1,15 +1,8 @@
 import '.././styles/App.scss' // STYLES
 import { UserContextProvider, CartContextProvider } from '../context/export' // CUSTOM CONTEXTS
 import { BrowserRouter, Routes, Route } from 'react-router-dom' // ROUTER DOM
-import { Layout } from '../pages/layout/Layout' // COMPONENTE
-import { Home } from '../pages/home/Home' // COMPONENT
-import { Error } from '../pages/error/Error' // COMPONENT
-import { Account } from '../pages/account/Account' // COMPONENT
-import { Checkout } from '../pages/checkout/Checkout' // COMPONENT
-import { ItemListCart } from '../pages/cart/ItemListCart/ItemListCart' // COMPONENT
-import { ItemDetailContainer, ItemListContainer } from '../pages/shop/export' // COMPONENTS
 import { ProtectedRoute, ProtectedRouteUser } from './export' // COMPONENTS
-import { Login, Register } from '../pages/login/export' // COMPONENTS
+import { LayoutPages, HomePage, ErrorPage, ShopPage, FaqPage, CartPage, AccountPage, CheckoutPage, LoginPage, RegisterPage } from '../pages/export'
 
 const App = () => {
   return (
@@ -17,21 +10,21 @@ const App = () => {
       <CartContextProvider>
         <BrowserRouter>
           <Routes>
-            <Route path='/' element={<Layout />}>
-              <Route index element={<Home />} />
-              <Route path='*' element={<Error />} />
-              <Route path='shop' element={<ItemListContainer />} />
-              <Route path='shop/category/:category' element={<ItemListContainer />} />
-              <Route path='shop/item/:id' element={<ItemDetailContainer />} />
-              <Route path='faq' element={<h2>FAq</h2>} />
-              <Route path='cart' element={<ItemListCart />} />
+            <Route path='/' element={<LayoutPages />}>
+              <Route index element={<HomePage />} />
+              <Route path='*' element={<ErrorPage />} />
+              <Route path='shop' element={<ShopPage />} />
+              <Route path='shop/category/:category' element={<h1>category</h1>} />
+              <Route path='shop/item/:id' element={<h1>item</h1>} />
+              <Route path='faq' element={<FaqPage />} />
+              <Route path='cart' element={<CartPage />} />
               <Route element={<ProtectedRoute />}>
-                <Route path='account' element={<Account />} />
-                <Route path='checkout' element={<Checkout />} />
+                <Route path='account' element={<AccountPage />} />
+                <Route path='checkout' element={<CheckoutPage />} />
               </Route>
               <Route element={<ProtectedRouteUser />}>
-                <Route path='login' element={<Login />} />
-                <Route path='register' element={<Register />} />
+                <Route path='login' element={<LoginPage />} />
+                <Route path='register' element={<RegisterPage />} />
               </Route>
             </Route>
           </Routes>

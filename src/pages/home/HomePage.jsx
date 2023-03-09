@@ -1,6 +1,6 @@
-import { Category } from '../.././components/category/Category' // COMPONENT
+import { Category } from '../../components/category/Category' // COMPONENT
 
-const Home = () => {
+const HomePage = () => {
   return (
     <main className='main-home'>
       {/* COMPONENT */}
@@ -9,4 +9,4 @@ const Home = () => {
   )
 }
 
-export { Home }
+export { HomePage }

@@ -1,4 +1,4 @@
-const Error = () => {
+const ErrorPage = () => {
   return (
     <>
       <h1 className='h1'>error 404, pagina no encontrada</h1>
@@ -6,4 +6,4 @@ const Error = () => {
   )
 }
 
-export { Error }
+export { ErrorPage }

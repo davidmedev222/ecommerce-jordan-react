@@ -1,6 +1,6 @@
 import { Panel } from '../../components/panel/Panel' // COMPONENT
 
-const Account = () => {
+const AccountPage = () => {
   return (
     <main>
       {/* COMPONENT */}
@@ -9,4 +9,4 @@ const Account = () => {
   )
 }
 
-export { Account }
+export { AccountPage }

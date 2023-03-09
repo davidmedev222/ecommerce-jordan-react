@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom' // ROUTER DOM & HOOK
 import { useContext, useState } from 'react' // HOOKS
 import { toastifyNotication } from '../../components/toastify/Toastify' // FUNCTION NOTIFICATION
 
-const Register = () => {
+const RegisterPage = () => {
   const navigate = useNavigate() // NAVIGATE
 
   const [registerData, updateRegisterData] = useState({
@@ -120,4 +120,4 @@ const Register = () => {
   )
 }
 
-export { Register }
+export { RegisterPage }

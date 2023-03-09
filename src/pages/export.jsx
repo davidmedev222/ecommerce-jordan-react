@@ -1,0 +1,11 @@
+// ? PAGES
+export { LayoutPages } from './layout/LayoutPages'
+export { HomePage } from './home/HomePage'
+export { ShopPage } from './shop/ShopPage'
+export { FaqPage } from './faq/FaqPage'
+export { CartPage } from './cart/CartPage'
+export { AccountPage } from './account/AccountPage'
+export { CheckoutPage } from './checkout/CheckoutPage'
+export { ErrorPage } from './error/ErrorPage'
+export { LoginPage } from './login/LoginPage'
+export { RegisterPage } from './register/RegisterPage'

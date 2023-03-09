@@ -3,7 +3,7 @@ import { CheckoutBrief } from './CheckoutBrief' // COMPONENT
 import { Navigate } from 'react-router-dom' // HOOKS
 import { useContext } from 'react' // HOOKS
 
-const Checkout = () => {
+const CheckoutPage = () => {
   const { order } = useContext(CartContext) // HELPERS
 
   if (!order) return <Navigate to='/cart' /> // REDIRECT
@@ -16,4 +16,4 @@ const Checkout = () => {
   )
 }
 
-export { Checkout }
+export { CheckoutPage }

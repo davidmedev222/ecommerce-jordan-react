@@ -2,7 +2,7 @@ import { Link, useNavigate } from 'react-router-dom' // ROUTER DOM & HOOK
 import { SignInWithCorreo } from './SignInWithCorreo' // COMPONENT
 import { useState } from 'react' // HOOKS
 
-const Login = () => {
+const LoginPage = () => {
   const navigate = useNavigate() // NAVIGATE
 
   const [onContinue, updateOnContinue] = useState(false) // STATE
@@ -56,4 +56,4 @@ const Login = () => {
   )
 }
 
-export { Login }
+export { LoginPage }
