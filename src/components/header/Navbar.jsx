@@ -41,20 +41,20 @@ const LiStyled = styled('li')`
   }
 `
 
-const Navbar = ({ show, onToggle }) => {
+const Navbar = ({ toggle, offToggle }) => {
   return (
-    <NavbarStyled show={show}>
+    <NavbarStyled show={toggle}>
       <UlStyled>
-        <LiStyled onClick={onToggle}>
+        <LiStyled onClick={offToggle}>
           <Link to='/shop'>Shop</Link>
         </LiStyled>
-        <LiStyled onClick={onToggle}>
+        <LiStyled onClick={offToggle}>
           <Link to='/faqs'>Faqs</Link>
         </LiStyled>
-        <LiStyled onClick={onToggle}>
+        <LiStyled onClick={offToggle}>
           <Link to='/cart'>Cart</Link>
         </LiStyled>
-        <LiStyled onClick={onToggle}>
+        <LiStyled onClick={offToggle}>
           <Link to='/account'>Account</Link>
         </LiStyled>
       </UlStyled>

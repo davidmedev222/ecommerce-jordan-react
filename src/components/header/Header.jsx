@@ -41,17 +41,17 @@ const WrapperMenu = styled('button')`
 `
 
 const Header = () => {
-  const { toggle, onToggle } = useToggle()
+  const { isToggle, toggle, offToggle } = useToggle()
 
   return (
     <HeaderStyled>
-      <WrapperLogo to='/' onClick={onToggle}>
+      <WrapperLogo to='/' onClick={offToggle}>
         <IconLogo />
       </WrapperLogo>
-      <WrapperMenu onClick={onToggle}>
+      <WrapperMenu onClick={toggle}>
         <IconMenu />
       </WrapperMenu>
-      <Navbar show={toggle} onToggle={onToggle} />
+      <Navbar toggle={isToggle} offToggle={offToggle} />
       <WrapperIcons>
         <WrapperIcon to='/shop'><IconCart /></WrapperIcon>
         <WrapperIcon to='/account'><IconUser /></WrapperIcon>

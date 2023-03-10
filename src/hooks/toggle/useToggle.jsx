@@ -1,11 +1,15 @@
 import { useState } from 'react'
 
 const useToggle = (initialValue = false) => {
-  const [toggle, updateToggle] = useState(initialValue)
+  const [isToggle, updateIsToggle] = useState(initialValue)
 
-  const onToggle = () => updateToggle(!toggle)
+  const toggle = () => updateIsToggle(!isToggle)
 
-  return { toggle, onToggle }
+  const onToggle = () => updateIsToggle(true)
+
+  const offToggle = () => updateIsToggle(false)
+
+  return { isToggle, toggle, onToggle, offToggle }
 }
 
 export { useToggle }
