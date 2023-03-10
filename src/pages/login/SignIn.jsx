@@ -5,12 +5,10 @@ import styled from 'styled-components'
 const FormStyled = styled('form')`
   display: flex;
   flex-flow: column nowrap;
-  justify-content: center;
-  align-items: center;
   gap: clamp(1rem, 1vw, 2rem);
+  font-size: clamp(1rem, 1vw, 2rem);
 `
 const LabelStyled = styled('label')`
-  align-self: flex-start;
   font-weight: 700;
 `
 const InputStyled = styled('input')`
@@ -22,6 +20,7 @@ const InputStyled = styled('input')`
 `
 const ForgotLink = styled(Link)`
   color: #006FCF;
+  text-align: center;
   text-decoration: underline;
 `
 const Submit = styled('button')`

@@ -30,7 +30,6 @@ const WrapperLoginLeft = styled('div')`
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
-  font-size: clamp(1rem, 1vw, 2rem);
 `
 const WrapperLoginRight = styled('section')`
   grid-area: right;
