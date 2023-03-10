@@ -1,58 +1,78 @@
-import { Link, useNavigate } from 'react-router-dom' // ROUTER DOM & HOOK
-import { SignInWithCorreo } from './SignInWithCorreo' // COMPONENT
-import { useState } from 'react' // HOOKS
+import { Link } from 'react-router-dom'
+import styled from 'styled-components'
+import { SignIn } from './SignIn'
+import { SignInWithSocials } from './SignInWithSocials'
+
+const MainStyled = styled('main')`
+  display: grid;
+  place-content: center;
+  grid-template: 
+  "left right" auto
+  / 1fr 1fr;
+  gap: clamp(2rem, 4vw, 8rem);
+  padding: clamp(1rem, 1vw, 2rem) clamp(1rem, 4vw, 8rem);
+
+ @media screen and (max-width: 64rem) {
+    grid-template: 
+    "left" auto
+    "right" auto
+    / 1fr;
+ }
+@media screen and (min-width: 222rem) {
+   grid-template: 
+   "left" auto
+   "right" auto
+   / 1fr;
+}
+`
+const WrapperLoginLeft = styled('div')`
+  grid-area: left;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  font-size: clamp(1rem, 1vw, 2rem);
+`
+const WrapperLoginRight = styled('section')`
+  grid-area: right;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(.5rem, .5vw, 1rem);
+  font-size: clamp(1rem, 1vw, 2rem);
+  text-align: center;
+`
+const Heading = styled('h2')`
+  font-size:clamp(1.75rem, 1.75vw, 3.5rem);
+  font-weight: 700;
+`
+const TermsOfUse = styled('p')`
+  font-size:clamp(.75rem, .75vw, 1.5rem);
+`
+const LinkStyled = styled(Link)`
+  font-weight: 700;
+  text-decoration: underline;
+`
 
 const LoginPage = () => {
-  const navigate = useNavigate() // NAVIGATE
-
-  const [onContinue, updateOnContinue] = useState(false) // STATE
-
-  const handleContinue = () => {
-    updateOnContinue(true)
-  } // EVENT
-
   return (
-    <div className='login-background'>
-      {/* COMPONENT SIGN IN WITH CORREO */}
-      {onContinue && <SignInWithCorreo updateOnContinue={updateOnContinue} />}
-      {/* BUTTON CLOSE */}
-      <button onClick={() => navigate('/cart')} className='login-btn-close'>
-        <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'>
-          <path d='M109.3 288L480 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-370.7 0 73.4-73.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-128 128c-12.5 12.5-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 288z' />
-        </svg>
-      </button>
-      <section className='login'>
-        {/* INFO */}
-        <h1 className='login-h1'>jordan shop</h1>
-        <h2 className='login-h2'>welcome to jordan shop</h2>
-        <span className='login-span'>Choose how you want to continue setting up your account</span>
-        {/* BUTTONS SOCIALS */}
-        <button className='login-btn login-btn-apple'>Continue with Github</button>
-        <button className='login-btn login-btn-facebook'>Continue with Facebook</button>
-        <button className='login-btn login-btn-google'>Continue with Google</button>
-        <button onClick={handleContinue} className='login-btn login-btn-correo'>
-          Continue with correo
-        </button>
-        {/* DETAILS */}
-        <p className='login-p'>
-          You do not have an account?{' '}
-          <Link to='/register' className='login-a'>
-            Create new account
-          </Link>
+    <MainStyled>
+      <WrapperLoginLeft>
+        <SignIn />
+      </WrapperLoginLeft>
+      <WrapperLoginRight>
+        <Heading>Welcome to Jordan Shop</Heading>
+        <span>Choose how you want to continue setting up your account</span>
+        <SignInWithSocials />
+        <p>You do not have an account?
+          <LinkStyled to='/register'> Create new account</LinkStyled>
         </p>
-        <p className='login-p'>
-          By clicking on the button, you accept the{' '}
-          <Link to='#' className='login-a'>
-            Terms of Use
-          </Link>{' '}
-          and the{' '}
-          <Link to='#' className='login-a'>
-            Privacy Policy
-          </Link>{' '}
+        <TermsOfUse>By clicking on the button, you accept the
+          <LinkStyled to='#'> Terms of Use </LinkStyled>and the<LinkStyled to='#'> Privacy Policy </LinkStyled>
           and also confirms that he is 18 years of age or older.
-        </p>
-      </section>
-    </div>
+        </TermsOfUse>
+      </WrapperLoginRight>
+    </MainStyled>
   )
 }
 
