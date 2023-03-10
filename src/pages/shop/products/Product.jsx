@@ -45,7 +45,7 @@ const ProductPrice = styled('h4')`
 `
 
 const Product = () => {
-  const { toggle, onToggle } = useToggle()
+  const { isToggle, toggle } = useToggle()
 
   const [elementRef, isIntersecting] = useIntersection({
     threshold: 0.5
@@ -54,8 +54,8 @@ const Product = () => {
   return (
     <ProductStyled ref={elementRef} data-opacity data-view={isIntersecting}>
       <ProductImage data-mask={isIntersecting} src='https://res.cloudinary.com/dos3i5jqy/image/upload/v1668792317/ecommerce-jordan-react/product-10_2_v8chjs.webp' alt='asd' />
-      <WrapperBookMark onClick={onToggle}>
-        {toggle ? <IconBookMarkBold /> : <IconBookMark />}
+      <WrapperBookMark onClick={toggle}>
+        {isToggle ? <IconBookMarkBold /> : <IconBookMark />}
       </WrapperBookMark>
       <ProductFooter data-mask={isIntersecting}>
         <ProductHeading>One Multicolor</ProductHeading>
