@@ -22,10 +22,6 @@
 //? CART
 @use './pages/cart/EmptyCart/EmptyCart';
 @use './pages/cart/ItemListCart/ItemListCart';
-//? LOGIN & REGISTER
-@use './pages/login/Login';
-@use './pages/login/Register';
-@use './pages/login/SignInWithCorreo';
 //? CHECKOUT
 @use './pages/checkout/Checkout';
 @use './pages/checkout/CheckoutBrief';
