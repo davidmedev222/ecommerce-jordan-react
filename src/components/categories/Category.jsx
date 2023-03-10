@@ -53,7 +53,7 @@ const CategoryParagraph = styled('p')`
 `
 const Category = ({ image, alt, year, paragraph }) => {
   const [elementRef, isIntersecting] = useIntersection({
-    threshold: 1
+    threshold: 0.5
   }, true)
 
   return (

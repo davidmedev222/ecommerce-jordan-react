@@ -48,7 +48,7 @@ const Product = () => {
   const { toggle, onToggle } = useToggle()
 
   const [elementRef, isIntersecting] = useIntersection({
-    threshold: 1
+    threshold: 0.5
   }, true)
 
   return (
