@@ -33,10 +33,12 @@ const ProductFooter = styled('footer')`
   text-align: center;
 `
 const ProductHeading = styled('h3')`
+  text-transform: capitalize;
   font-size:clamp(1.25rem, 2vw, 4rem);
   font-weight: 800;
 `
 const ProductColor = styled('span')`
+  text-transform: capitalize;
   font-size:clamp(.75rem, 1vw, 2rem);
 `
 const ProductPrice = styled('h4')`
@@ -44,7 +46,7 @@ const ProductPrice = styled('h4')`
   font-weight: 700;
 `
 
-const Product = () => {
+const Product = ({ image, name, color, price }) => {
   const { isToggle, toggle } = useToggle()
 
   const [elementRef, isIntersecting] = useIntersection({
@@ -53,14 +55,14 @@ const Product = () => {
 
   return (
     <ProductStyled ref={elementRef} data-opacity data-view={isIntersecting}>
-      <ProductImage data-mask={isIntersecting} src='https://res.cloudinary.com/dos3i5jqy/image/upload/v1668792317/ecommerce-jordan-react/product-10_2_v8chjs.webp' alt='asd' />
+      <ProductImage data-mask={isIntersecting} src={image} alt={name} />
       <WrapperBookMark onClick={toggle}>
         {isToggle ? <IconBookMarkBold /> : <IconBookMark />}
       </WrapperBookMark>
       <ProductFooter data-mask={isIntersecting}>
-        <ProductHeading>One Multicolor</ProductHeading>
-        <ProductColor>Grey / Black / White</ProductColor>
-        <ProductPrice>$198.00</ProductPrice>
+        <ProductHeading>{name}</ProductHeading>
+        <ProductColor>{color}</ProductColor>
+        <ProductPrice>${price}</ProductPrice>
       </ProductFooter>
     </ProductStyled>
   )
