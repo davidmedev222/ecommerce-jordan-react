@@ -53,7 +53,7 @@ const Header = () => {
       </WrapperMenu>
       <Navbar toggle={isToggle} offToggle={offToggle} />
       <WrapperIcons>
-        <WrapperIcon to='/shop'><IconCart /></WrapperIcon>
+        <WrapperIcon to='/cart'><IconCart /></WrapperIcon>
         <WrapperIcon to='/account'><IconUser /></WrapperIcon>
       </WrapperIcons>
     </HeaderStyled>

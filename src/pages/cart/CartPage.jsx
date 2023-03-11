@@ -1,7 +1,9 @@
+import { Products } from './products/Products'
+
 const CartPage = () => {
   return (
     <main>
-      cart
+      <Products />
     </main>
   )
 }
