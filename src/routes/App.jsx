@@ -1,13 +1,14 @@
 import '.././styles/App.scss' // STYLES
-import { UserContextProvider, CartContextProvider } from '../context/export' // CUSTOM CONTEXTS
+import { UserContextProvider } from '../context/export' // CUSTOM CONTEXTS
 import { BrowserRouter, Routes, Route } from 'react-router-dom' // ROUTER DOM
 import { ProtectedRoute, ProtectedRouteUser } from './export' // COMPONENTS
 import { LayoutPages, HomePage, ErrorPage, ShopPage, FaqPage, CartPage, AccountPage, CheckoutPage, LoginPage, RegisterPage, ProductDetailPage } from '../pages/export'
+import { CartProvider } from '../context/cart/CartProvider'
 
 const App = () => {
   return (
     <UserContextProvider>
-      <CartContextProvider>
+      <CartProvider>
         <BrowserRouter>
           <Routes>
             <Route path='/' element={<LayoutPages />}>
@@ -29,7 +30,7 @@ const App = () => {
             </Route>
           </Routes>
         </BrowserRouter>
-      </CartContextProvider>
+      </CartProvider>
     </UserContextProvider>
   )
 }
