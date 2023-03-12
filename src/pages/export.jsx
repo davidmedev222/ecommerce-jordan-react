@@ -2,6 +2,7 @@
 export { LayoutPages } from './layout/LayoutPages'
 export { HomePage } from './home/HomePage'
 export { ShopPage } from './shop/ShopPage'
+export { ProductDetailPage } from './shop/productDetailPage/ProductDetailPage'
 export { FaqPage } from './faq/FaqPage'
 export { CartPage } from './cart/CartPage'
 export { AccountPage } from './account/AccountPage'

@@ -2,7 +2,7 @@ import '.././styles/App.scss' // STYLES
 import { UserContextProvider, CartContextProvider } from '../context/export' // CUSTOM CONTEXTS
 import { BrowserRouter, Routes, Route } from 'react-router-dom' // ROUTER DOM
 import { ProtectedRoute, ProtectedRouteUser } from './export' // COMPONENTS
-import { LayoutPages, HomePage, ErrorPage, ShopPage, FaqPage, CartPage, AccountPage, CheckoutPage, LoginPage, RegisterPage } from '../pages/export'
+import { LayoutPages, HomePage, ErrorPage, ShopPage, FaqPage, CartPage, AccountPage, CheckoutPage, LoginPage, RegisterPage, ProductDetailPage } from '../pages/export'
 
 const App = () => {
   return (
@@ -15,7 +15,7 @@ const App = () => {
               <Route path='*' element={<ErrorPage />} />
               <Route path='shop' element={<ShopPage />} />
               <Route path='shop/category/:category' element={<ShopPage />} />
-              <Route path='shop/item/:id' element={<h1>item</h1>} />
+              <Route path='shop/product/:id' element={<ProductDetailPage />} />
               <Route path='faq' element={<FaqPage />} />
               <Route path='cart' element={<CartPage />} />
               <Route element={<ProtectedRoute />}>
