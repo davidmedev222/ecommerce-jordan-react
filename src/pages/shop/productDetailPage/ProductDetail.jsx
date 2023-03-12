@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components'
 import { IconDecrease, IconIncrease } from '../../../components/export'
+import { useIntersection } from '../../../hooks/intersection/useIntersection'
 
 const ProductDetailStyled = styled('article')`
   display: grid;
@@ -88,9 +89,13 @@ const ProductDetailButton = styled('button')`
 const ProductDetail = (props) => {
   const { imageOne, name, color, stock, year, collection, location, designer, price } = props
 
+  const [elementRef, isIntersecting] = useIntersection({
+    threshold: 0.25
+  }, false)
+
   return (
-    <ProductDetailStyled>
-      <ProductDetailImage src={imageOne} alt={name} />
+    <ProductDetailStyled ref={elementRef} data-opacity data-view={isIntersecting}>
+      <ProductDetailImage data-mask-top={isIntersecting} src={imageOne} alt={name} />
       <ProductDetailHeader>
         <ProductDetailHeading isTitle>{name} <ProductDetailSpan>{color}</ProductDetailSpan></ProductDetailHeading>
         <ProductDetailHeading>Stock <ProductDetailSpan>{stock}</ProductDetailSpan></ProductDetailHeading>

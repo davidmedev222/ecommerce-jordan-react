@@ -12,9 +12,17 @@ const view = keyframes`
     opacity: 1;
   }
 `
-const mask = keyframes`
+const maskLeft = keyframes`
   0% {
     clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+  }
+  100% {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+`
+const maskTop = keyframes`
+  0% {
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
   }
   100% {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
@@ -28,8 +36,11 @@ const helpers = css`
   [data-view=true]{
     animation: ${view} 1500ms ease-in-out forwards;
   }
-  [data-mask=true]{
-    animation: ${mask} 650ms ease-in-out forwards;
+  [data-mask-left=true]{
+    animation: ${maskLeft} 650ms ease-in-out forwards;
+  }
+  [data-mask-top=true]{
+    animation: ${maskTop} 650ms ease-in-out forwards;
   }
 `
 
