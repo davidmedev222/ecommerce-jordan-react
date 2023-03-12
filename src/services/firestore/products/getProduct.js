@@ -5,7 +5,7 @@ const getProduct = async (id) => {
   const docRef = doc(database, 'items', id)
   const querySnapshot = await getDoc(docRef)
   if (!querySnapshot.exists()) return Promise.reject(new Error('Product not found'))
-  return querySnapshot.data()
+  return [querySnapshot.data()]
 }
 
 export { getProduct }
