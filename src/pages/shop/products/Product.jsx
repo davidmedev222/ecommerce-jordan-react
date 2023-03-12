@@ -57,12 +57,12 @@ const Product = ({ cp, image, name, color, price }) => {
   return (
     <ProductStyled ref={elementRef} data-opacity data-view={isIntersecting}>
       <Link to={`/shop/product/${cp}`}>
-        <ProductImage data-mask={isIntersecting} src={image} alt={name} />
+        <ProductImage data-mask-left={isIntersecting} src={image} alt={name} />
       </Link>
       <WrapperBookMark onClick={toggle}>
         {isToggle ? <IconBookMarkBold /> : <IconBookMark />}
       </WrapperBookMark>
-      <ProductFooter data-mask={isIntersecting}>
+      <ProductFooter data-mask-left={isIntersecting}>
         <ProductHeading>{name}</ProductHeading>
         <ProductColor>{color}</ProductColor>
         <ProductPrice>${price}</ProductPrice>
