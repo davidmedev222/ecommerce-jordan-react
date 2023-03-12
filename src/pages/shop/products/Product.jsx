@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import { useToggle } from '../../../hooks/toggle/useToggle'
 import { IconBookMark, IconBookMarkBold } from '../../../components/export'
 import { useIntersection } from '../../../hooks/intersection/useIntersection'
+import { Link } from 'react-router-dom'
 
 const ProductStyled = styled('article')`
   display: flex;
@@ -46,7 +47,7 @@ const ProductPrice = styled('h4')`
   font-weight: 700;
 `
 
-const Product = ({ image, name, color, price }) => {
+const Product = ({ cp, image, name, color, price }) => {
   const { isToggle, toggle } = useToggle()
 
   const [elementRef, isIntersecting] = useIntersection({
@@ -55,7 +56,9 @@ const Product = ({ image, name, color, price }) => {
 
   return (
     <ProductStyled ref={elementRef} data-opacity data-view={isIntersecting}>
-      <ProductImage data-mask={isIntersecting} src={image} alt={name} />
+      <Link to={`/shop/product/${cp}`}>
+        <ProductImage data-mask={isIntersecting} src={image} alt={name} />
+      </Link>
       <WrapperBookMark onClick={toggle}>
         {isToggle ? <IconBookMarkBold /> : <IconBookMark />}
       </WrapperBookMark>
