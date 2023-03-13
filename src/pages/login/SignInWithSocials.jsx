@@ -42,11 +42,20 @@ const SignInWithSocialsButton = styled('button')`
   `}
 `
 const SignInWithSocials = () => {
-  const { signInWithGoogle } = useAuth()
+  const { signInWithGoogle, signInWithFacebook } = useAuth()
 
   const handleSignInWithGoogle = async () => {
     try {
       const userCredential = await signInWithGoogle()
+      console.log(userCredential)
+    } catch (error) {
+      window.alert(error.message)
+    }
+  }
+
+  const handleSignInWithFacebook = async () => {
+    try {
+      const userCredential = await signInWithFacebook()
       console.log(userCredential)
     } catch (error) {
       window.alert(error.message)
@@ -61,7 +70,7 @@ const SignInWithSocials = () => {
           Continue with Twitter
         </SignInWithSocialsButton>
       </SignInWithSocialsLi>
-      <SignInWithSocialsLi>
+      <SignInWithSocialsLi onClick={handleSignInWithFacebook}>
         <SignInWithSocialsButton facebook>
           <IconFacebook />
           Continue with Facebook

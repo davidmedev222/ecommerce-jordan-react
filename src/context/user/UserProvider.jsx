@@ -1,4 +1,4 @@
-import { createUserWithEmailAndPassword, GoogleAuthProvider, signInWithEmailAndPassword, signInWithPopup } from 'firebase/auth'
+import { createUserWithEmailAndPassword, FacebookAuthProvider, GoogleAuthProvider, signInWithEmailAndPassword, signInWithPopup } from 'firebase/auth'
 import { auth } from '../../services/firebase/config'
 import { useState } from 'react'
 import { UserContext } from './UserContext'
@@ -9,6 +9,7 @@ const UserProvider = ({ children }) => {
   const signUp = ({ email, password }) => {
     return createUserWithEmailAndPassword(auth, email, password)
   }
+
   const signIn = ({ email, password }) => {
     return signInWithEmailAndPassword(auth, email, password)
   }
@@ -17,12 +18,16 @@ const UserProvider = ({ children }) => {
     const provider = new GoogleAuthProvider()
     return signInWithPopup(auth, provider)
   }
+
   const signInWithFacebook = () => {
-    console.log('sign in with facebook')
+    const provider = new FacebookAuthProvider()
+    return signInWithPopup(auth, provider)
   }
+
   const signInWithGithub = () => {
     console.log('sign in with github')
   }
+
   const signInWithTwitter = () => {
     console.log('sign in with twitter')
   }
