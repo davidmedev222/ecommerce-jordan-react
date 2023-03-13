@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useAuth } from '../../hooks/export'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
@@ -39,6 +40,18 @@ const SignIn = () => {
     password: ''
   })
 
+  const { signIn } = useAuth()
+
+  const handleSubmit = async (ev) => {
+    ev.preventDefault()
+    try {
+      const userCredential = await signIn(formData)
+      console.log(userCredential)
+    } catch (error) {
+      window.alert(error.message)
+    }
+  }
+
   const handleOnInputChange = (ev) => {
     updateFormData((prevFormData) => {
       return {
@@ -49,7 +62,7 @@ const SignIn = () => {
   }
 
   return (
-    <FormStyled>
+    <FormStyled onSubmit={handleSubmit}>
       <LabelStyled htmlFor='email'>Email</LabelStyled>
       <InputStyled onChange={handleOnInputChange} value={formData.email} id='email' name='email' type='email' placeholder='Email' required />
       <LabelStyled htmlFor='password'>Password</LabelStyled>
