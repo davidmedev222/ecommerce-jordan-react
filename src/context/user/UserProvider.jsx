@@ -1,11 +1,13 @@
+import { createUserWithEmailAndPassword } from 'firebase/auth'
+import { auth } from '../../services/firebase/config'
 import { useState } from 'react'
 import { UserContext } from './UserContext'
 
 const UserProvider = ({ children }) => {
   const [user, updateUser] = useState(false)
 
-  const signUp = () => {
-    console.log('sign up')
+  const signUp = ({ email, password }) => {
+    return createUserWithEmailAndPassword(auth, email, password)
   }
   const signIn = () => {
     console.log('sign in')

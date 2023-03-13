@@ -1,5 +1,6 @@
-import { useState } from 'react'
 import styled from 'styled-components'
+import { useState } from 'react'
+import { useAuth } from '../../hooks/export'
 
 const FormStyled = styled('form')`
   width: 100%;
@@ -66,6 +67,18 @@ const SignUp = () => {
     password: ''
   })
 
+  const { signUp } = useAuth()
+
+  const handleSubmit = async (ev) => {
+    ev.preventDefault()
+    try {
+      const userCredential = await signUp(formData)
+      console.log(userCredential)
+    } catch (error) {
+      window.alert(error.message)
+    }
+  }
+
   const handleOnInputChange = (ev) => {
     updateFormData((prevFormData) => {
       return {
@@ -76,7 +89,7 @@ const SignUp = () => {
   }
 
   return (
-    <FormStyled>
+    <FormStyled onSubmit={handleSubmit}>
       <WrapperFormLeft>
         <LabelStyled htmlFor='firstName'>First name</LabelStyled>
         <InputStyled onChange={handleOnInputChange} value={formData.firstName} id='firstName' name='firstName' placeholder='First name' required />
