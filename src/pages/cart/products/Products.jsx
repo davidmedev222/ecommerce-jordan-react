@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components'
+import { useCart } from '../../../hooks/export'
 import { Product } from './Product'
 
 const ProductsStyled = styled('section')`
@@ -38,14 +39,20 @@ const ProductsPrice = styled('h3')`
   font-weight: 700;
 `
 const Products = () => {
+  const { cart, emptyCart, totalProductsQuantity, totalCartPrice } = useCart()
+
+  const products = cart.map((product) => {
+    const { id, imageOne, name, color, price, quantity } = product
+    return <Product key={id} imageOne={imageOne} name={name} color={color} price={price} quantity={quantity} />
+  })
+
   return (
     <ProductsStyled>
-      <Product />
-      <Product />
-      <ProductsButton align='flex-end'>Empty Cart</ProductsButton>
+      {products}
+      <ProductsButton onClick={emptyCart} align='flex-end'>Empty Cart</ProductsButton>
       <ProductsDetails>
-        <ProductsTotal>Total (12 products):</ProductsTotal>
-        <ProductsPrice>$270</ProductsPrice>
+        <ProductsTotal>Total ( {totalProductsQuantity()} {totalProductsQuantity() > 1 ? 'products' : 'product'} ):</ProductsTotal>
+        <ProductsPrice>${totalCartPrice()}</ProductsPrice>
       </ProductsDetails>
       <ProductsButton>Go to checkout</ProductsButton>
     </ProductsStyled>

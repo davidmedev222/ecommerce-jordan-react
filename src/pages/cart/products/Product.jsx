@@ -50,18 +50,20 @@ const ProductQuantity = styled('span')`
   font-size: clamp(1.25rem, 2vw, 4rem);
 `
 
-const Product = () => {
+const Product = (props) => {
+  const { imageOne, name, color, price, quantity } = props
+
   return (
     <ProductStyled>
-      <ProductImage src='https://res.cloudinary.com/dos3i5jqy/image/upload/v1668792321/ecommerce-jordan-react/product-29_t02pe2.webp' alt='producto' />
+      <ProductImage src={imageOne} alt={name} />
       <ProductDetails>
-        <ProductHeading>future light one</ProductHeading>
-        <ProductColor>White / Gold / Black</ProductColor>
-        <ProductPrice>$175</ProductPrice>
+        <ProductHeading>{name}</ProductHeading>
+        <ProductColor>{color}</ProductColor>
+        <ProductPrice>${price}</ProductPrice>
       </ProductDetails>
       <ProductOptions>
         <ProductButton><IconDecrease /></ProductButton>
-        <ProductQuantity>0</ProductQuantity>
+        <ProductQuantity>{quantity}</ProductQuantity>
         <ProductButton><IconIncrease /></ProductButton>
         <ProductButton><IconTrash /></ProductButton>
       </ProductOptions>
