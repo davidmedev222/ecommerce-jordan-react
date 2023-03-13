@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components'
+import { useAuth } from '../../hooks/export'
 import { IconTwitter, IconFacebook, IconGithub, IconGoogle } from '../../components/export'
 
 const SignInWithSocialsUl = styled('ul')`
@@ -41,6 +42,17 @@ const SignInWithSocialsButton = styled('button')`
   `}
 `
 const SignInWithSocials = () => {
+  const { signInWithGoogle } = useAuth()
+
+  const handleSignInWithGoogle = async () => {
+    try {
+      const userCredential = await signInWithGoogle()
+      console.log(userCredential)
+    } catch (error) {
+      window.alert(error.message)
+    }
+  }
+
   return (
     <SignInWithSocialsUl>
       <SignInWithSocialsLi>
@@ -61,7 +73,7 @@ const SignInWithSocials = () => {
           Continue with Github
         </SignInWithSocialsButton>
       </SignInWithSocialsLi>
-      <SignInWithSocialsLi>
+      <SignInWithSocialsLi onClick={handleSignInWithGoogle}>
         <SignInWithSocialsButton google>
           <IconGoogle />
           Continue with Google
