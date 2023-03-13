@@ -54,6 +54,7 @@ const ProductDetailLink = styled(Link)`
   color: white;
   font-size: clamp(1rem, 1.75vw, 3.5rem);
   font-weight: 700;
+  text-align: center;
   border-radius: 3rem;
   background-color: black;
   padding: clamp(1rem, 1vw, 2rem) clamp(1.5rem, 3vw, 6rem);
