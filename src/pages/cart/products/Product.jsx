@@ -26,10 +26,12 @@ const ProductDetails = styled('header')`
   text-align: center;
 `
 const ProductHeading = styled('h2')`
+  text-transform: capitalize;
   font-size: clamp(1.5rem, 2vw, 4rem);
   font-weight: 800;
 `
 const ProductColor = styled('span')`
+  text-transform: capitalize;
   font-size: clamp(1rem, 1vw, 2rem);
 `
 const ProductPrice = styled('h3')`
