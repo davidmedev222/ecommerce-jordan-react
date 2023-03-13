@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { useCart } from '../../../hooks/export'
 import { IconIncrease, IconDecrease, IconTrash } from '../../../components/export'
 
 const ProductStyled = styled('article')`
@@ -51,7 +52,19 @@ const ProductQuantity = styled('span')`
 `
 
 const Product = (props) => {
-  const { imageOne, name, color, price, quantity } = props
+  const { id, imageOne, name, color, price, quantity, stock } = props
+
+  const { decreaseProduct, increaseProduct, removeProduct } = useCart()
+
+  const handleDecrease = () => {
+    quantity > 1 && decreaseProduct(id)
+  }
+  const handleIncrease = () => {
+    quantity < stock && increaseProduct(id)
+  }
+  const handleRemove = () => {
+    removeProduct(id)
+  }
 
   return (
     <ProductStyled>
@@ -62,10 +75,10 @@ const Product = (props) => {
         <ProductPrice>${price}</ProductPrice>
       </ProductDetails>
       <ProductOptions>
-        <ProductButton><IconDecrease /></ProductButton>
+        <ProductButton onClick={handleDecrease}><IconDecrease /></ProductButton>
         <ProductQuantity>{quantity}</ProductQuantity>
-        <ProductButton><IconIncrease /></ProductButton>
-        <ProductButton><IconTrash /></ProductButton>
+        <ProductButton onClick={handleIncrease}><IconIncrease /></ProductButton>
+        <ProductButton onClick={handleRemove}><IconTrash /></ProductButton>
       </ProductOptions>
     </ProductStyled>
   )

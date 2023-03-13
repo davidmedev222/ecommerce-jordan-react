@@ -42,8 +42,8 @@ const Products = () => {
   const { cart, emptyCart, totalProductsQuantity, totalCartPrice } = useCart()
 
   const products = cart.map((product) => {
-    const { id, imageOne, name, color, price, quantity } = product
-    return <Product key={id} imageOne={imageOne} name={name} color={color} price={price} quantity={quantity} />
+    const { id, imageOne, name, color, price, quantity, stock } = product
+    return <Product key={id} id={id} imageOne={imageOne} name={name} color={color} price={price} quantity={quantity} stock={stock} />
   })
 
   return (
