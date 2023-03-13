@@ -1,4 +1,2 @@
-import { CartContextProvider } from './cart/CartContextProvider'
-import { UserContextProvider } from './user/UserContextProvider'
-
-export { CartContextProvider, UserContextProvider }
+export { CartProvider } from './cart/CartProvider'
+export { UserProvider } from './user/UserProvider'
