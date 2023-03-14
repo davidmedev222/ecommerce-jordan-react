@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { useAuth } from '../../../hooks/export'
 
 const UserCardStyled = styled('article')`
   display: flex;
@@ -28,12 +29,18 @@ const UserCardEmail = styled('h3')`
   color: grey;
 `
 const UserCard = () => {
+  const { user } = useAuth()
+
+  const { photoURL, displayName, email } = user
+
+  const IMAGE_DEFAULT = 'https://res.cloudinary.com/dos3i5jqy/image/upload/v1678815873/ecommerce-jordan-react/user/user-anonimo_fy6t5p.png'
+
   return (
     <UserCardStyled>
-      <UserCardImage src='https://res.cloudinary.com/dos3i5jqy/image/upload/v1678815873/ecommerce-jordan-react/user/user-anonimo_fy6t5p.png' alt='user' />
+      <UserCardImage src={photoURL || IMAGE_DEFAULT} alt='profile image' />
       <UserCardHeader>
-        <UserCardName>Davidmedev222</UserCardName>
-        <UserCardEmail>davidmedev222ok@gmail.com</UserCardEmail>
+        <UserCardName>{displayName}</UserCardName>
+        <UserCardEmail>{email}</UserCardEmail>
       </UserCardHeader>
     </UserCardStyled>
   )
