@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components'
 import { useAuth } from '../../hooks/export'
-import { IconTwitter, IconFacebook, IconGithub, IconGoogle } from '../../components/export'
+import { IconTwitter, IconGithub, IconGoogle } from '../../components/export'
 
 const SignInWithSocialsUl = styled('ul')`
   width: 100%;
@@ -29,10 +29,6 @@ const SignInWithSocialsButton = styled('button')`
   ${({ google }) => google && css`
     background-color: #d1d0d6;
   `}
-  ${({ facebook }) => facebook && css`
-    color: white;
-    background-color: #3b5998;
-  `}
   ${({ github }) => github && css`
     color: white;
     background-color: #191717;
@@ -42,20 +38,11 @@ const SignInWithSocialsButton = styled('button')`
   `}
 `
 const SignInWithSocials = () => {
-  const { signInWithGoogle, signInWithFacebook, signInWithGithub } = useAuth()
+  const { signInWithGoogle, signInWithGithub } = useAuth()
 
   const handleSignInWithGoogle = async () => {
     try {
       const userCredential = await signInWithGoogle()
-      console.log(userCredential)
-    } catch (error) {
-      window.alert(error.message)
-    }
-  }
-
-  const handleSignInWithFacebook = async () => {
-    try {
-      const userCredential = await signInWithFacebook()
       console.log(userCredential)
     } catch (error) {
       window.alert(error.message)
@@ -77,12 +64,6 @@ const SignInWithSocials = () => {
         <SignInWithSocialsButton twitter>
           <IconTwitter />
           Continue with Twitter
-        </SignInWithSocialsButton>
-      </SignInWithSocialsLi>
-      <SignInWithSocialsLi onClick={handleSignInWithFacebook}>
-        <SignInWithSocialsButton facebook>
-          <IconFacebook />
-          Continue with Facebook
         </SignInWithSocialsButton>
       </SignInWithSocialsLi>
       <SignInWithSocialsLi onClick={handleSignInWithgithub}>
