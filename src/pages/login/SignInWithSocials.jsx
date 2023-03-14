@@ -42,7 +42,7 @@ const SignInWithSocialsButton = styled('button')`
   `}
 `
 const SignInWithSocials = () => {
-  const { signInWithGoogle, signInWithFacebook } = useAuth()
+  const { signInWithGoogle, signInWithFacebook, signInWithGithub } = useAuth()
 
   const handleSignInWithGoogle = async () => {
     try {
@@ -56,6 +56,15 @@ const SignInWithSocials = () => {
   const handleSignInWithFacebook = async () => {
     try {
       const userCredential = await signInWithFacebook()
+      console.log(userCredential)
+    } catch (error) {
+      window.alert(error.message)
+    }
+  }
+
+  const handleSignInWithgithub = async () => {
+    try {
+      const userCredential = await signInWithGithub()
       console.log(userCredential)
     } catch (error) {
       window.alert(error.message)
@@ -76,7 +85,7 @@ const SignInWithSocials = () => {
           Continue with Facebook
         </SignInWithSocialsButton>
       </SignInWithSocialsLi>
-      <SignInWithSocialsLi>
+      <SignInWithSocialsLi onClick={handleSignInWithgithub}>
         <SignInWithSocialsButton github>
           <IconGithub />
           Continue with Github
