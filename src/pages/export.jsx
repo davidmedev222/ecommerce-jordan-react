@@ -11,7 +11,7 @@ export { FaqPage } from './faq/FaqPage'
 export { CartPage } from './cart/CartPage'
 // ? ACCOUNT
 export { LayoutAccountPages } from './account/layout/LayoutAccountPages'
-export { AccountPage } from './account/AccountPage'
+export { AccountPage } from './account/account/AccountPage'
 export { ProfilePage } from './account/profile/ProfilePage'
 export { OrdersPage } from './account/orders/OrdersPage'
 export { BookMarksPage } from './account/bookmarks/BookMarksPage'
