@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import styled, { css } from 'styled-components'
 import { IconUser, IconCart, IconGift, IconSignOut, IconBell, IconInfo, IconMoon, IconBookMarkBold } from '../../../components/export'
+import { useAuth } from '../../../hooks/export'
 
 const PanelStyled = styled('div')`
   display: flex;
@@ -38,6 +39,17 @@ const PanelLink = styled(Link)`
 `
 
 const Panel = () => {
+  const { signOutUser } = useAuth()
+
+  const handleSignOut = async () => {
+    try {
+      await signOutUser()
+      console.log('sesion cerrada')
+    } catch (error) {
+      window.alert(error.message)
+    }
+  }
+
   return (
     <PanelStyled>
       <PanelLink to='profile'>
@@ -68,7 +80,7 @@ const Panel = () => {
         <IconBell />
         Notifications
       </PanelLink>
-      <PanelLink as='button' signOut>
+      <PanelLink onClick={handleSignOut} as='button' signOut>
         <IconSignOut />
         Sign out
       </PanelLink>

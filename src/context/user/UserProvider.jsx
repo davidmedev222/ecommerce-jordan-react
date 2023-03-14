@@ -1,4 +1,4 @@
-import { createUserWithEmailAndPassword, GithubAuthProvider, GoogleAuthProvider, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup } from 'firebase/auth'
+import { createUserWithEmailAndPassword, GithubAuthProvider, GoogleAuthProvider, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut } from 'firebase/auth'
 import { auth } from '../../services/firebase/config'
 import { useState, useEffect } from 'react'
 import { UserContext } from './UserContext'
@@ -42,8 +42,8 @@ const UserProvider = ({ children }) => {
     console.log('sign in with twitter')
   }
 
-  const signOut = () => {
-    console.log('sign out')
+  const signOutUser = () => {
+    return signOut(auth)
   }
 
   const data = {
@@ -53,7 +53,7 @@ const UserProvider = ({ children }) => {
     signInWithGoogle,
     signInWithGithub,
     signInWithTwitter,
-    signOut
+    signOutUser
   }
 
   return <UserContext.Provider value={data}>{children}</UserContext.Provider>
