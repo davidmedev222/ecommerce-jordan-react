@@ -1,10 +1,24 @@
-import { createUserWithEmailAndPassword, GithubAuthProvider, GoogleAuthProvider, signInWithEmailAndPassword, signInWithPopup } from 'firebase/auth'
+import { createUserWithEmailAndPassword, GithubAuthProvider, GoogleAuthProvider, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup } from 'firebase/auth'
 import { auth } from '../../services/firebase/config'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { UserContext } from './UserContext'
 
 const UserProvider = ({ children }) => {
   const [user, updateUser] = useState(false)
+
+  useEffect(() => {
+    const onSubscribe = onAuthStateChanged(auth, (user) => {
+      if (user) {
+        console.log('existe un usuario')
+        updateUser(user)
+      } else {
+        console.log('no existe')
+        updateUser(null)
+      }
+    })
+
+    return () => onSubscribe()
+  }, [])
 
   const signUp = ({ email, password }) => {
     return createUserWithEmailAndPassword(auth, email, password)
