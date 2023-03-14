@@ -1,14 +1,14 @@
 import { useAuth } from '../../hooks/export'
 import { Navigate, Outlet } from 'react-router-dom'
 
-const UserRouteRedirect = () => {
+const UserRouteProtected = () => {
   const { user } = useAuth()
 
   if (user === false) return 'loading...'
 
-  if (user) return <Navigate to='/account' />
+  if (user === null) return <Navigate to='/login' />
 
   return <Outlet />
 }
 
-export { UserRouteRedirect }
+export { UserRouteProtected }
