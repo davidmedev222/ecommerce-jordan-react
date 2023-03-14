@@ -39,7 +39,7 @@ const UserCard = () => {
     <UserCardStyled>
       <UserCardImage src={photoURL || IMAGE_DEFAULT} alt='profile image' />
       <UserCardHeader>
-        <UserCardName>{displayName}</UserCardName>
+        <UserCardName>{displayName || 'example'}</UserCardName>
         <UserCardEmail>{email}</UserCardEmail>
       </UserCardHeader>
     </UserCardStyled>

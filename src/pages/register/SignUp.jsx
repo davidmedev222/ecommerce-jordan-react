@@ -59,21 +59,19 @@ const Submit = styled('button')`
 
 const SignUp = () => {
   const [formData, updateFormData] = useState({
-    firstName: '',
-    lastName: '',
     username: '',
-    address: '',
+    photoURL: 'https://res.cloudinary.com/dos3i5jqy/image/upload/v1678815873/ecommerce-jordan-react/user/user-anonimo_fy6t5p.png',
     email: '',
     password: ''
   })
 
-  const { signUp } = useAuth()
+  const { signUp, updateProfileUser } = useAuth()
 
   const handleSubmit = async (ev) => {
     ev.preventDefault()
     try {
-      const userCredential = await signUp(formData)
-      console.log(userCredential)
+      await signUp(formData)
+      await updateProfileUser(formData)
     } catch (error) {
       window.alert(error.message)
     }
@@ -91,21 +89,14 @@ const SignUp = () => {
   return (
     <FormStyled onSubmit={handleSubmit}>
       <WrapperFormLeft>
-        <LabelStyled htmlFor='firstName'>First name</LabelStyled>
-        <InputStyled onChange={handleOnInputChange} value={formData.firstName} id='firstName' name='firstName' placeholder='First name' required />
-        <LabelStyled htmlFor='lastName'>Last name</LabelStyled>
-        <InputStyled onChange={handleOnInputChange} value={formData.lastName} id='lastName' name='lastName' placeholder='Last name' required />
         <LabelStyled htmlFor='username'>Username</LabelStyled>
-        <InputStyled onChange={handleOnInputChange} value={formData.username} id='username' name='username' placeholder='Username' required />
+        <InputStyled onChange={handleOnInputChange} value={formData.username} id='username' name='username' placeholder='Username' required maxLength={25} />
+        <LabelStyled htmlFor='photoURL'>Photo URL </LabelStyled>
+        <InputStyled type='url' onChange={handleOnInputChange} value={formData.photoURL} id='photoURL' name='photoURL' readOnly />
       </WrapperFormLeft>
       <WrapperFormRight>
-        <LabelStyled htmlFor='address'>Address</LabelStyled>
-        <InputStyled
-          onChange={handleOnInputChange} value={formData.address} id='address'
-          name='address' placeholder='Address' required
-        />
         <LabelStyled htmlFor='email'>Email</LabelStyled>
-        <InputStyled onChange={handleOnInputChange} value={formData.email} id='email' name='email' type='email' placeholder='Email' required />
+        <InputStyled onChange={handleOnInputChange} value={formData.email} id='email' name='email' type='email' placeholder='Email' required maxLength={45} />
         <LabelStyled htmlFor='password'>Password</LabelStyled>
         <InputStyled onChange={handleOnInputChange} value={formData.password} id='password' name='password' type='password' placeholder='Password' required />
       </WrapperFormRight>
