@@ -49,7 +49,7 @@ const Navbar = ({ toggle, offToggle }) => {
           <Link to='/shop'>Shop</Link>
         </LiStyled>
         <LiStyled onClick={offToggle}>
-          <Link to='/faqs'>Faqs</Link>
+          <Link to='/faqs'>FAQs</Link>
         </LiStyled>
         <LiStyled onClick={offToggle}>
           <Link to='/cart'>Cart</Link>
