@@ -18,39 +18,38 @@ const Accordion = () => {
     {
       id: 1,
       title: 'Where can I see my orders?',
-      text: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque quia odio in corrupti adipisci nemo et ex nihil quod? Culpa deserunt aliquam aliquid. Neque laborum molestiae accusamus recusandae non ratione!'
+      text: 'Only users with a created account will be able to view their orders in the account orders section.'
     },
     {
       id: 2,
-      title: 'How do I log in with Google?',
-      text: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque quia odio in corrupti adipisci nemo et ex nihil quod? Culpa deserunt aliquam aliquid. Neque laborum molestiae accusamus recusandae non ratione!'
+      title: 'How do I log in with Google or Github?',
+      text: 'In the login section, the google and github login options are available.'
     },
     {
       id: 3,
       title: 'How do I apply a discount coupon?',
-      text: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque quia odio in corrupti adipisci nemo et ex nihil quod? Culpa deserunt aliquam aliquid. Neque laborum molestiae accusamus recusandae non ratione!'
+      text: 'In the gifts section of your created account you will find all the available coupons to activate'
     },
     {
       id: 4,
       title: "Why don't I see my name on my account?",
-      text: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque quia odio in corrupti adipisci nemo et ex nihil quod? Culpa deserunt aliquam aliquid. Neque laborum molestiae accusamus recusandae non ratione!'
+      text: 'If you registered with email and password you will have to refresh the screen to see your username.'
     },
     {
       id: 5,
       title: 'Can I buy if I am from abroad?',
-      text: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque quia odio in corrupti adipisci nemo et ex nihil quod? Culpa deserunt aliquam aliquid. Neque laborum molestiae accusamus recusandae non ratione!'
+      text: 'For the moment we only accept purchases in Latin America.'
     },
     {
       id: 6,
       title: 'Can I update my gmail or password?',
-      text: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque quia odio in corrupti adipisci nemo et ex nihil quod? Culpa deserunt aliquam aliquid. Neque laborum molestiae accusamus recusandae non ratione!'
+      text: 'Yes, in the "my account information" section of your account you have the option to update your gmail or password.'
     },
     {
       id: 7,
       title: 'Can I update my account name and image?',
-      text: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque quia odio in corrupti adipisci nemo et ex nihil quod? Culpa deserunt aliquam aliquid. Neque laborum molestiae accusamus recusandae non ratione!'
+      text: 'Yes, in the my account information section of your account you have the option to update your image and username.'
     }
-
   ]
 
   const accordionItem = data.map((item) => {
