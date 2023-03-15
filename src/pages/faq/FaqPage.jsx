@@ -1,7 +1,9 @@
+import { Accordion } from './Accordion'
+
 const FaqPage = () => {
   return (
     <main>
-      faq
+      <Accordion />
     </main>
   )
 }
