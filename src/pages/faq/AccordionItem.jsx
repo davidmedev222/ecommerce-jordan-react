@@ -10,6 +10,7 @@ const AccordionHeader = styled('header')`
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
+  gap: clamp(1rem, 1vw, 2rem);
   background-color: #d1d0d6;
   padding: clamp(1rem, 1vw, 2rem) clamp(1rem, 2vw, 4rem);
   border-radius: 3rem;
