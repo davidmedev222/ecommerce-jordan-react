@@ -1,6 +1,7 @@
 import styled, { css } from 'styled-components'
 import { useAuth } from '../../hooks/export'
 import { IconTwitter, IconGithub, IconGoogle } from '../../components/export'
+import { createUser } from '../../services/export'
 
 const SignInWithSocialsUl = styled('ul')`
   width: 100%;
@@ -42,8 +43,9 @@ const SignInWithSocials = () => {
 
   const handleSignInWithGoogle = async () => {
     try {
-      const userCredential = await signInWithGoogle()
-      console.log(userCredential)
+      const { user } = await signInWithGoogle()
+      await createUser(user)
+      window.alert('cuenta creada con google')
     } catch (error) {
       window.alert(error.message)
     }
@@ -51,8 +53,9 @@ const SignInWithSocials = () => {
 
   const handleSignInWithgithub = async () => {
     try {
-      const userCredential = await signInWithGithub()
-      console.log(userCredential)
+      const { user } = await signInWithGithub()
+      await createUser(user)
+      window.alert('cuenta creada con github')
     } catch (error) {
       window.alert(error.message)
     }

@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import { useState } from 'react'
 import { useAuth } from '../../hooks/export'
+import { createUser } from '../../services/export'
 
 const FormStyled = styled('form')`
   width: 100%;
@@ -70,8 +71,10 @@ const SignUp = () => {
   const handleSubmit = async (ev) => {
     ev.preventDefault()
     try {
-      await signUp(formData)
+      const { user } = await signUp(formData)
       await updateProfileUser(formData)
+      await createUser(user)
+      window.alert('cuenta creada')
     } catch (error) {
       window.alert(error.message)
     }
