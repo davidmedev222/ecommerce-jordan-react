@@ -28,7 +28,6 @@ const WrapperIcons = styled('div')`
 `
 const WrapperIcon = styled(Link)`
   width: clamp(2.5rem, 2.5vw, 5rem);
-  height: clamp(2.5rem, 2.5vw, 5rem);
 `
 const WrapperMenu = styled('button')`
   display: none;
