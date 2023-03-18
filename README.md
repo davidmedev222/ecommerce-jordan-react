@@ -9,22 +9,15 @@
 </ol>
 
 # **📸IMÁGENES**
-![](https://res.cloudinary.com/dos3i5jqy/image/upload/v1676229801/layers/jordanstore/jordan1_inkvsq.jpg)
-![](https://res.cloudinary.com/dos3i5jqy/image/upload/v1676229801/layers/jordanstore/jordan2_n2z4m8.jpg)
-![](https://res.cloudinary.com/dos3i5jqy/image/upload/v1676229802/layers/jordanstore/jordan3_bvpg0m.jpg)
-![](https://res.cloudinary.com/dos3i5jqy/image/upload/v1676229802/layers/jordanstore/jordan4_cxfgvn.jpg)
-![](https://res.cloudinary.com/dos3i5jqy/image/upload/v1676229802/layers/jordanstore/jordan5_dkeo6g.jpg)
-![](https://res.cloudinary.com/dos3i5jqy/image/upload/v1676229802/layers/jordanstore/jordan6_aodxqn.jpg)
-![](https://res.cloudinary.com/dos3i5jqy/image/upload/v1676229802/layers/jordanstore/jordan7_ibzx4j.jpg)
-![](https://res.cloudinary.com/dos3i5jqy/image/upload/v1676229801/layers/jordanstore/jordan8_iskjzm.jpg)
-![](https://res.cloudinary.com/dos3i5jqy/image/upload/v1676229801/layers/jordanstore/jordan1dark_ns5ozr.jpg)
-![](https://res.cloudinary.com/dos3i5jqy/image/upload/v1676229803/layers/jordanstore/jordan2dark_bp89ts.jpg)
-![](https://res.cloudinary.com/dos3i5jqy/image/upload/v1676229801/layers/jordanstore/jordan3dark_sduzsl.jpg)
-![](https://res.cloudinary.com/dos3i5jqy/image/upload/v1676229802/layers/jordanstore/jordan4dark_bfqvlw.jpg)
-![](https://res.cloudinary.com/dos3i5jqy/image/upload/v1676229802/layers/jordanstore/jordan5dark_htycav.jpg)
-![](https://res.cloudinary.com/dos3i5jqy/image/upload/v1676229802/layers/jordanstore/jordan6dark_pts6vx.jpg)
-![](https://res.cloudinary.com/dos3i5jqy/image/upload/v1676229801/layers/jordanstore/jordan7dark_r67zmn.jpg)
-![](https://res.cloudinary.com/dos3i5jqy/image/upload/v1676229801/layers/jordanstore/jordan8dark_tkfl0c.jpg)
+![](https://res.cloudinary.com/dos3i5jqy/image/upload/v1679166047/layers/jordanstore/jordan1_hbthj3.jpg)
+![](https://res.cloudinary.com/dos3i5jqy/image/upload/v1679166046/layers/jordanstore/jordan2_rl15k6.jpg)
+![](https://res.cloudinary.com/dos3i5jqy/image/upload/v1679166046/layers/jordanstore/jordan3_ldcluo.jpg)
+![](https://res.cloudinary.com/dos3i5jqy/image/upload/v1679166046/layers/jordanstore/jordan4_oxizut.jpg)
+![](https://res.cloudinary.com/dos3i5jqy/image/upload/v1679166046/layers/jordanstore/jordan5_doehdi.jpg)
+![](https://res.cloudinary.com/dos3i5jqy/image/upload/v1679166046/layers/jordanstore/jordan6_w1d3xo.jpg)
+![](https://res.cloudinary.com/dos3i5jqy/image/upload/v1679166046/layers/jordanstore/jordan7_ivvzev.jpg)
+![](https://res.cloudinary.com/dos3i5jqy/image/upload/v1679166047/layers/jordanstore/jordan8_ebicl6.jpg)
+![](https://res.cloudinary.com/dos3i5jqy/image/upload/v1679166047/layers/jordanstore/jordan9_aze42r.jpg)
 
 # **🚀DEMO**
 [https://jordanstore.vercel.app/](https://jordanstore.vercel.app/)
