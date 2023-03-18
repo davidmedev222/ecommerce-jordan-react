@@ -53,6 +53,8 @@ const WrapperMenu = styled('button')`
 const Header = () => {
   const { isToggle, toggle, offToggle } = useToggle()
 
+  const { cart, totalProductsQuantity } = useCart()
+
   return (
     <HeaderStyled>
       <WrapperLogo to='/' onClick={offToggle}>
@@ -65,7 +67,7 @@ const Header = () => {
       <WrapperIcons>
         <WrapperIcon to='/cart'>
           <IconCart />
-          <CartBadge>12</CartBadge>
+          {cart.length > 0 && <CartBadge>{totalProductsQuantity()}</CartBadge>}
         </WrapperIcon>
         <WrapperIcon to='/account'><IconUser /></WrapperIcon>
       </WrapperIcons>
