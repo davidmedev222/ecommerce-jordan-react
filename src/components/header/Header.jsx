@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 import { IconCart, IconLogo, IconMenu, IconUser } from '../export'
 import { Navbar } from './Navbar'
-import { useToggle } from '../../hooks/toggle/useToggle'
+import { useToggle, useCart } from '../../hooks/export'
 
 const HeaderStyled = styled('header')`
   display: flex;
@@ -28,6 +28,17 @@ const WrapperIcons = styled('div')`
 `
 const WrapperIcon = styled(Link)`
   width: clamp(2.5rem, 2.5vw, 5rem);
+  position: relative;
+`
+const CartBadge = styled('span')`
+  position: absolute;
+  top: -25%;
+  right: -25%;
+  background-color: #d1d0d6;
+  font-size: clamp(.75rem, .75vw, 1.5rem);
+  font-weight: 600;
+  padding: clamp(.25rem, .25vw, .5rem) clamp(.5rem, .5vw, 1rem);
+  border-radius: 1rem;
 `
 const WrapperMenu = styled('button')`
   display: none;
@@ -52,7 +63,10 @@ const Header = () => {
       </WrapperMenu>
       <Navbar toggle={isToggle} offToggle={offToggle} />
       <WrapperIcons>
-        <WrapperIcon to='/cart'><IconCart /></WrapperIcon>
+        <WrapperIcon to='/cart'>
+          <IconCart />
+          <CartBadge>12</CartBadge>
+        </WrapperIcon>
         <WrapperIcon to='/account'><IconUser /></WrapperIcon>
       </WrapperIcons>
     </HeaderStyled>
