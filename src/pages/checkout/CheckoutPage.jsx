@@ -1,18 +1,26 @@
-import { CartContext } from '../../context/cart/CartContext' // CONTEXT
-import { CheckoutBrief } from './CheckoutBrief' // COMPONENT
-import { Navigate } from 'react-router-dom' // HOOKS
-import { useContext } from 'react' // HOOKS
+import { Brief } from './Brief'
+import styled from 'styled-components'
+import { Products } from './Products'
+
+const MainStyled = styled('main')`
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: baseline;
+  gap: clamp(1rem, 1vw, 2rem);
+  padding: clamp(1rem, 1vw, 2rem) clamp(1rem, 4vw, 8rem);
+
+ @media screen and (max-width: 64rem) {
+    grid-template-columns: 1fr;
+ }
+
+`
 
 const CheckoutPage = () => {
-  const { order } = useContext(CartContext) // HELPERS
-
-  if (!order) return <Navigate to='/cart' /> // REDIRECT
-
   return (
-    <main className='main-checkout'>
-      {/* COMPONENT */}
-      <CheckoutBrief />
-    </main>
+    <MainStyled>
+      <Brief />
+      <Products />
+    </MainStyled>
   )
 }
 
