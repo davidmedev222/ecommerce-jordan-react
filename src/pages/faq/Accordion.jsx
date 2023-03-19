@@ -7,7 +7,7 @@ const AccordionUl = styled('ul')`
   gap: clamp(1rem, 1vw, 2rem);
   padding: clamp(1rem, 1vw, 2rem) clamp(1rem, 4vw, 8rem);
 
- @media screen and (min-width: 1024px) {
+ @media screen and (min-width: 64rem) {
     margin: 0 auto;
     width: 75%;
  }
