@@ -1,5 +1,8 @@
+import { serverTimestamp } from 'firebase/firestore'
+import { useNavigate } from 'react-router-dom'
 import styled from 'styled-components'
 import { useAuth, useCart } from '../../hooks/export'
+import { createOrder } from '../../services/firestore/orders/createOrder'
 
 const SectionStyled = styled('section')`
   display: flex;
@@ -44,7 +47,25 @@ const BriefDescription = styled('p')`
 const Brief = () => {
   const { user } = useAuth()
   const { displayName, email } = user
-  const { totalProductsQuantity, totalCartPrice } = useCart()
+  const { cart, emptyCart, totalProductsQuantity, totalCartPrice } = useCart()
+  const navigate = useNavigate()
+
+  const handleCreateOrder = async () => {
+    try {
+      const order = {
+        buyer: { displayName, email },
+        products: cart,
+        total: { products: totalProductsQuantity(), price: totalCartPrice() },
+        date: serverTimestamp()
+      }
+      await createOrder(order)
+      navigate('/account')
+      emptyCart()
+      window.alert('generated order')
+    } catch (error) {
+      window.alert(error.message)
+    }
+  }
 
   return (
     <SectionStyled>
@@ -62,7 +83,7 @@ const Brief = () => {
         <BriefSubHeading>Price</BriefSubHeading>
         <BriefSpan>${totalCartPrice()}</BriefSpan>
       </BriefDetails>
-      <BriefButton>Confirm order</BriefButton>
+      <BriefButton onClick={handleCreateOrder}>Confirm order</BriefButton>
       <BriefDescription>Confirm your purchase order to continue.</BriefDescription>
     </SectionStyled>
   )
