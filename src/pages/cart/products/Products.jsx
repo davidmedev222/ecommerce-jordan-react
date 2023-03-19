@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import styled, { css } from 'styled-components'
 import { useCart } from '../../../hooks/export'
 import { Product } from './Product'
@@ -12,6 +13,7 @@ const ProductsStyled = styled('section')`
 `
 const ProductsButton = styled('button')`
   color: white;
+  text-align: center;
   font-size: clamp(1rem, 1vw, 2rem);
   font-weight: 700;
   border-radius: 3rem;
@@ -54,7 +56,7 @@ const Products = () => {
         <ProductsTotal>Total ( {totalProductsQuantity()} {totalProductsQuantity() > 1 ? 'products' : 'product'} ):</ProductsTotal>
         <ProductsPrice>${totalCartPrice()}</ProductsPrice>
       </ProductsDetails>
-      <ProductsButton>Go to checkout</ProductsButton>
+      <ProductsButton as={Link} to='/checkout'>Go to checkout</ProductsButton>
     </ProductsStyled>
   )
 }
