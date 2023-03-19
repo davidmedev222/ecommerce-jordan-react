@@ -64,7 +64,7 @@ const ProductDetailLink = styled(Link)`
  }
 `
 const ProductDetail = (props) => {
-  const { id, cp, imageOne, name, color, stock, year, collection, location, designer, price } = props
+  const { id, cp, imageOne, imageTwo, name, color, stock, year, collection, location, designer, price } = props
 
   const [elementRef, isIntersecting] = useIntersection({
     threshold: 0.25
@@ -72,7 +72,7 @@ const ProductDetail = (props) => {
 
   const { isInCart } = useCart()
 
-  const product = { id, cp, imageOne, name, color, stock, price }
+  const product = { id, cp, imageOne, imageTwo, name, color, stock, price }
 
   return (
     <ProductDetailStyled ref={elementRef} data-opacity data-view={isIntersecting}>

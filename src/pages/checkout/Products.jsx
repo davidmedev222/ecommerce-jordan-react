@@ -1,5 +1,6 @@
-import { Product } from './Product'
 import styled from 'styled-components'
+import { Product } from './Product'
+import { useCart } from '../../hooks/export'
 
 const SectionStyled = styled('section')`
   display: flex;
@@ -9,26 +10,16 @@ const SectionStyled = styled('section')`
 `
 
 const Products = () => {
+  const { cart } = useCart()
+
+  const products = cart.map((product) => {
+    const { id, imageTwo, name, color, price, quantity } = product
+    return <Product key={id} imageTwo={imageTwo} name={name} color={color} price={price} quantity={quantity} />
+  })
+
   return (
     <SectionStyled>
-      <Product />
-      <Product />
-      <Product />
-      <Product />
-      <Product />
-      <Product />
-      <Product />
-      <Product />
-      <Product />
-      <Product />
-      <Product />
-      <Product />
-      <Product />
-      <Product />
-      <Product />
-      <Product />
-      <Product />
-      <Product />
+      {products}
     </SectionStyled>
   )
 }

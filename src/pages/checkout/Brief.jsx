@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { useAuth, useCart } from '../../hooks/export'
 
 const SectionStyled = styled('section')`
   display: flex;
@@ -39,22 +40,27 @@ const BriefButton = styled('button')`
 const BriefDescription = styled('p')`
   text-align: center;
 `
+
 const Brief = () => {
+  const { user } = useAuth()
+  const { displayName, email } = user
+  const { totalProductsQuantity, totalCartPrice } = useCart()
+
   return (
     <SectionStyled>
       <BriefHeading>Buyer</BriefHeading>
       <BriefDetails>
         <BriefSubHeading>Name</BriefSubHeading>
-        <BriefSpan>davidmedev222</BriefSpan>
+        <BriefSpan>{displayName}</BriefSpan>
         <BriefSubHeading>Email</BriefSubHeading>
-        <BriefSpan>davidcatrielmamaniescalera@gmail.com</BriefSpan>
+        <BriefSpan>{email}</BriefSpan>
       </BriefDetails>
       <BriefHeading>Total</BriefHeading>
       <BriefDetails>
         <BriefSubHeading>Products</BriefSubHeading>
-        <BriefSpan>123</BriefSpan>
+        <BriefSpan>{totalProductsQuantity()}</BriefSpan>
         <BriefSubHeading>Price</BriefSubHeading>
-        <BriefSpan>$20140</BriefSpan>
+        <BriefSpan>${totalCartPrice()}</BriefSpan>
       </BriefDetails>
       <BriefButton>Confirm order</BriefButton>
       <BriefDescription>Confirm your purchase order to continue.</BriefDescription>
