@@ -14,12 +14,12 @@ const App = () => {
           <Route path='shop/product/:id' element={<ProductDetailPage />} />
           <Route path='faqs' element={<FaqPage />} />
           <Route path='cart' element={<CartPage />} />
-          <Route path='checkout' element={<CheckoutPage />} />
           <Route element={<UserRouteRedirect />}>
             <Route path='login' element={<LoginPage />} />
             <Route path='register' element={<RegisterPage />} />
           </Route>
           <Route element={<UserRouteProtected />}>
+            <Route path='checkout' element={<CheckoutPage />} />
             <Route path='account' element={<LayoutAccountPages />}>
               <Route index element={<AccountPage />} />
               <Route path='profile' element={<ProfilePage />} />
