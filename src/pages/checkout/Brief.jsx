@@ -9,7 +9,7 @@ const SectionStyled = styled('section')`
   
  @media screen and (min-width: 64rem) {
   position: sticky;
-  top: 0;
+  top: 25%;
  }
 `
 const BriefHeading = styled('h2')`
