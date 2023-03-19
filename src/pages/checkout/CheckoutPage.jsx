@@ -1,4 +1,6 @@
 import styled from 'styled-components'
+import { useCart } from '../../hooks/export'
+import { Navigate } from 'react-router-dom'
 import { Brief } from './Brief'
 import { Products } from './Products'
 
@@ -16,6 +18,10 @@ const MainStyled = styled('main')`
 `
 
 const CheckoutPage = () => {
+  const { cart } = useCart()
+
+  if (cart.length === 0) return <Navigate to='/cart' />
+
   return (
     <MainStyled>
       <Brief />
