@@ -1,7 +1,9 @@
+import { Orders } from './Orders'
+
 const OrdersPage = () => {
   return (
     <main>
-      orders page
+      <Orders />
     </main>
   )
 }
