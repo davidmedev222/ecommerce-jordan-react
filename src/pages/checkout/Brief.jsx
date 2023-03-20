@@ -2,7 +2,7 @@ import { serverTimestamp } from 'firebase/firestore'
 import { useNavigate } from 'react-router-dom'
 import styled from 'styled-components'
 import { useAuth, useCart } from '../../hooks/export'
-import { createOrder } from '../../services/firestore/orders/createOrder'
+import { createOrder } from '../../services/export'
 
 const SectionStyled = styled('section')`
   display: flex;
