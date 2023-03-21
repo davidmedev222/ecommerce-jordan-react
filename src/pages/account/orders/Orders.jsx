@@ -1,23 +1,30 @@
 import styled from 'styled-components'
 import { Order } from './Order'
 
-const SectionStyled = styled('section')`
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
+const UlStyled = styled('ul')`
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: clamp(1rem, 1vw, 2rem);
   padding: clamp(1rem, 1vw, 2rem) clamp(1rem, 4vw, 8rem);
+
+ @media screen and (max-width: 49.75rem) {
+    grid-template-columns: 1fr;
+ }
 `
 
 const Orders = () => {
   return (
-    <SectionStyled>
+    <UlStyled>
       <Order />
       <Order />
       <Order />
       <Order />
       <Order />
-    </SectionStyled>
+      <Order />
+      <Order />
+      <Order />
+      <Order />
+    </UlStyled>
   )
 }
 
