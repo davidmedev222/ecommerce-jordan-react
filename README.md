@@ -1,6 +1,6 @@
 # **📂JORDAN STORE**
 
-# **📑 GUIDE**
+# **📑 GUÍA**
 
 <ol>
      <li><a href="#imágenes">Imágenes</a></li>
