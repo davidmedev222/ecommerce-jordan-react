@@ -1,7 +1,8 @@
-import { useState } from 'react'
-import { useAuth } from '../../hooks/export'
-import { Link } from 'react-router-dom'
 import styled from 'styled-components'
+import { useState } from 'react'
+import { Link } from 'react-router-dom'
+import { toast } from 'react-toastify'
+import { useAuth } from '../../hooks/export'
 
 const FormStyled = styled('form')`
   display: flex;
@@ -45,10 +46,10 @@ const SignIn = () => {
   const handleSubmit = async (ev) => {
     ev.preventDefault()
     try {
-      const userCredential = await signIn(formData)
-      console.log(userCredential)
+      const { user } = await signIn(formData)
+      toast.success(`Welcome ${user.displayName}`)
     } catch (error) {
-      window.alert(error.message)
+      toast.error(error.code)
     }
   }
 

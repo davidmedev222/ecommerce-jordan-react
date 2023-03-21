@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import { useState } from 'react'
 import { useAuth } from '../../hooks/export'
+import { toast } from 'react-toastify'
 import { createUser } from '../../services/export'
 
 const FormStyled = styled('form')`
@@ -74,9 +75,9 @@ const SignUp = () => {
       const { user } = await signUp(formData)
       await updateProfileUser(formData)
       await createUser(user)
-      window.alert('cuenta creada')
+      toast.success(`Welcome ${user.displayName}`)
     } catch (error) {
-      window.alert(error.message)
+      toast.error(error.code)
     }
   }
 

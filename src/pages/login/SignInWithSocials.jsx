@@ -1,7 +1,8 @@
 import styled, { css } from 'styled-components'
+import { toast } from 'react-toastify'
 import { useAuth } from '../../hooks/export'
-import { IconTwitter, IconGithub, IconGoogle } from '../../components/export'
 import { createUser } from '../../services/export'
+import { IconTwitter, IconGithub, IconGoogle } from '../../components/export'
 
 const SignInWithSocialsUl = styled('ul')`
   width: 100%;
@@ -45,9 +46,9 @@ const SignInWithSocials = () => {
     try {
       const { user } = await signInWithGoogle()
       await createUser(user)
-      window.alert('cuenta creada con google')
+      toast.success(`Welcome ${user.displayName}`)
     } catch (error) {
-      window.alert(error.message)
+      toast.error(error.code)
     }
   }
 
@@ -55,9 +56,9 @@ const SignInWithSocials = () => {
     try {
       const { user } = await signInWithGithub()
       await createUser(user)
-      window.alert('cuenta creada con github')
+      toast.success(`Welcome ${user.displayName}`)
     } catch (error) {
-      window.alert(error.message)
+      toast.error(error.code)
     }
   }
 
