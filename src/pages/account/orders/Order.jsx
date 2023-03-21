@@ -1,5 +1,5 @@
-import { Link } from 'react-router-dom'
 import styled from 'styled-components'
+import { Link } from 'react-router-dom'
 
 const OrderStyled = styled('li')`
   border-radius:clamp(1rem, 1vw, 2rem);
@@ -11,7 +11,7 @@ const OrderLink = styled(Link)`
   flex-flow: column nowrap;
   justify-content: center;
   align-items: flex-start;
-  gap: clamp(.25rem, .25vw, .5rem);
+  gap: clamp(.5rem, .5vw, 1rem);
   word-break: break-all;
 `
 const OrderName = styled('h2')`
@@ -22,17 +22,19 @@ const OrderEmail = styled('span')`
   font-size: clamp(1rem, 1vw, 2rem);
 `
 const OrderDate = styled('h3')`
-  font-size: clamp(1.25rem, 1.75vw, 3.5rem);
-  font-weight: 700;
+  font-size: clamp(1rem, 1vw, 2rem);
+  font-weight: 600;
 `
 
-const Order = () => {
+const Order = ({ id, buyer, date }) => {
+  const { displayName, email } = buyer
+
   return (
     <OrderStyled>
-      <OrderLink to='asdsad'>
-        <OrderName>David .M</OrderName>
-        <OrderEmail>davidcatrielmamaniescalera@gmail.com</OrderEmail>
-        <OrderDate>20 mar 2023 17:44:34</OrderDate>
+      <OrderLink to={id}>
+        <OrderName>{displayName}</OrderName>
+        <OrderEmail>{email}</OrderEmail>
+        <OrderDate>{date.toDate().toString()}</OrderDate>
       </OrderLink>
     </OrderStyled>
   )
