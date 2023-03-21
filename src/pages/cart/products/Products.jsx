@@ -1,5 +1,6 @@
-import { Link } from 'react-router-dom'
 import styled, { css } from 'styled-components'
+import { Link } from 'react-router-dom'
+import { toast } from 'react-toastify'
 import { useCart } from '../../../hooks/export'
 import { Product } from './Product'
 
@@ -48,10 +49,15 @@ const Products = () => {
     return <Product key={id} id={id} imageOne={imageOne} name={name} color={color} price={price} quantity={quantity} stock={stock} />
   })
 
+  const handleEmptyCart = () => {
+    emptyCart()
+    toast.success('The Cart Is Empty')
+  }
+
   return (
     <ProductsStyled>
       {products}
-      <ProductsButton onClick={emptyCart} align='flex-end'>Empty Cart</ProductsButton>
+      <ProductsButton onClick={handleEmptyCart} align='flex-end'>Empty Cart</ProductsButton>
       <ProductsDetails>
         <ProductsTotal>Total ( {totalProductsQuantity()} {totalProductsQuantity() > 1 ? 'products' : 'product'} ):</ProductsTotal>
         <ProductsPrice>${totalCartPrice()}</ProductsPrice>

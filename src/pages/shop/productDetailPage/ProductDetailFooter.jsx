@@ -40,7 +40,7 @@ const ProductDetailFooter = ({ product, stock, price }) => {
   }
   const handleAddToCart = () => {
     addProduct({ ...product, quantity })
-    toast.success('Added to cart')
+    toast.success('Added To Cart')
   }
 
   return (
