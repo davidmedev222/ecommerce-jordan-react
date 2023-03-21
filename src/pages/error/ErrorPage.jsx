@@ -1,8 +1,10 @@
+import { ErrorNotFound } from '../../components/export'
+
 const ErrorPage = () => {
   return (
-    <>
-      <h1 className='h1'>error 404, pagina no encontrada</h1>
-    </>
+    <main>
+      <ErrorNotFound />
+    </main>
   )
 }
 

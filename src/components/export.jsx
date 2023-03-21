@@ -1,5 +1,6 @@
 // ? COMPONENTS
 export { Categories } from './categories/Categories'
+export { ErrorNotFound } from './error/ErrorNotFound'
 // ? ICONS
 export { IconArrowRight } from './icons/IconArrow'
 export { IconBell } from './icons/IconBell'
@@ -23,3 +24,4 @@ export { IconGithub } from './icons/IconGithub'
 export { IconGoogle } from './icons/IconGoogle'
 export { IconTwitter } from './icons/IconTwitter'
 export { IconCartEmpty } from './icons/IconCartEmpty'
+export { IconError } from './icons/IconError'
