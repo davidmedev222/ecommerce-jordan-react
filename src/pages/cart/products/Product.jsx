@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { toast } from 'react-toastify'
 import { useCart } from '../../../hooks/export'
 import { IconIncrease, IconDecrease, IconTrash } from '../../../components/export'
 
@@ -59,13 +60,14 @@ const Product = (props) => {
   const { decreaseProduct, increaseProduct, removeProduct } = useCart()
 
   const handleDecrease = () => {
-    quantity > 1 && decreaseProduct(id)
+    quantity > 1 ? decreaseProduct(id) : toast.info('Min. Quantity Available')
   }
   const handleIncrease = () => {
-    quantity < stock && increaseProduct(id)
+    quantity < stock ? increaseProduct(id) : toast.info('Max. Quantity Available')
   }
   const handleRemove = () => {
     removeProduct(id)
+    toast.error('Product Removed')
   }
 
   return (

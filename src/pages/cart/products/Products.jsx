@@ -51,7 +51,7 @@ const Products = () => {
 
   const handleEmptyCart = () => {
     emptyCart()
-    toast.success('The Cart Is Empty')
+    toast.info('Cart Removed')
   }
 
   return (
