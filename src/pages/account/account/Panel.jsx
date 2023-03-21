@@ -1,7 +1,8 @@
-import { Link } from 'react-router-dom'
 import styled, { css } from 'styled-components'
-import { IconUser, IconCart, IconGift, IconSignOut, IconBell, IconInfo, IconMoon, IconBookMarkBold } from '../../../components/export'
+import { Link } from 'react-router-dom'
+import { toast } from 'react-toastify'
 import { useAuth } from '../../../hooks/export'
+import { IconUser, IconCart, IconGift, IconSignOut, IconBell, IconInfo, IconMoon, IconBookMarkBold } from '../../../components/export'
 
 const PanelStyled = styled('div')`
   display: flex;
@@ -44,9 +45,9 @@ const Panel = () => {
   const handleSignOut = async () => {
     try {
       await signOutUser()
-      console.log('sesion cerrada')
+      toast.info('Closed Session')
     } catch (error) {
-      window.alert(error.message)
+      toast.error(error.message)
     }
   }
 
