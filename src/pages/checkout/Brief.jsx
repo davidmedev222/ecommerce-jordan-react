@@ -1,6 +1,7 @@
+import styled from 'styled-components'
 import { serverTimestamp } from 'firebase/firestore'
 import { useNavigate } from 'react-router-dom'
-import styled from 'styled-components'
+import { toast } from 'react-toastify'
 import { useAuth, useCart } from '../../hooks/export'
 import { createOrder } from '../../services/export'
 
@@ -61,9 +62,9 @@ const Brief = () => {
       await createOrder(order)
       navigate('/account')
       emptyCart()
-      window.alert('generated order')
+      toast.success('Generated Order')
     } catch (error) {
-      window.alert(error.message)
+      toast.error(error.message)
     }
   }
 
