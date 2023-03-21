@@ -1,7 +1,8 @@
-import { ProductDetailCount } from './ProductDetailCount'
 import styled from 'styled-components'
-import { useCart } from '../../../hooks/export'
+import { toast } from 'react-toastify'
 import { useState } from 'react'
+import { useCart } from '../../../hooks/export'
+import { ProductDetailCount } from './ProductDetailCount'
 
 const ProductDetailStyled = styled('footer')`
   grid-area: footer;
@@ -39,6 +40,7 @@ const ProductDetailFooter = ({ product, stock, price }) => {
   }
   const handleAddToCart = () => {
     addProduct({ ...product, quantity })
+    toast.success('Added to cart')
   }
 
   return (

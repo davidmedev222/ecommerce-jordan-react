@@ -1,6 +1,7 @@
 // ? COMPONENTS
 export { Categories } from './categories/Categories'
 export { ErrorNotFound } from './error/ErrorNotFound'
+export { Toastify } from './toastify/Toastify'
 // ? ICONS
 export { IconArrowRight } from './icons/IconArrow'
 export { IconBell } from './icons/IconBell'

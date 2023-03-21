@@ -1,13 +1,21 @@
-import Toastify from 'toastify-js' // DEPENDENCY TOASTIFY JS
-import 'toastify-js/src/toastify.css' // STYLES DEPENDENCY TOASTIFY JS
+import { ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.min.css'
 
-const toastifyNotication = (message) => {
-  Toastify({
-    text: message,
-    duration: 3000,
-    gravity: 'bottom',
-    className: 'toastify-notification'
-  }).showToast()
+const Toastify = () => {
+  return (
+    <ToastContainer
+      position='top-right'
+      autoClose={3000}
+      hideProgressBar={false}
+      newestOnTop={false}
+      closeOnClick
+      rtl={false}
+      pauseOnFocusLoss
+      draggable
+      pauseOnHover
+      theme='light'
+    />
+  )
 }
 
-export { toastifyNotication }
+export { Toastify }
