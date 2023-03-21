@@ -47,7 +47,7 @@ const Panel = () => {
       await signOutUser()
       toast.info('Closed Session')
     } catch (error) {
-      toast.error(error.message)
+      toast.error(error.code)
     }
   }
 

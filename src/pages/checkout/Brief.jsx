@@ -64,7 +64,7 @@ const Brief = () => {
       emptyCart()
       toast.success('Generated Order')
     } catch (error) {
-      toast.error(error.message)
+      toast.error(error.code)
     }
   }
 
