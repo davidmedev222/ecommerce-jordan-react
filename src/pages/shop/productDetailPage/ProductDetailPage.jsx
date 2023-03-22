@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
-import { getProduct } from '../../../services/firestore/products/getProduct'
 import { useParams } from 'react-router-dom'
+import { ErrorNotFound } from '../../../components/export'
+import { getProduct } from '../../../services/firestore/products/getProduct'
 import { ProductDetail } from './ProductDetail'
 
 const ProductDetailPage = () => {
@@ -16,12 +17,12 @@ const ProductDetailPage = () => {
   useEffect(() => {
     getProduct(id)
       .then((product) => updateData(product))
-      .catch((error) => updateError(error.message))
+      .catch((error) => updateError(error))
   }, [])
 
   return (
     <main>
-      {error && <h1>{error}</h1>}
+      {error && <ErrorNotFound message={error.message} />}
       {productDetail.length > 0 && productDetail}
     </main>
   )
