@@ -23,15 +23,20 @@ const OrderDetailTotal = styled('h4')`
   font-size: clamp(1.5rem, 2vw, 4rem);
   font-weight: 700;
 `
-const OrderDetail = () => {
+const OrderDetail = ({ data }) => {
+  const { buyer, date, products, total } = data
+
+  const orderDetailProducts = products.map((product) => {
+    const { id, imageTwo, name, color, price, quantity } = product
+    return <OrderDetailProduct key={id} imageTwo={imageTwo} name={name} color={color} price={price} quantity={quantity} />
+  })
   return (
     <SectionStyled>
-      <OrderName>D. Mamani Escalera</OrderName>
-      <OrderEmail>davidcatrielmamaniescalera@gmail.com</OrderEmail>
-      <OrderDate>Tue Mar 21 2023 20:23:06 GMT-0300 (hora estándar de Argentina)</OrderDate>
-      <OrderDetailProduct />
-      <OrderDetailProduct />
-      <OrderDetailTotal>( 25 products ) $1200</OrderDetailTotal>
+      <OrderName>{buyer.displayName}</OrderName>
+      <OrderEmail>{buyer.email}</OrderEmail>
+      <OrderDate>{date.toDate().toString()}</OrderDate>
+      {orderDetailProducts.length > 0 && orderDetailProducts}
+      <OrderDetailTotal>( {total.products} {total.products === 1 ? 'product' : 'products'} ) ${total.price}</OrderDetailTotal>
     </SectionStyled>
   )
 }

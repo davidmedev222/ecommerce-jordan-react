@@ -44,16 +44,17 @@ const ProductQuantity = styled('span')`
   flex-basis: 100%;
 `
 
-const OrderDetailProduct = () => {
+const OrderDetailProduct = (props) => {
+  const { imageTwo, name, color, price, quantity } = props
   return (
     <ProductStyled>
-      <ProductImage src='https://res.cloudinary.com/dos3i5jqy/image/upload/v1668792322/ecommerce-jordan-react/product-32_2_icniak.webp' alt='asdasdasd' />
+      <ProductImage src={imageTwo} alt={name} />
       <ProductDetails>
-        <ProductHeading>One multicolor light</ProductHeading>
-        <ProductColor>black / white / grey</ProductColor>
-        <ProductPrice>$250</ProductPrice>
+        <ProductHeading>{name}</ProductHeading>
+        <ProductColor>{color}</ProductColor>
+        <ProductPrice>${price}</ProductPrice>
       </ProductDetails>
-      <ProductQuantity>x7</ProductQuantity>
+      <ProductQuantity>x{quantity}</ProductQuantity>
     </ProductStyled>
   )
 }

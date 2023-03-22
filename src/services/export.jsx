@@ -8,3 +8,4 @@ export { createUser } from './firestore/users/createUser'
 // ? ORDERS
 export { createOrder } from './firestore/orders/createOrder'
 export { getOrders } from './firestore/orders/getOrders'
+export { getOrder } from './firestore/orders/getOrder'
