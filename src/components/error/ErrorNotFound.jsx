@@ -21,11 +21,11 @@ const Heading = styled('h2')`
   text-align: center;
 `
 
-const ErrorNotFound = () => {
+const ErrorNotFound = ({ message }) => {
   return (
     <SectionStyled>
       <IconError />
-      <Heading>Page 404 not found</Heading>
+      <Heading>{message}</Heading>
     </SectionStyled>
   )
 }
