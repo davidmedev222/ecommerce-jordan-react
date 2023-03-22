@@ -14,6 +14,7 @@ export { LayoutAccountPages } from './account/layout/LayoutAccountPages'
 export { AccountPage } from './account/account/AccountPage'
 export { ProfilePage } from './account/profile/ProfilePage'
 export { OrdersPage } from './account/orders/OrdersPage'
+export { OrderDetailPage } from './account/orders/orderDetailPage/OrderDetailPage'
 export { BookMarksPage } from './account/bookmarks/BookMarksPage'
 export { GiftsPage } from './account/gifts/GiftsPage'
 // ? CHECKOUT

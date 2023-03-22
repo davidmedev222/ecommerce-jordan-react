@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import { LayoutPages, HomePage, ErrorPage, ShopPage, FaqPage, CartPage, AccountPage, CheckoutPage, LoginPage, RegisterPage, ProductDetailPage, LayoutAccountPages, ProfilePage, OrdersPage, BookMarksPage, GiftsPage } from '../pages/export'
+import { LayoutPages, HomePage, ErrorPage, ShopPage, FaqPage, CartPage, AccountPage, CheckoutPage, LoginPage, RegisterPage, ProductDetailPage, LayoutAccountPages, ProfilePage, OrdersPage, BookMarksPage, GiftsPage, OrderDetailPage } from '../pages/export'
 import { UserRouteProtected, UserRouteRedirect } from './export'
 
 const App = () => {
@@ -24,6 +24,7 @@ const App = () => {
               <Route index element={<AccountPage />} />
               <Route path='profile' element={<ProfilePage />} />
               <Route path='orders' element={<OrdersPage />} />
+              <Route path='orders/:id' element={<OrderDetailPage />} />
               <Route path='bookmarks' element={<BookMarksPage />} />
               <Route path='gifts' element={<GiftsPage />} />
             </Route>
