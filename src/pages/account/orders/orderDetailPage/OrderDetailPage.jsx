@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import { getOrder } from '../../../../services/export'
+import { ErrorNotFound } from '../../../../components/export'
 import { OrderDetail } from './OrderDetail'
 
 const OrderDetailPage = () => {
@@ -16,7 +17,7 @@ const OrderDetailPage = () => {
 
   return (
     <main>
-      {error && <h1>{error.message}</h1>}
+      {error && <ErrorNotFound message={error.message} />}
       {data && <OrderDetail data={data} />}
     </main>
   )
