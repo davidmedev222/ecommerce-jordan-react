@@ -1,9 +1,0 @@
-// MIXINS
-@import '../.././global/mixins';
-
-// STYLES
-.main-checkout {
-    position: relative;
-    @include flex(column, center, center);
-    padding: var(--padding-main);
-}
