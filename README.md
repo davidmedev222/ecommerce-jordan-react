@@ -24,5 +24,5 @@
 
 # **💬¿QUÉ TECNOLOGIAS SE USARON?**
 
-Se uso `ViteJs` como framework de desarollo, `ReactJs` para el desarrollo de interfaces, `Sass` para el desarrollo de estilos, `Context API` para el manejo y gestión de estados globales, `React Router Dom` para enrutamiento del proyecto, `Firebase Auth` para la autenticacion del usuario, `Firebase Firestore` para la base de datos de la tienda, `Husky` para la ejecucion de los hooks de Git, `StandardJs` como linter de código, 
+Se uso `ViteJs` como framework de desarollo, `ReactJs` para el desarrollo de interfaces, `Styled Components` para el desarrollo de estilos, `Context API` para el manejo y gestión de estados globales, `React Router Dom` para enrutamiento del proyecto,`Firebase` para la infraestructura del back, `Firebase Auth` para la autenticacion del usuario, `Firebase Firestore` para la base de datos,`React Toastify` para las notificaciones, `StandardJs` como linter de código, 
 `Pnpm` para la gestión de paquetes, `Git` para el control de versiones y `Github` para hospedar el código del proyecto.
