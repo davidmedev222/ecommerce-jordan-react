@@ -1,7 +1,5 @@
-import { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
 import styled from 'styled-components'
-import { getProducts } from '../../../services/firestore/products/getProducts'
+import { useParams } from 'react-router-dom'
 import { Product } from './Product'
 
 const SectionStyled = styled('section')`
@@ -11,8 +9,7 @@ const SectionStyled = styled('section')`
   padding: clamp(1rem, 1vw, 2rem) clamp(1rem, 4vw, 8rem);
 `
 
-const Products = () => {
-  const [data, updateData] = useState([])
+const Products = ({ data }) => {
   const { category } = useParams()
 
   const categories = {
@@ -38,10 +35,6 @@ const Products = () => {
         return <Product key={id} cp={cp} image={imageTwo} name={name} color={color} price={price} />
       })
   }
-
-  useEffect(() => {
-    getProducts().then((products) => updateData(products))
-  }, [])
 
   const products = categories[category] ? filterDataByParam() : allData()
 
