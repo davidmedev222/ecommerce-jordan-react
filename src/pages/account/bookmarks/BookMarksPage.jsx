@@ -1,7 +1,13 @@
+import { useCart } from '../../../hooks/export'
+import { Empty } from '../../../components/export'
+import { Products } from './Products'
+
 const BookMarksPage = () => {
+  const { bookmark } = useCart()
+
   return (
     <main>
-      book marks page
+      {bookmark.length > 0 ? <Products data={bookmark} /> : <Empty />}
     </main>
   )
 }

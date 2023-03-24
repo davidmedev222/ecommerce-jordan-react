@@ -3,6 +3,7 @@ export { Categories } from './categories/Categories'
 export { ErrorNotFound } from './error/ErrorNotFound'
 export { Spinner } from './spinner/Spinner'
 export { Toastify } from './toastify/Toastify'
+export { Empty } from './empty/Empty'
 // ? ICONS
 export { IconArrowRight } from './icons/IconArrow'
 export { IconBell } from './icons/IconBell'

@@ -66,6 +66,7 @@ const CartProvider = ({ children }) => {
 
   const data = {
     cart,
+    bookmark,
     addProduct,
     addBookmark,
     decreaseProduct,
