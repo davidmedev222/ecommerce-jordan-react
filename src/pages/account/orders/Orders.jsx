@@ -1,6 +1,4 @@
 import styled from 'styled-components'
-import { useEffect, useState } from 'react'
-import { getOrders } from '../../../services/export'
 import { Order } from './Order'
 
 const UlStyled = styled('ul')`
@@ -14,13 +12,7 @@ const UlStyled = styled('ul')`
  }
 `
 
-const Orders = () => {
-  const [data, updateData] = useState([])
-
-  useEffect(() => {
-    getOrders().then(orders => updateData(orders))
-  }, [])
-
+const Orders = ({ data }) => {
   const orders = data.map((document) => {
     const { id, data } = document
     return <Order key={id} id={id} buyer={data.buyer} date={data.date} />
