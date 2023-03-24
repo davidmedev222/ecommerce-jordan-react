@@ -4,15 +4,22 @@ import { CartContext } from './CartContext'
 
 const CartProvider = ({ children }) => {
   const cartLocalStorage = JSON.parse(window.localStorage.getItem('cart'))
+  const bookmarkLocalStorage = JSON.parse(window.localStorage.getItem('bookmark'))
 
   const [cart, updateCart] = useState(cartLocalStorage || [])
+  const [bookmark, updateBookmark] = useState(bookmarkLocalStorage || [])
 
   useEffect(() => {
     window.localStorage.setItem('cart', JSON.stringify(cart))
-  }, [cart])
+    window.localStorage.setItem('bookmark', JSON.stringify(bookmark))
+  }, [cart, bookmark])
 
   const addProduct = (product) => {
     updateCart((prevCart) => [...prevCart, product])
+  }
+
+  const addBookmark = (product) => {
+    updateBookmark((prevBookmark) => [...prevBookmark, product])
   }
 
   const decreaseProduct = (id) => {
@@ -33,12 +40,20 @@ const CartProvider = ({ children }) => {
     updateCart((prevCart) => prevCart.filter((product) => product.id !== id))
   }
 
+  const removeBookmark = (id) => {
+    updateBookmark((prevBookmark) => prevBookmark.filter((product) => product.id !== id))
+  }
+
   const emptyCart = () => {
     updateCart([])
   }
 
   const isInCart = (id) => {
     return cart.some((product) => product.id === id)
+  }
+
+  const isInBookmark = (id) => {
+    return bookmark.some((product) => product.id === id)
   }
 
   const totalProductsQuantity = () => {
@@ -52,11 +67,14 @@ const CartProvider = ({ children }) => {
   const data = {
     cart,
     addProduct,
+    addBookmark,
     decreaseProduct,
     increaseProduct,
     removeProduct,
+    removeBookmark,
     emptyCart,
     isInCart,
+    isInBookmark,
     totalProductsQuantity,
     totalCartPrice
   }

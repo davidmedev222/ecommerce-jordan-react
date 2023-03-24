@@ -1,8 +1,8 @@
 import styled from 'styled-components'
-import { useToggle } from '../../../hooks/toggle/useToggle'
-import { IconBookMark, IconBookMarkBold } from '../../../components/export'
-import { useIntersection } from '../../../hooks/intersection/useIntersection'
 import { Link } from 'react-router-dom'
+import { toast } from 'react-toastify'
+import { useCart, useIntersection } from '../../../hooks/export'
+import { IconBookMark, IconBookMarkBold } from '../../../components/export'
 
 const ProductStyled = styled('article')`
   display: flex;
@@ -47,20 +47,34 @@ const ProductPrice = styled('h4')`
   font-weight: 700;
 `
 
-const Product = ({ cp, image, name, color, price }) => {
-  const { isToggle, toggle } = useToggle()
+const Product = ({ id, cp, image, name, color, price }) => {
+  const { addBookmark, removeBookmark, isInBookmark } = useCart()
 
   const [elementRef, isIntersecting] = useIntersection({
     threshold: 0.5
   }, true)
+
+  const productForBookmark = { id, cp, image, name, color, price }
+
+  const handleAddBookmark = () => {
+    addBookmark({ ...productForBookmark, isBookmark: true })
+    toast.success('Added To Bookmark')
+  }
+
+  const handleRemoveBookmark = () => {
+    removeBookmark(id)
+    toast.error('Removed From Bookmark')
+  }
 
   return (
     <ProductStyled ref={elementRef} data-opacity data-view={isIntersecting}>
       <Link to={`/shop/product/${cp}`}>
         <ProductImage data-mask-left={isIntersecting} src={image} alt={name} />
       </Link>
-      <WrapperBookMark onClick={toggle}>
-        {isToggle ? <IconBookMarkBold /> : <IconBookMark />}
+      <WrapperBookMark>
+        {isInBookmark(id)
+          ? <IconBookMarkBold onClick={handleRemoveBookmark} />
+          : <IconBookMark onClick={handleAddBookmark} />}
       </WrapperBookMark>
       <ProductFooter data-mask-left={isIntersecting}>
         <ProductHeading>{name}</ProductHeading>

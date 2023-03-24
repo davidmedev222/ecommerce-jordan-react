@@ -24,7 +24,7 @@ const Products = ({ data }) => {
       .filter((product) => product.year === category)
       .map((product) => {
         const { id, cp, imageTwo, name, color, price } = product
-        return <Product key={id} cp={cp} image={imageTwo} name={name} color={color} price={price} />
+        return <Product key={id} id={id} cp={cp} image={imageTwo} name={name} color={color} price={price} />
       })
   }
 
@@ -32,7 +32,7 @@ const Products = ({ data }) => {
     return data
       .map((product) => {
         const { id, cp, imageTwo, name, color, price } = product
-        return <Product key={id} cp={cp} image={imageTwo} name={name} color={color} price={price} />
+        return <Product key={id} id={id} cp={cp} image={imageTwo} name={name} color={color} price={price} />
       })
   }
 
