@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { ThemeContext } from './ThemeContext'
+import { ThemeContext } from '@/context'
 
 const ThemeProvider = ({ children }) => {
   const [theme, updateTheme] = useState(window.localStorage.getItem('theme') || 'light')

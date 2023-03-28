@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 
-import { CartContext } from './CartContext'
+import { CartContext } from '@/context'
 
 const CartProvider = ({ children }) => {
   const cartLocalStorage = JSON.parse(window.localStorage.getItem('cart'))

@@ -1,7 +1,7 @@
 import { createUserWithEmailAndPassword, GithubAuthProvider, GoogleAuthProvider, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from 'firebase/auth'
 import { auth } from '../../services/firebase/config'
 import { useState, useEffect } from 'react'
-import { UserContext } from './UserContext'
+import { UserContext } from '@/context'
 
 const UserProvider = ({ children }) => {
   const [user, updateUser] = useState(false)

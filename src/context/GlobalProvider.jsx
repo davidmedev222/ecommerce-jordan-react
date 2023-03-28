@@ -1,4 +1,4 @@
-import { UserProvider, CartProvider } from './export'
+import { UserProvider, CartProvider } from '@/context'
 
 const GlobalProvider = ({ children }) => {
   return (
