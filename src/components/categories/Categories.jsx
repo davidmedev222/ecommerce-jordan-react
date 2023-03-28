@@ -1,5 +1,5 @@
+import { Category } from '@/components'
 import styled from 'styled-components'
-import { Category } from './Category'
 
 const SectionStyled = styled('section')`
   display: grid;

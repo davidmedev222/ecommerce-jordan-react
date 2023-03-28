@@ -1,5 +1,5 @@
-import styled from 'styled-components'
 import { IconError } from '@/components'
+import styled from 'styled-components'
 
 const SectionStyled = styled('section')`
   height: 100%;

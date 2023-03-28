@@ -1,8 +1,7 @@
-import styled from 'styled-components'
+import { IconCart, IconLogo, IconMenu, IconUser, Navbar } from '@/components'
 import { Link } from 'react-router-dom'
-import { IconCart, IconLogo, IconMenu, IconUser } from '@/components'
-import { Navbar } from './Navbar'
-import { useToggle, useCart } from '../../hooks/export'
+import styled from 'styled-components'
+import { useCart, useToggle } from '../../hooks/export'
 
 const HeaderStyled = styled('header')`
   display: flex;

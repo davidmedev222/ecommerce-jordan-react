@@ -1,6 +1,6 @@
-import styled from 'styled-components'
-import { Link } from 'react-router-dom'
 import { IconCartEmpty } from '@/components'
+import { Link } from 'react-router-dom'
+import styled from 'styled-components'
 
 const EmptyStyled = styled('section')`
   height: 100%;
