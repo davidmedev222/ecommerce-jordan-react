@@ -1,6 +1,5 @@
 import { Outlet } from 'react-router-dom'
-import { Header } from '../../components/header/Header'
-import { Toastify } from '../../components/export'
+import { Header, Toastify } from '@/components'
 
 const LayoutPages = () => {
   return (

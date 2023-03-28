@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import { getOrder } from '../../../../services/export'
-import { ErrorNotFound, Spinner } from '../../../../components/export'
+import { ErrorNotFound, Spinner } from '@/components'
 import { OrderDetail } from './OrderDetail'
 
 const OrderDetailPage = () => {

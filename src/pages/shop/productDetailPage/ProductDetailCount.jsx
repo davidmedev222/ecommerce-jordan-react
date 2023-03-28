@@ -1,4 +1,4 @@
-import { IconDecrease, IconIncrease } from '../../../components/export'
+import { IconDecrease, IconIncrease } from '@/components'
 import styled from 'styled-components'
 
 const ProductOptions = styled('footer')`

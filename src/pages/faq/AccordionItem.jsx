@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components'
 import { useToggle } from '../../hooks/export'
-import { IconIncrease } from '../../components/export'
+import { IconIncrease } from '@/components'
 
 const AccordionLi = styled('li')`
   overflow: hidden;

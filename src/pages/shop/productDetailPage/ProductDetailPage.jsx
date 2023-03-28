@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import { Spinner, ErrorNotFound } from '../../../components/export'
+import { Spinner, ErrorNotFound } from '@/components'
 import { getProduct } from '../../../services/firestore/products/getProduct'
 import { ProductDetail } from './ProductDetail'
 

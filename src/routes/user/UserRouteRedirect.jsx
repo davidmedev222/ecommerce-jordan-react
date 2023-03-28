@@ -1,6 +1,6 @@
 import { useAuth } from '../../hooks/export'
 import { Navigate, Outlet } from 'react-router-dom'
-import { Spinner } from '../../components/export'
+import { Spinner } from '@/components'
 
 const UserRouteRedirect = () => {
   const { user } = useAuth()

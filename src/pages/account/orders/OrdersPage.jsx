@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { getOrders } from '../../../services/export'
-import { Spinner } from '../../../components/export'
+import { Spinner } from '@/components'
 import { Orders } from './Orders'
 
 const OrdersPage = () => {

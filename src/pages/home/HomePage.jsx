@@ -1,4 +1,4 @@
-import { Categories } from '../../components/export'
+import { Categories } from '@/components'
 
 const HomePage = () => {
   return (

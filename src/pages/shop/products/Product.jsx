@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 import { toast } from 'react-toastify'
 import { useCart, useIntersection } from '../../../hooks/export'
-import { IconBookMark, IconBookMarkBold } from '../../../components/export'
+import { IconBookMark, IconBookMarkBold } from '@/components'
 
 const ProductStyled = styled('article')`
   display: flex;

@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { getProducts } from '../../services/export'
-import { Spinner } from '../../components/export'
+import { Spinner } from '@/components'
 import { Categories } from './categories/Categories'
 import { Products } from './products/Products'
 

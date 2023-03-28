@@ -1,5 +1,5 @@
 import { useCart } from '../../../hooks/export'
-import { Empty } from '../../../components/export'
+import { Empty } from '@/components'
 import { Products } from './Products'
 
 const BookMarksPage = () => {

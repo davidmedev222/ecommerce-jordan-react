@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components'
 import { Link } from 'react-router-dom'
 import { toast } from 'react-toastify'
 import { useAuth } from '../../../hooks/export'
-import { IconUser, IconCart, IconGift, IconSignOut, IconBell, IconInfo, IconMoon, IconBookMarkBold } from '../../../components/export'
+import { IconUser, IconCart, IconGift, IconSignOut, IconBell, IconInfo, IconMoon, IconBookMarkBold } from '@/components'
 
 const PanelStyled = styled('div')`
   display: flex;

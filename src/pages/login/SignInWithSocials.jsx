@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components'
 import { toast } from 'react-toastify'
 import { useAuth } from '../../hooks/export'
 import { createUser } from '../../services/export'
-import { IconTwitter, IconGithub, IconGoogle } from '../../components/export'
+import { IconTwitter, IconGithub, IconGoogle } from '@/components'
 
 const SignInWithSocialsUl = styled('ul')`
   width: 100%;

@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { toast } from 'react-toastify'
 import { useCart } from '../../../hooks/export'
-import { IconIncrease, IconDecrease, IconTrash } from '../../../components/export'
+import { IconIncrease, IconDecrease, IconTrash } from '@/components'
 
 const ProductStyled = styled('article')`
   display: flex;

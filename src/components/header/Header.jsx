@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
-import { IconCart, IconLogo, IconMenu, IconUser } from '../export'
+import { IconCart, IconLogo, IconMenu, IconUser } from '@/components'
 import { Navbar } from './Navbar'
 import { useToggle, useCart } from '../../hooks/export'
 

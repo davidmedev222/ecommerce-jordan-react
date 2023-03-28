@@ -1,4 +1,4 @@
-import { ErrorNotFound } from '../../components/export'
+import { ErrorNotFound } from '@/components'
 
 const ErrorPage = () => {
   return (
