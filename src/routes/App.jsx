@@ -1,6 +1,6 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import { LayoutPages, HomePage, ErrorPage, ShopPage, FaqPage, CartPage, AccountPage, CheckoutPage, LoginPage, RegisterPage, ProductDetailPage, LayoutAccountPages, ProfilePage, OrdersPage, BookMarksPage, GiftsPage, OrderDetailPage } from '../pages/export'
-import { UserRouteProtected, UserRouteRedirect } from './export'
+import { UserRouteProtected, UserRouteRedirect } from '@/routes'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { AccountPage, BookMarksPage, CartPage, CheckoutPage, ErrorPage, FaqPage, GiftsPage, HomePage, LayoutAccountPages, LayoutPages, LoginPage, OrderDetailPage, OrdersPage, ProductDetailPage, ProfilePage, RegisterPage, ShopPage } from '../pages/export'
 
 const App = () => {
   return (

@@ -1,10 +1,10 @@
+import { GlobalProvider } from '@/context'
+import { App } from '@/routes'
+import { initializeApp } from 'firebase/app'
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import { initializeApp } from 'firebase/app'
 import { firebaseConfig } from './services/firebase/config'
-import { GlobalProvider } from '@/context'
 import { GlobalStyles } from './styles/GlobalStyles'
-import { App } from './routes/App'
 
 initializeApp(firebaseConfig)
 
