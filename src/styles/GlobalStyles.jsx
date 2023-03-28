@@ -1,5 +1,5 @@
+import { attributes } from '@/styles/utils'
 import { createGlobalStyle } from 'styled-components'
-import { helpers } from './helpers'
 
 const GlobalStyles = createGlobalStyle`
   :root {
@@ -140,7 +140,7 @@ const GlobalStyles = createGlobalStyle`
     display: block;
   }
 
-  ${helpers}
+  ${attributes}
 `
 
 export { GlobalStyles }
