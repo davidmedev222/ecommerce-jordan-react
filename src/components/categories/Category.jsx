@@ -1,5 +1,5 @@
+import { useIntersection } from '@/hooks'
 import styled, { css } from 'styled-components'
-import { useIntersection } from '../../hooks/intersection/useIntersection'
 
 const CategoryStyled = styled('article')`
   display: grid;

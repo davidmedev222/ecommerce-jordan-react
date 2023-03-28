@@ -1,6 +1,6 @@
-import styled from 'styled-components'
-import { useCart } from '../../hooks/export'
+import { useCart } from '@/hooks'
 import { Navigate } from 'react-router-dom'
+import styled from 'styled-components'
 import { Brief } from './Brief'
 import { Products } from './Products'
 

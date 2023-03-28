@@ -1,8 +1,8 @@
-import styled, { css } from 'styled-components'
+import { IconGithub, IconGoogle, IconTwitter } from '@/components'
+import { useAuth } from '@/hooks'
 import { toast } from 'react-toastify'
-import { useAuth } from '../../hooks/export'
+import styled, { css } from 'styled-components'
 import { createUser } from '../../services/export'
-import { IconTwitter, IconGithub, IconGoogle } from '@/components'
 
 const SignInWithSocialsUl = styled('ul')`
   width: 100%;

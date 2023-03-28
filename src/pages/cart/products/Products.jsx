@@ -1,7 +1,7 @@
-import styled, { css } from 'styled-components'
+import { useCart } from '@/hooks'
 import { Link } from 'react-router-dom'
 import { toast } from 'react-toastify'
-import { useCart } from '../../../hooks/export'
+import styled, { css } from 'styled-components'
 import { Product } from './Product'
 
 const ProductsStyled = styled('section')`

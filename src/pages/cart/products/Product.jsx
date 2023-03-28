@@ -1,7 +1,7 @@
-import styled from 'styled-components'
+import { IconDecrease, IconIncrease, IconTrash } from '@/components'
+import { useCart } from '@/hooks'
 import { toast } from 'react-toastify'
-import { useCart } from '../../../hooks/export'
-import { IconIncrease, IconDecrease, IconTrash } from '@/components'
+import styled from 'styled-components'
 
 const ProductStyled = styled('article')`
   display: flex;

@@ -1,6 +1,6 @@
+import { useCart, useIntersection } from '@/hooks'
 import { Link } from 'react-router-dom'
 import styled, { css } from 'styled-components'
-import { useCart, useIntersection } from '../../../hooks/export'
 import { ProductDetailFooter } from './ProductDetailFooter'
 
 const ProductDetailStyled = styled('article')`

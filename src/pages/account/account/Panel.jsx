@@ -1,8 +1,8 @@
-import styled, { css } from 'styled-components'
+import { IconBell, IconBookMarkBold, IconCart, IconGift, IconInfo, IconMoon, IconSignOut, IconUser } from '@/components'
+import { useAuth } from '@/hooks'
 import { Link } from 'react-router-dom'
 import { toast } from 'react-toastify'
-import { useAuth } from '../../../hooks/export'
-import { IconUser, IconCart, IconGift, IconSignOut, IconBell, IconInfo, IconMoon, IconBookMarkBold } from '@/components'
+import styled, { css } from 'styled-components'
 
 const PanelStyled = styled('div')`
   display: flex;

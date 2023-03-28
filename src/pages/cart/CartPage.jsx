@@ -1,6 +1,6 @@
-import { useCart } from '../../hooks/export'
-import { Products } from './products/Products'
+import { useCart } from '@/hooks'
 import { Empty } from './empty/Empty'
+import { Products } from './products/Products'
 
 const CartPage = () => {
   const { cart } = useCart()

@@ -1,5 +1,5 @@
+import { useAuth } from '@/hooks'
 import styled from 'styled-components'
-import { useAuth } from '../../../hooks/export'
 
 const UserCardStyled = styled('article')`
   display: flex;

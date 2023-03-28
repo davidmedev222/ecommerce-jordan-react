@@ -1,7 +1,7 @@
-import styled from 'styled-components'
+import { useAuth } from '@/hooks'
 import { useState } from 'react'
-import { useAuth } from '../../hooks/export'
 import { toast } from 'react-toastify'
+import styled from 'styled-components'
 import { createUser } from '../../services/export'
 
 const FormStyled = styled('form')`

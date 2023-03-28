@@ -1,6 +1,6 @@
-import styled from 'styled-components'
+import { useIntersection } from '@/hooks'
 import { Link } from 'react-router-dom'
-import { useIntersection } from '../../../hooks/export'
+import styled from 'styled-components'
 
 const ProductStyled = styled('article')`
   display: flex;

@@ -1,8 +1,8 @@
-import styled from 'styled-components'
+import { useAuth } from '@/hooks'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { toast } from 'react-toastify'
-import { useAuth } from '../../hooks/export'
+import styled from 'styled-components'
 
 const FormStyled = styled('form')`
   display: flex;
