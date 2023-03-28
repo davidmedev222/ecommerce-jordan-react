@@ -1,8 +1,8 @@
 import { IconGithub, IconGoogle, IconTwitter } from '@/components'
 import { useAuth } from '@/hooks'
+import { createUser } from '@/services/firestore'
 import { toast } from 'react-toastify'
 import styled, { css } from 'styled-components'
-import { createUser } from '../../services/export'
 
 const SignInWithSocialsUl = styled('ul')`
   width: 100%;

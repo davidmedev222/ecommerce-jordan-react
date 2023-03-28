@@ -1,6 +1,6 @@
-import { useState, useEffect } from 'react'
-import { getOrders } from '../../../services/export'
 import { Spinner } from '@/components'
+import { getOrders } from '@/services/firestore'
+import { useEffect, useState } from 'react'
 import { Orders } from './Orders'
 
 const OrdersPage = () => {

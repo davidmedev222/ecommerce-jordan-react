@@ -1,6 +1,6 @@
-import { useEffect, useState } from 'react'
-import { getProducts } from '../../services/export'
 import { Spinner } from '@/components'
+import { getProducts } from '@/services/firestore'
+import { useEffect, useState } from 'react'
 import { Categories } from './categories/Categories'
 import { Products } from './products/Products'
 

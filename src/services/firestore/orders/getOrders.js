@@ -1,5 +1,5 @@
+import { auth } from '@/services/firebase'
 import { collection, getDocs, getFirestore, query, where } from 'firebase/firestore'
-import { auth } from '../../export'
 
 const getOrders = async () => {
   const { email } = auth.currentUser

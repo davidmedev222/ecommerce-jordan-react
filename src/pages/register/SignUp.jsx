@@ -1,8 +1,8 @@
 import { useAuth } from '@/hooks'
+import { createUser } from '@/services/firestore'
 import { useState } from 'react'
 import { toast } from 'react-toastify'
 import styled from 'styled-components'
-import { createUser } from '../../services/export'
 
 const FormStyled = styled('form')`
   width: 100%;
