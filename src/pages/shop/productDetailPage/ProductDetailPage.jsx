@@ -1,8 +1,8 @@
 import { ErrorNotFound, Spinner } from '@/components'
+import { ProductDetail } from '@/pages/shop'
 import { getProduct } from '@/services/firestore'
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import { ProductDetail } from './ProductDetail'
 
 const ProductDetailPage = () => {
   const [data, updateData] = useState([])

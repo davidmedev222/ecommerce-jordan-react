@@ -1,6 +1,6 @@
-import styled from 'styled-components'
+import { Product } from '@/pages/shop'
 import { useParams } from 'react-router-dom'
-import { Product } from './Product'
+import styled from 'styled-components'
 
 const SectionStyled = styled('section')`
   display: grid;

@@ -1,4 +1,4 @@
-import { Accordion } from './Accordion'
+import { Accordion } from '@/pages/faq'
 
 const FaqPage = () => {
   return (

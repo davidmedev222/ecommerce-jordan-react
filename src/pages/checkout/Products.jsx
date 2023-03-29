@@ -1,6 +1,6 @@
 import { useCart } from '@/hooks'
+import { Product } from '@/pages/checkout'
 import styled from 'styled-components'
-import { Product } from './Product'
 
 const SectionStyled = styled('section')`
   display: flex;

@@ -1,5 +1,5 @@
+import { CategoryLink } from '@/pages/shop'
 import styled from 'styled-components'
-import { CategoryLink } from './CategoryLink'
 
 const CategoriesStyled = styled('div')`
   display: flex;

@@ -1,8 +1,7 @@
 import { useCart } from '@/hooks'
+import { Brief, Products } from '@/pages/checkout'
 import { Navigate } from 'react-router-dom'
 import styled from 'styled-components'
-import { Brief } from './Brief'
-import { Products } from './Products'
 
 const MainStyled = styled('main')`
   display: grid;

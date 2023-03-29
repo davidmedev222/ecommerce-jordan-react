@@ -1,8 +1,8 @@
 import { useCart } from '@/hooks'
+import { Product } from '@/pages/cart'
 import { Link } from 'react-router-dom'
 import { toast } from 'react-toastify'
 import styled, { css } from 'styled-components'
-import { Product } from './Product'
 
 const ProductsStyled = styled('section')`
   height: 100%;

@@ -1,7 +1,6 @@
 
+import { Panel, UserCard } from '@/pages/account'
 import styled from 'styled-components'
-import { Panel } from './Panel'
-import { UserCard } from './UserCard'
 
 const MainStyled = styled('main')`
   display: flex;

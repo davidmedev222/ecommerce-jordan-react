@@ -1,5 +1,5 @@
+import { AccordionItem } from '@/pages/faq'
 import styled from 'styled-components'
-import { AccordionItem } from './AccordionItem'
 
 const AccordionUl = styled('ul')`
   display: flex;

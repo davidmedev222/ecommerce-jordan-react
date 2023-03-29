@@ -1,5 +1,5 @@
+import { Order } from '@/pages/account'
 import styled from 'styled-components'
-import { Order } from './Order'
 
 const UlStyled = styled('ul')`
   display: grid;

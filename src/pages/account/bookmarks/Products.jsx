@@ -1,5 +1,5 @@
+import { Product } from '@/pages/account'
 import styled from 'styled-components'
-import { Product } from './Product'
 
 const SectionStyled = styled('section')`
   display: grid;

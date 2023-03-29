@@ -1,7 +1,7 @@
 import { useCart, useIntersection } from '@/hooks'
+import { ProductDetailFooter } from '@/pages/shop'
 import { Link } from 'react-router-dom'
 import styled, { css } from 'styled-components'
-import { ProductDetailFooter } from './ProductDetailFooter'
 
 const ProductDetailStyled = styled('article')`
   display: grid;

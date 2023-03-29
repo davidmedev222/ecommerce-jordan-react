@@ -1,6 +1,6 @@
 import { Empty } from '@/components'
 import { useCart } from '@/hooks'
-import { Products } from './Products'
+import { Products } from '@/pages/account'
 
 const BookMarksPage = () => {
   const { bookmark } = useCart()

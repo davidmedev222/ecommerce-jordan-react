@@ -1,8 +1,7 @@
 import { Spinner } from '@/components'
+import { Categories, Products } from '@/pages/shop'
 import { getProducts } from '@/services/firestore'
 import { useEffect, useState } from 'react'
-import { Categories } from './categories/Categories'
-import { Products } from './products/Products'
 
 const ShopPage = () => {
   const [data, updateData] = useState([])

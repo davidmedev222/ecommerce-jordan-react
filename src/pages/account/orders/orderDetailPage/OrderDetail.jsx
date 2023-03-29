@@ -1,5 +1,5 @@
+import { OrderDetailProduct } from '@/pages/account'
 import styled from 'styled-components'
-import { OrderDetailProduct } from './OrderDetailProduct'
 
 const SectionStyled = styled('section')`
   display: flex;

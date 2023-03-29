@@ -1,5 +1,5 @@
+import { SignUp } from '@/pages/register'
 import styled from 'styled-components'
-import { SignUp } from './SignUp'
 
 const MainStyled = styled('main')`
   display: flex;

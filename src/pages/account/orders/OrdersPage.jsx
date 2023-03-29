@@ -1,7 +1,7 @@
 import { Spinner } from '@/components'
+import { Orders } from '@/pages/account'
 import { getOrders } from '@/services/firestore'
 import { useEffect, useState } from 'react'
-import { Orders } from './Orders'
 
 const OrdersPage = () => {
   const [data, updateData] = useState([])

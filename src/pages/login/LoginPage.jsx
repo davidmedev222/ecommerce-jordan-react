@@ -1,7 +1,6 @@
+import { SignIn, SignInWithSocials } from '@/pages/login'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
-import { SignIn } from './SignIn'
-import { SignInWithSocials } from './SignInWithSocials'
 
 const MainStyled = styled('main')`
   display: grid;

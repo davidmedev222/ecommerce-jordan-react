@@ -1,8 +1,8 @@
 import { useCart } from '@/hooks'
+import { ProductDetailCount } from '@/pages/shop'
 import { useState } from 'react'
 import { toast } from 'react-toastify'
 import styled from 'styled-components'
-import { ProductDetailCount } from './ProductDetailCount'
 
 const ProductDetailStyled = styled('footer')`
   grid-area: footer;
