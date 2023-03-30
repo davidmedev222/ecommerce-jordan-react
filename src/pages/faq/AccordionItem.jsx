@@ -1,5 +1,6 @@
 import { IconIncrease } from '@/components'
 import { useToggle } from '@/hooks'
+import { useAutoAnimate } from '@formkit/auto-animate/react'
 import styled, { css } from 'styled-components'
 
 const AccordionLi = styled('li')`
@@ -30,25 +31,21 @@ const AccordionIcon = styled('button')`
   `}
 `
 const AccordionParagraph = styled('p')`
-  display: none;
   font-size: clamp(.85rem, 1vw, 2rem);
   padding: clamp(1rem, 1vw, 2rem);
-
-  ${({ isActive }) => isActive && css`
-     display: block;
-  `}
 `
 
 const AccordionItem = ({ title, text }) => {
   const { isToggle, toggle } = useToggle()
+  const [parent] = useAutoAnimate()
 
   return (
-    <AccordionLi>
+    <AccordionLi ref={parent}>
       <AccordionHeader onClick={toggle}>
         <AccordionTitle>{title}</AccordionTitle>
         <AccordionIcon isActive={isToggle}><IconIncrease /></AccordionIcon>
       </AccordionHeader>
-      <AccordionParagraph isActive={isToggle}>{text}</AccordionParagraph>
+      {isToggle && <AccordionParagraph>{text}</AccordionParagraph>}
     </AccordionLi>
   )
 }
