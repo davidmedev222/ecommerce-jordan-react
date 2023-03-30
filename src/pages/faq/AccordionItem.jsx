@@ -37,7 +37,7 @@ const AccordionParagraph = styled('p')`
 
 const AccordionItem = ({ title, text }) => {
   const { isToggle, toggle } = useToggle()
-  const [parent] = useAutoAnimate()
+  const [parent] = useAutoAnimate({ disrespectUserMotionPreference: true })
 
   return (
     <AccordionLi ref={parent}>
