@@ -1,5 +1,6 @@
 import { Product } from '@/pages/shop'
 import { useParams } from 'react-router-dom'
+import { useAutoAnimate } from '@formkit/auto-animate/react'
 import styled from 'styled-components'
 
 const SectionStyled = styled('section')`
@@ -10,6 +11,8 @@ const SectionStyled = styled('section')`
 `
 
 const Products = ({ data }) => {
+  const [parent] = useAutoAnimate()
+
   const { category } = useParams()
 
   const categories = {
@@ -39,7 +42,7 @@ const Products = ({ data }) => {
   const products = categories[category] ? filterDataByParam() : allData()
 
   return (
-    <SectionStyled>
+    <SectionStyled ref={parent}>
       {products.length > 0 && products}
     </SectionStyled>
   )

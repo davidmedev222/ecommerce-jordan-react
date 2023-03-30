@@ -1,5 +1,5 @@
 import { IconBookMark, IconBookMarkBold } from '@/components'
-import { useCart, useIntersection } from '@/hooks'
+import { useCart } from '@/hooks'
 import { Link } from 'react-router-dom'
 import { toast } from 'react-toastify'
 import styled from 'styled-components'
@@ -50,10 +50,6 @@ const ProductPrice = styled('h4')`
 const Product = ({ id, cp, image, name, color, price }) => {
   const { addBookmark, removeBookmark, isInBookmark } = useCart()
 
-  const [elementRef, isIntersecting] = useIntersection({
-    threshold: 0.5
-  }, true)
-
   const productForBookmark = { id, cp, image, name, color, price }
 
   const handleAddBookmark = () => {
@@ -67,16 +63,16 @@ const Product = ({ id, cp, image, name, color, price }) => {
   }
 
   return (
-    <ProductStyled ref={elementRef} data-opacity data-view={isIntersecting}>
+    <ProductStyled>
       <Link to={`/shop/product/${cp}`}>
-        <ProductImage data-mask-left={isIntersecting} src={image} alt={name} />
+        <ProductImage src={image} alt={name} />
       </Link>
       <WrapperBookMark>
         {isInBookmark(id)
           ? <IconBookMarkBold onClick={handleRemoveBookmark} />
           : <IconBookMark onClick={handleAddBookmark} />}
       </WrapperBookMark>
-      <ProductFooter data-mask-left={isIntersecting}>
+      <ProductFooter>
         <ProductHeading>{name}</ProductHeading>
         <ProductColor>{color}</ProductColor>
         <ProductPrice>${price}</ProductPrice>
