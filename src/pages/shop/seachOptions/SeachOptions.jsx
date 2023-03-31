@@ -1,5 +1,6 @@
 import { IconArrowDownZa, IconArrowUpAz, IconMagnifyingGlass } from '@/components'
-import styled from 'styled-components'
+import { useState } from 'react'
+import styled, { css } from 'styled-components'
 
 const SearchOptionsStyled = styled('div')`
   display: flex;
@@ -46,13 +47,36 @@ const WrapperIcon = styled('button')`
   background-color: rgb(209, 208, 214);
   border-radius: clamp(1rem, 1vw, 2rem);
   padding: clamp(0.5rem, .5vw, 1rem);
-
+  
   & svg {
     fill: black;
   }
+
+  ${({ isSelected }) => isSelected && css`
+    background-color: black;
+
+    & svg {
+      fill: white;
+    }
+  `}
 `
 
-const SearchOptions = () => {
+const SearchOptions = ({ sortByAscending, sortByDescending }) => {
+  const [selectOptions, setSelectOptions] = useState({
+    ascending: false,
+    descending: false
+  })
+
+  const handleSortByAscending = () => {
+    sortByAscending()
+    setSelectOptions({ ascending: true, descending: false })
+  }
+
+  const handleSortByDescending = () => {
+    sortByDescending()
+    setSelectOptions({ ascending: false, descending: true })
+  }
+
   return (
     <SearchOptionsStyled>
       <FormStyled>
@@ -60,8 +84,8 @@ const SearchOptions = () => {
         <InputStyled type='search' name='' id='' placeholder='One Multicolor' />
       </FormStyled>
       <WrapperIcons>
-        <WrapperIcon><IconArrowUpAz /></WrapperIcon>
-        <WrapperIcon><IconArrowDownZa /></WrapperIcon>
+        <WrapperIcon isSelected={selectOptions.ascending} onClick={handleSortByAscending}><IconArrowUpAz /></WrapperIcon>
+        <WrapperIcon isSelected={selectOptions.descending} onClick={handleSortByDescending}><IconArrowDownZa /></WrapperIcon>
       </WrapperIcons>
     </SearchOptionsStyled>
   )

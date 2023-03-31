@@ -18,9 +18,19 @@ const ShopPage = () => {
       .finally(() => updateLoader(false))
   }, [])
 
+  const sortByAscending = () => {
+    const newDataSorted = data.sort((a, b) => a.name.localeCompare(b.name))
+    updateData([...newDataSorted])
+  }
+
+  const sortByDescending = () => {
+    const newDataSorted = data.sort((a, b) => b.name.localeCompare(a.name))
+    updateData([...newDataSorted])
+  }
+
   return (
     <MainStyled>
-      <SearchOptions />
+      <SearchOptions sortByAscending={sortByAscending} sortByDescending={sortByDescending} />
       <Categories />
       {loader && <Spinner />}
       <Products data={data} />
