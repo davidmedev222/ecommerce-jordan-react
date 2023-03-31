@@ -1,5 +1,5 @@
 import { Spinner } from '@/components'
-import { Categories, Products } from '@/pages/shop'
+import { SearchOptions, Categories, Products } from '@/pages/shop'
 import { getProducts } from '@/services/firestore'
 import { useEffect, useState } from 'react'
 import styled from 'styled-components'
@@ -20,6 +20,7 @@ const ShopPage = () => {
 
   return (
     <MainStyled>
+      <SearchOptions />
       <Categories />
       {loader && <Spinner />}
       <Products data={data} />
