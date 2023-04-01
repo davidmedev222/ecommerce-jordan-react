@@ -10,8 +10,6 @@ const rotateInCircle = keyframes`
 `
 const SpinnerStyled = styled('div')`
   position: relative;
-  width: 100%;
-  height: 100%;
 `
 const SpinnerItem = styled('div')`
   position: absolute;

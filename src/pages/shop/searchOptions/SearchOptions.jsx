@@ -1,5 +1,6 @@
 import { IconArrowDownZa, IconArrowUpAz, IconMagnifyingGlass } from '@/components'
-import { useState } from 'react'
+import { ProductsContext } from '@/pages/shop'
+import { useContext, useState } from 'react'
 import styled, { css } from 'styled-components'
 
 const SearchOptionsStyled = styled('div')`
@@ -10,7 +11,7 @@ const SearchOptionsStyled = styled('div')`
   gap: clamp(1rem, 1vw, 2rem);
   padding: clamp(1rem, 1vw, 2rem) clamp(1rem, 4vw, 8rem);
 `
-const FormStyled = styled('form')`
+const WrapperSearch = styled('div')`
   font-size: clamp(1rem, 1vw, 2rem);
   flex-grow: 1;
   position: relative;
@@ -61,7 +62,8 @@ const WrapperIcon = styled('button')`
   `}
 `
 
-const SearchOptions = ({ sortByAscending, sortByDescending }) => {
+const SearchOptions = () => {
+  const { inputSearch, handleChange, sortByAscending, sortByDescending } = useContext(ProductsContext)
   const [selectOptions, setSelectOptions] = useState({
     ascending: false,
     descending: false
@@ -79,10 +81,10 @@ const SearchOptions = ({ sortByAscending, sortByDescending }) => {
 
   return (
     <SearchOptionsStyled>
-      <FormStyled>
+      <WrapperSearch>
         <WrapperMagnifyingGlass><IconMagnifyingGlass /></WrapperMagnifyingGlass>
-        <InputStyled type='search' name='' id='' placeholder='One Multicolor' />
-      </FormStyled>
+        <InputStyled onChange={handleChange} value={inputSearch} type='search' name='search' id='search' placeholder='One Multicolor' />
+      </WrapperSearch>
       <WrapperIcons>
         <WrapperIcon isSelected={selectOptions.ascending} onClick={handleSortByAscending}><IconArrowUpAz /></WrapperIcon>
         <WrapperIcon isSelected={selectOptions.descending} onClick={handleSortByDescending}><IconArrowDownZa /></WrapperIcon>

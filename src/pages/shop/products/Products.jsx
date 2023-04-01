@@ -1,18 +1,26 @@
-import { Product } from '@/pages/shop'
-import { useParams } from 'react-router-dom'
+import { Spinner } from '@/components'
+import { Product, ProductsContext } from '@/pages/shop'
 import { useAutoAnimate } from '@formkit/auto-animate/react'
+import { useContext } from 'react'
+import { useParams } from 'react-router-dom'
 import styled from 'styled-components'
 
 const SectionStyled = styled('section')`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(clamp(7.5rem, 15.5vw, 31rem), 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(clamp(9rem, 15vw, 30rem), 1fr));
+  justify-content: center;
+  align-items: center;
   gap: clamp(1.5rem, 3vw, 6rem);
   padding: clamp(1rem, 1vw, 2rem) clamp(1rem, 4vw, 8rem);
 `
-
-const Products = ({ data }) => {
+const HeadingProductNotFound = styled('h3')`
+  font-size: clamp(1.25rem, 1.5vw, 3rem);
+  text-align: center;
+  word-break: break-all;
+`
+const Products = () => {
+  const { inputSearch, products, loader } = useContext(ProductsContext)
   const [parent] = useAutoAnimate()
-
   const { category } = useParams()
 
   const categories = {
@@ -22,8 +30,8 @@ const Products = ({ data }) => {
     2020: '2020'
   }
 
-  const filterDataByParam = () => {
-    return data
+  const filterProductsByParam = () => {
+    return products
       .filter((product) => product.year === category)
       .map((product) => {
         const { id, cp, imageTwo, name, color, price } = product
@@ -31,19 +39,21 @@ const Products = ({ data }) => {
       })
   }
 
-  const allData = () => {
-    return data
+  const allProducts = () => {
+    return products
       .map((product) => {
         const { id, cp, imageTwo, name, color, price } = product
         return <Product key={id} id={id} cp={cp} image={imageTwo} name={name} color={color} price={price} />
       })
   }
 
-  const products = categories[category] ? filterDataByParam() : allData()
+  const productsList = categories[category] ? filterProductsByParam() : allProducts()
 
   return (
     <SectionStyled ref={parent}>
-      {products.length > 0 && products}
+      {loader && <Spinner />}
+      {!loader && productsList.length === 0 && <HeadingProductNotFound>No product matches with {inputSearch}</HeadingProductNotFound>}
+      {productsList.length > 0 && productsList}
     </SectionStyled>
   )
 }
