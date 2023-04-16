@@ -9,15 +9,14 @@
 </ol>
 
 # **📸IMÁGENES**
-![](https://res.cloudinary.com/dos3i5jqy/image/upload/v1679166047/layers/jordanstore/jordan1_hbthj3.jpg)
-![](https://res.cloudinary.com/dos3i5jqy/image/upload/v1679166046/layers/jordanstore/jordan2_rl15k6.jpg)
-![](https://res.cloudinary.com/dos3i5jqy/image/upload/v1679166046/layers/jordanstore/jordan3_ldcluo.jpg)
-![](https://res.cloudinary.com/dos3i5jqy/image/upload/v1679166046/layers/jordanstore/jordan4_oxizut.jpg)
-![](https://res.cloudinary.com/dos3i5jqy/image/upload/v1679166046/layers/jordanstore/jordan5_doehdi.jpg)
-![](https://res.cloudinary.com/dos3i5jqy/image/upload/v1679166046/layers/jordanstore/jordan6_w1d3xo.jpg)
-![](https://res.cloudinary.com/dos3i5jqy/image/upload/v1679166046/layers/jordanstore/jordan7_ivvzev.jpg)
-![](https://res.cloudinary.com/dos3i5jqy/image/upload/v1679166047/layers/jordanstore/jordan8_ebicl6.jpg)
-![](https://res.cloudinary.com/dos3i5jqy/image/upload/v1679166047/layers/jordanstore/jordan9_aze42r.jpg)
+![](https://res.cloudinary.com/dos3i5jqy/image/upload/v1681667918/layers/jordanstore/jordan1_zzqmjf.jpg)
+![](https://res.cloudinary.com/dos3i5jqy/image/upload/v1681667919/layers/jordanstore/jordan2_hv6ptt.jpg)
+![](https://res.cloudinary.com/dos3i5jqy/image/upload/v1681667919/layers/jordanstore/jordan3_yy0yuh.jpg)
+![](https://res.cloudinary.com/dos3i5jqy/image/upload/v1681667919/layers/jordanstore/jordan5_ybiwba.jpg)
+![](https://res.cloudinary.com/dos3i5jqy/image/upload/v1681667918/layers/jordanstore/jordan6_pxowky.jpg)
+![](https://res.cloudinary.com/dos3i5jqy/image/upload/v1681667919/layers/jordanstore/jordan7_wcunym.jpg)
+![](https://res.cloudinary.com/dos3i5jqy/image/upload/v1681667918/layers/jordanstore/jordan8_ruvkhu.jpg)
+![](https://res.cloudinary.com/dos3i5jqy/image/upload/v1681667917/layers/jordanstore/jordan9_fjhivc.jpg)
 
 # **🚀DEMO**
 [https://jordanstore.vercel.app/](https://jordanstore.vercel.app/)
